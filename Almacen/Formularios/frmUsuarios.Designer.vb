@@ -30,6 +30,8 @@ Partial Class frmUsuarios
         Me.BunifuCustomLabel3 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.lblError = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.btnAceptar = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
+        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtUsuario
@@ -87,9 +89,9 @@ Partial Class frmUsuarios
         Me.BunifuCustomLabel3.BackColor = System.Drawing.Color.Orchid
         Me.BunifuCustomLabel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.BunifuCustomLabel3.Font = New System.Drawing.Font("Comic Sans MS", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(27, 30)
+        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(41, 32)
         Me.BunifuCustomLabel3.Name = "BunifuCustomLabel3"
-        Me.BunifuCustomLabel3.Size = New System.Drawing.Size(388, 67)
+        Me.BunifuCustomLabel3.Size = New System.Drawing.Size(409, 67)
         Me.BunifuCustomLabel3.TabIndex = 4
         Me.BunifuCustomLabel3.Text = "Validación"
         Me.BunifuCustomLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -130,11 +132,25 @@ Partial Class frmUsuarios
         Me.btnAceptar.Textcolor = System.Drawing.Color.White
         Me.btnAceptar.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'Usuarios
+        'BunifuImageButton1
+        '
+        Me.BunifuImageButton1.BackColor = System.Drawing.Color.Transparent
+        Me.BunifuImageButton1.Image = CType(resources.GetObject("BunifuImageButton1.Image"), System.Drawing.Image)
+        Me.BunifuImageButton1.ImageActive = Nothing
+        Me.BunifuImageButton1.Location = New System.Drawing.Point(365, 337)
+        Me.BunifuImageButton1.Name = "BunifuImageButton1"
+        Me.BunifuImageButton1.Size = New System.Drawing.Size(71, 71)
+        Me.BunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.BunifuImageButton1.TabIndex = 7
+        Me.BunifuImageButton1.TabStop = False
+        Me.BunifuImageButton1.Zoom = 10
+        '
+        'frmUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(439, 420)
+        Me.ClientSize = New System.Drawing.Size(482, 437)
+        Me.Controls.Add(Me.BunifuImageButton1)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.lblError)
         Me.Controls.Add(Me.BunifuCustomLabel3)
@@ -142,8 +158,9 @@ Partial Class frmUsuarios
         Me.Controls.Add(Me.BunifuCustomLabel1)
         Me.Controls.Add(Me.txtContraseña)
         Me.Controls.Add(Me.txtUsuario)
-        Me.Name = "Usuarios"
+        Me.Name = "frmUsuarios"
         Me.Text = "Usuarios"
+        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -155,4 +172,5 @@ Partial Class frmUsuarios
     Friend WithEvents BunifuCustomLabel3 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents lblError As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents btnAceptar As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents BunifuImageButton1 As Bunifu.Framework.UI.BunifuImageButton
 End Class

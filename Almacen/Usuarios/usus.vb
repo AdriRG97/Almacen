@@ -15,8 +15,8 @@ Public Class Usus
         sline2 = objReaderInicial.ReadLine
 
         If sline2 = "" Then
-            My.Computer.FileSystem.WriteAllText(ruta, "usuario: miriam" & vbCrLf, True)
-            My.Computer.FileSystem.WriteAllText(ruta, "contraseña; miriam" & vbCrLf, True)
+            My.Computer.FileSystem.WriteAllText(ruta, "usuario:miriam" & vbCrLf, True)
+            My.Computer.FileSystem.WriteAllText(ruta, "contraseña;miriam" & vbCrLf, True)
         End If
 
 
@@ -48,6 +48,8 @@ Public Class Usus
             End If
             Usuarios.Add(usu)
         Loop Until sline = "" OrElse IsNothing(sline)
+
+        objReader.Close()
     End Sub
 
 End Class
