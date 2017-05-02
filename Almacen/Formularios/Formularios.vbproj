@@ -83,6 +83,12 @@
       <DependentUpon>frmAlmacen.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmAñadirUsuario.Designer.vb">
+      <DependentUpon>frmAñadirUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAñadirUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -109,6 +115,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmAlmacen.resx">
       <DependentUpon>frmAlmacen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAñadirUsuario.resx">
+      <DependentUpon>frmAñadirUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
