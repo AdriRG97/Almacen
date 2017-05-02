@@ -28,11 +28,10 @@ Partial Class frmAlmacen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(389, 361)
+        Me.ClientSize = New System.Drawing.Size(982, 529)
         Me.Name = "frmAlmacen"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
 
     End Sub
-
 End Class
