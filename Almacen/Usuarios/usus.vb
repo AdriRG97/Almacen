@@ -1,12 +1,11 @@
-﻿
-Imports System.IO
+﻿Imports System.IO
 Imports CapaDatos
 
 Public Class Usus
     Private ruta = ".\usuarios.txt"
-    ' TODO: Mantenimiento de usuarios
+
     Public Property Usuarios As New List(Of ClUsuario)
-    Public Sub New() ' TODO Falta controlar los posibles errores
+    Public Sub New()
         Dim sline2 As String = ""
         If Not System.IO.File.Exists("usuarios.txt") Then
             System.IO.File.Create("usuarios.txt")
@@ -47,9 +46,43 @@ Public Class Usus
                 End If
             End If
             Usuarios.Add(usu)
+
         Loop Until sline = "" OrElse IsNothing(sline)
 
         objReader.Close()
+
+
+
+        Dim sline3 As String = ""
+        Dim objReader2 As New StreamReader(".\usuarios.txt")
+
+
+        Do
+            Dim usu2 As New ClUsuario
+            sline = objReader2.ReadLine
+            If Not sline = "" Then
+                If sline.Contains("-") Then
+                    arrayDatos = sline.Split("-")
+                    usu2.Usuario = arrayDatos(1)
+                End If
+            End If
+
+            sline = objReader2.ReadLine
+            If Not sline = "" Then
+                If sline.Contains("_") Then
+                    arraydatos2 = sline.Split("_")
+                    usu2.Contraseña = arraydatos2(1)
+                End If
+            End If
+
+
+
+
+        Loop Until sline = "" OrElse IsNothing(sline)
+
+        objReader2.Close()
+
+
     End Sub
 
 End Class

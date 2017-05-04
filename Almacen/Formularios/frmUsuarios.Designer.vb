@@ -31,6 +31,8 @@ Partial Class frmUsuarios
         Me.lblError = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.btnAceptar = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.lblErrorAdmin = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -93,13 +95,13 @@ Partial Class frmUsuarios
         Me.BunifuCustomLabel3.Name = "BunifuCustomLabel3"
         Me.BunifuCustomLabel3.Size = New System.Drawing.Size(409, 67)
         Me.BunifuCustomLabel3.TabIndex = 4
-        Me.BunifuCustomLabel3.Text = "Validación"
+        Me.BunifuCustomLabel3.Text = "Iniciar sesión"
         Me.BunifuCustomLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblError
         '
         Me.lblError.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblError.Location = New System.Drawing.Point(101, 319)
+        Me.lblError.Location = New System.Drawing.Point(66, 337)
         Me.lblError.Name = "lblError"
         Me.lblError.Size = New System.Drawing.Size(241, 23)
         Me.lblError.TabIndex = 5
@@ -121,7 +123,7 @@ Partial Class frmUsuarios
         Me.btnAceptar.Iconimage_Selected = Nothing
         Me.btnAceptar.IconZoom = 90.0R
         Me.btnAceptar.IsTab = False
-        Me.btnAceptar.Location = New System.Drawing.Point(101, 360)
+        Me.btnAceptar.Location = New System.Drawing.Point(66, 377)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.btnAceptar.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(129, Byte), Integer), CType(CType(77, Byte), Integer))
@@ -137,7 +139,7 @@ Partial Class frmUsuarios
         Me.BunifuImageButton1.BackColor = System.Drawing.Color.Transparent
         Me.BunifuImageButton1.Image = CType(resources.GetObject("BunifuImageButton1.Image"), System.Drawing.Image)
         Me.BunifuImageButton1.ImageActive = Nothing
-        Me.BunifuImageButton1.Location = New System.Drawing.Point(365, 337)
+        Me.BunifuImageButton1.Location = New System.Drawing.Point(361, 299)
         Me.BunifuImageButton1.Name = "BunifuImageButton1"
         Me.BunifuImageButton1.Size = New System.Drawing.Size(71, 71)
         Me.BunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -145,11 +147,33 @@ Partial Class frmUsuarios
         Me.BunifuImageButton1.TabStop = False
         Me.BunifuImageButton1.Zoom = 10
         '
+        'lblErrorAdmin
+        '
+        Me.lblErrorAdmin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblErrorAdmin.Location = New System.Drawing.Point(66, 314)
+        Me.lblErrorAdmin.Name = "lblErrorAdmin"
+        Me.lblErrorAdmin.Size = New System.Drawing.Size(241, 23)
+        Me.lblErrorAdmin.TabIndex = 8
+        Me.lblErrorAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblErrorAdmin.Visible = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Firebrick
+        Me.Button1.Location = New System.Drawing.Point(361, 377)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 55)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "Salir"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'frmUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(482, 437)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.lblErrorAdmin)
         Me.Controls.Add(Me.BunifuImageButton1)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.lblError)
@@ -158,7 +182,9 @@ Partial Class frmUsuarios
         Me.Controls.Add(Me.BunifuCustomLabel1)
         Me.Controls.Add(Me.txtContraseña)
         Me.Controls.Add(Me.txtUsuario)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmUsuarios"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Usuarios"
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -173,4 +199,6 @@ Partial Class frmUsuarios
     Friend WithEvents lblError As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents btnAceptar As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuImageButton1 As Bunifu.Framework.UI.BunifuImageButton
+    Friend WithEvents lblErrorAdmin As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents Button1 As Button
 End Class
