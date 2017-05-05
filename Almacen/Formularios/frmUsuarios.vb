@@ -101,7 +101,10 @@ Public Class frmUsuarios
             If usu2.Usuario = txtUsuario.text AndAlso usu2.Contraseña = txtContraseña.text Then
                 lblError.Visible = True
                 lblError.Text = "Bienvenido " & usu2.Usuario
-
+                Dim frmAlmacen As New frmAlmacen
+                frmAlmacen.Show()
+                Hide()
+                Exit Sub
             End If
             If usu2.Usuario = txtUsuario.text Then
                 boolError = True
@@ -124,16 +127,9 @@ Public Class frmUsuarios
             lblError.Text = "Error, la contraseña no es correcta."
         End If
 
-
-
         objReader2.Close()
 
 
-    End Sub
-
-
-    Private Sub frmUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim usu As New Usus
     End Sub
 
     Private Sub BunifuImageButton1_Click(sender As Object, e As EventArgs) Handles BunifuImageButton1.Click
@@ -145,4 +141,6 @@ Public Class frmUsuarios
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
     End Sub
+
+
 End Class
