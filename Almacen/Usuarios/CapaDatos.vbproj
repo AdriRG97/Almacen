@@ -82,7 +82,6 @@
     <Compile Include="Producto.vb" />
     <Compile Include="Pedido.vb" />
     <Compile Include="Usuario.vb" />
-    <Compile Include="Usus.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
