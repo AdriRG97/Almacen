@@ -5,6 +5,9 @@ Public Class frmUsuarios
 
     Public Property Usuarios As New List(Of ClUsuario)
 
+
+
+
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
         lblErrorAdmin.Text = ""
         lblError.Text = ""
@@ -142,5 +145,26 @@ Public Class frmUsuarios
         Me.Close()
     End Sub
 
+    Private Sub frmUsuarios_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Dim ruta = ".\usuarios.txt"
+        If Not System.IO.File.Exists("usuarios.txt") Then
+            System.IO.File.Create("usuarios.txt")
+        End If
 
+        Dim objReaderInicial As New StreamReader(".\usuarios.txt")
+        Dim sline2 As String = ""
+        sline2 = objReaderInicial.ReadLine
+
+        objReaderInicial.Close()
+
+
+
+        If sline2 = "" Then
+
+            My.Computer.FileSystem.WriteAllText(ruta, "usuario:miriam" & vbCrLf, True)
+            My.Computer.FileSystem.WriteAllText(ruta, "contraseña;miriam" & vbCrLf, True)
+        End If
+
+
+    End Sub
 End Class

@@ -57,4 +57,8 @@ Public Class frmAñadirUsuario
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()
     End Sub
+
+    Private Sub txtContraseña_OnTextChange(sender As Object, e As EventArgs) Handles txtContraseña.OnTextChange
+        txtContraseña.Tag = txtContraseña.Tag & "*"
+    End Sub
 End Class

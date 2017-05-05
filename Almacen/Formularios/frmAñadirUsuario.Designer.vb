@@ -61,7 +61,6 @@ Partial Class frmAñadirUsuario
         'btnCrearUsuario
         '
         Me.btnCrearUsuario.BackColor = System.Drawing.Color.SeaGreen
-        Me.btnCrearUsuario.BackgroundImage = CType(resources.GetObject("btnCrearUsuario.BackgroundImage"), System.Drawing.Image)
         Me.btnCrearUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnCrearUsuario.ButtonText = "Crear usuario"
         Me.btnCrearUsuario.Cursor = System.Windows.Forms.Cursors.Hand
@@ -81,7 +80,6 @@ Partial Class frmAñadirUsuario
         'btnSalir
         '
         Me.btnSalir.BackColor = System.Drawing.Color.Firebrick
-        Me.btnSalir.BackgroundImage = CType(resources.GetObject("btnSalir.BackgroundImage"), System.Drawing.Image)
         Me.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnSalir.ButtonText = "Salir"
         Me.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand
