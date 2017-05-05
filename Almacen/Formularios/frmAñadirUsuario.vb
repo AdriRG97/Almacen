@@ -10,9 +10,16 @@ Public Class frmAñadirUsuario
             MsgBox("Error, debes introducir una contraseña")
         End If
 
-        Dim ruta = ".\usuarios.txt"
+        Dim ruta = My.Application.Info.DirectoryPath & "/usuarios.txt"
         Dim sline As String = ""
-        Dim objReader As New StreamReader(".\usuarios.txt")
+        If Not File.Exists(ruta) Then
+            'File.Create(ruta)
+            Dim fic As New StreamWriter(ruta)
+            fic.Close()
+
+        End If
+
+        Dim objReader As New StreamReader(ruta)
         Dim arrayDatos() As String
         Dim compro As Boolean = False
 
