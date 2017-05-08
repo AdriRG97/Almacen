@@ -40,6 +40,9 @@ Public Class frmAñadirUsuario
                 compro = True
             End If
 
+            If txtUsuario.text = "miriam" Then
+                compro = True
+            End If
 
 
         Loop Until sline = "" OrElse IsNothing(sline)
@@ -55,7 +58,7 @@ Public Class frmAñadirUsuario
 
 
         If compro = True Then
-            MsgBox("Error, el usuario ya existe")
+            MsgBox("Error, el usuario introducido ya existe.")
         End If
 
 
