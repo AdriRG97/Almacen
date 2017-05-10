@@ -89,6 +89,12 @@
     <Compile Include="frmAñadirUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmCantidadPedida.Designer.vb">
+      <DependentUpon>frmCantidadPedida.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCantidadPedida.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAñadirUsuario.resx">
       <DependentUpon>frmAñadirUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCantidadPedida.resx">
+      <DependentUpon>frmCantidadPedida.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
