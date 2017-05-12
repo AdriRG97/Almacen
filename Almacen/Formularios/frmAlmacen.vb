@@ -184,6 +184,14 @@ Public Class frmAlmacen
         coordenadas.X = MousePosition.X - sender.left
     End Sub
 
+    Private Sub btnFinalizar_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        Me.Close()
+    End Sub
+
 
 
 

@@ -28,7 +28,6 @@ Partial Class frmAlmacen
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.pbCarpetas = New System.Windows.Forms.PictureBox()
         Me.pbGrapadoras = New System.Windows.Forms.PictureBox()
-        Me.btnFinalizar = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblCuadernosT = New System.Windows.Forms.Label()
         Me.lblSubrayadoresT = New System.Windows.Forms.Label()
@@ -39,6 +38,8 @@ Partial Class frmAlmacen
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnSalir = New MetroFramework.Controls.MetroButton()
+        Me.btnFinalizar = New MetroFramework.Controls.MetroButton()
         CType(Me.pbCuadernos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbSubrayadores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -96,16 +97,6 @@ Partial Class frmAlmacen
         Me.pbGrapadoras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbGrapadoras.TabIndex = 4
         Me.pbGrapadoras.TabStop = False
-        '
-        'btnFinalizar
-        '
-        Me.btnFinalizar.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.btnFinalizar.Location = New System.Drawing.Point(495, 717)
-        Me.btnFinalizar.Name = "btnFinalizar"
-        Me.btnFinalizar.Size = New System.Drawing.Size(166, 83)
-        Me.btnFinalizar.TabIndex = 5
-        Me.btnFinalizar.Text = "Finalizar pedido"
-        Me.btnFinalizar.UseVisualStyleBackColor = False
         '
         'Panel1
         '
@@ -198,19 +189,40 @@ Partial Class frmAlmacen
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Penultimate", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.YellowGreen
         Me.Label1.Location = New System.Drawing.Point(184, 37)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(310, 53)
+        Me.Label1.Size = New System.Drawing.Size(364, 55)
         Me.Label1.TabIndex = 15
         Me.Label1.Text = "Juego almacén"
+        '
+        'btnSalir
+        '
+        Me.btnSalir.Location = New System.Drawing.Point(715, 726)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(194, 23)
+        Me.btnSalir.TabIndex = 17
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseSelectable = True
+        '
+        'btnFinalizar
+        '
+        Me.btnFinalizar.Location = New System.Drawing.Point(498, 726)
+        Me.btnFinalizar.Name = "btnFinalizar"
+        Me.btnFinalizar.Size = New System.Drawing.Size(194, 23)
+        Me.btnFinalizar.TabIndex = 18
+        Me.btnFinalizar.Text = "Finalizar pedido"
+        Me.btnFinalizar.UseSelectable = True
         '
         'frmAlmacen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1211, 856)
+        Me.AutoSize = True
+        Me.ClientSize = New System.Drawing.Size(1211, 780)
+        Me.Controls.Add(Me.btnFinalizar)
+        Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -220,7 +232,6 @@ Partial Class frmAlmacen
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lblSubrayadoresT)
         Me.Controls.Add(Me.lblCuadernosT)
-        Me.Controls.Add(Me.btnFinalizar)
         Me.Controls.Add(Me.pbGrapadoras)
         Me.Controls.Add(Me.pbCarpetas)
         Me.Controls.Add(Me.pbCuadernos)
@@ -231,6 +242,7 @@ Partial Class frmAlmacen
         Me.Name = "frmAlmacen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Juego Almacén"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.pbCuadernos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbSubrayadores, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -246,7 +258,6 @@ Partial Class frmAlmacen
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents pbCarpetas As PictureBox
     Friend WithEvents pbGrapadoras As PictureBox
-    Friend WithEvents btnFinalizar As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents lblCuadernosT As Label
     Friend WithEvents lblSubrayadoresT As Label
@@ -257,4 +268,6 @@ Partial Class frmAlmacen
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents btnSalir As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnFinalizar As MetroFramework.Controls.MetroButton
 End Class

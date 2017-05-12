@@ -71,4 +71,8 @@ Public Class frmAñadirUsuario
     Private Sub txtContraseña_OnTextChange(sender As Object, e As EventArgs) Handles txtContraseña.OnTextChange
         txtContraseña.Tag = txtContraseña.Tag & "*"
     End Sub
+
+    Private Sub frmAñadirUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
