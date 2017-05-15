@@ -60,7 +60,8 @@ Public Class frmUsuarios
                     lblErrorAdmin.Visible = True
                     lblError.Visible = False
                     lblErrorAdmin.Text = "Bienvenida Miriam"
-
+                    Dim frmAdmin As New frmAdministrador
+                    frmAdmin.Show()
                     Exit Sub
                 End If
             End If
