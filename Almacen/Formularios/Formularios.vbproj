@@ -51,17 +51,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>My Project\Bunifu_UI_v1.4.dll</HintPath>
     </Reference>
-    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\MetroFramework.dll</HintPath>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\..\..\..\Desktop\metro\MetroFramework.dll</HintPath>
     </Reference>
-    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\MetroFramework.Design.dll</HintPath>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\..\..\..\..\Desktop\metro\MetroFramework.Design.dll</HintPath>
     </Reference>
-    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\MetroFramework.Fonts.dll</HintPath>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\..\..\..\..\Desktop\metro\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -177,6 +174,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\Estanteria.jpg" />
   </ItemGroup>
   <ItemGroup>

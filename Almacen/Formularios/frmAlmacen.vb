@@ -3,11 +3,32 @@ Module Module1
     Public nuestroAlmacen As New List(Of Producto)
 End Module
 Public Class frmAlmacen
-    Dim nombresProductos As String() = {"Cuadernos", "Subrayadores", "Grapadoras", "Carpetas", "Lupa", "Maletin", "Maquina", "Reloj", "Telefono"}
+
+    Private localizacionIniCuadernos As Point
+    Private localizacionIniSubrayadores As Point
+    Private localizacionIniGrapadoras As Point
+    Private localizacionIniCarpetas As Point
+    Private localizacionIniBolis As Point
+    Private localizacionIniCalculadoras As Point
+    Private localizacionIniLapices As Point
+    Private localizacionIniTelefono As Point
+    Private localizacionIniPerforadora As Point
+
+    Dim nombresProductos As String() = {"Cuadernos", "Subrayadores", "Grapadoras", "Carpetas", "Bolis", "Calculadoras", "Lapices", "Telefono", "Telefono"}
 
     Private Sub frmAlmacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        localizacionIniCuadernos = pbCuadernos.Location
+        localizacionIniSubrayadores = pbSubrayadores.Location
+        localizacionIniGrapadoras = pbGrapadoras.Location
+        localizacionIniCarpetas = pbCarpetas.Location
+        localizacionIniCalculadoras = pbCalculadoras.Location
+        localizacionIniLapices = pbLapices.Location
+        localizacionIniTelefono = pbTelefono.Location
+        localizacionIniPerforadora = pbPerforadora.Location
+        localizacionIniBolis = pbBolis.Location
 
+        lblTitulo.SendToBack()
         PictureBox2.SendToBack()
         Panel1.SendToBack()
         'Creamos los productos predeterminados
@@ -40,8 +61,8 @@ Public Class frmAlmacen
     Private Sub PictureBox1_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbSubrayadores.MouseMove
 
         If e.Button = MouseButtons.Left Then
-            sender.top = MousePosition.Y - 165
-            sender.left = MousePosition.X - 400
+            sender.top = MousePosition.Y - 65
+            sender.left = MousePosition.X - 50
         End If
 
         Dim p As PictureBox = DirectCast(sender, PictureBox)
@@ -83,8 +104,8 @@ Public Class frmAlmacen
     Private Sub pbCuadernos_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbCuadernos.MouseMove
 
         If e.Button = MouseButtons.Left Then
-            sender.top = MousePosition.Y - 165
-            sender.left = MousePosition.X - 400
+            sender.top = MousePosition.Y - 65
+            sender.left = MousePosition.X - 50
         End If
 
         Dim p As PictureBox = DirectCast(sender, PictureBox)
@@ -124,8 +145,8 @@ Public Class frmAlmacen
     Private Sub pbGrapadoras_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbGrapadoras.MouseMove
 
         If e.Button = MouseButtons.Left Then
-            sender.top = MousePosition.Y - 165
-            sender.left = MousePosition.X - 400
+            sender.top = MousePosition.Y - 65
+            sender.left = MousePosition.X - 50
         End If
 
         Dim p As PictureBox = DirectCast(sender, PictureBox)
@@ -162,8 +183,8 @@ Public Class frmAlmacen
     Private Sub pbCarpetas_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbCarpetas.MouseMove
 
         If e.Button = MouseButtons.Left Then
-            sender.top = MousePosition.Y - 165
-            sender.left = MousePosition.X - 400
+            sender.top = MousePosition.Y - 65
+            sender.left = MousePosition.X - 50
         End If
 
         Dim p As PictureBox = DirectCast(sender, PictureBox)
@@ -184,18 +205,322 @@ Public Class frmAlmacen
         coordenadas.X = MousePosition.X - sender.left
     End Sub
 
-    Private Sub btnFinalizar_Click(sender As Object, e As EventArgs)
+
+
+    'Fin mov. CARPETAS
+
+
+
+    'Movimiento de la imagen de BOLIS
+
+
+    Private Sub Bolis()
+
+        pbCuadernos.Cursor = Cursors.SizeAll
+        AddHandler pbCarpetas.MouseDown, AddressOf pbBolisMouseDown
+        AddHandler pbCarpetas.MouseMove, AddressOf pbBolis_MouseMove
 
     End Sub
+
+
+
+    Private Sub pbBolis_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbBolis.MouseMove
+
+        If e.Button = MouseButtons.Left Then
+            sender.top = MousePosition.Y - 65
+            sender.left = MousePosition.X - 50
+        End If
+
+        Dim p As PictureBox = DirectCast(sender, PictureBox)
+        Dim loca As New Point
+        If pbBolis.Location.X + pbBolis.Width >= Panel1.Location.X + 50 AndAlso pbBolis.Location.Y <= 380 Then
+
+            loca = pbCarpetas.Location
+            pbBolis.Location = New Point(1000, 689)
+            pbBolis.Enabled = False
+            ' Else
+            '     pbCarpetas.Location = loca
+        End If
+
+    End Sub
+
+    Private Sub pbBolisMouseDown(sender As Object, e As System.Windows.Forms.MouseEventArgs)
+        coordenadas.Y = MousePosition.Y - sender.top
+        coordenadas.X = MousePosition.X - sender.left
+    End Sub
+
+
+
+    'Fin mov. BOLIS
+
+
+
+    'Movimiento de la imagen de CALCULADORAS
+
+
+    Private Sub Calculadoras()
+
+        pbCalculadoras.Cursor = Cursors.SizeAll
+        AddHandler pbCalculadoras.MouseDown, AddressOf pbCalculadorasMouseDown
+        AddHandler pbCalculadoras.MouseMove, AddressOf pbCalculadoras_MouseMove
+
+    End Sub
+
+
+
+    Private Sub pbCalculadoras_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbCalculadoras.MouseMove
+
+        If e.Button = MouseButtons.Left Then
+            sender.top = MousePosition.Y - 65
+            sender.left = MousePosition.X - 50
+        End If
+
+        Dim p As PictureBox = DirectCast(sender, PictureBox)
+        Dim loca As New Point
+        If pbCalculadoras.Location.X + pbCalculadoras.Width >= Panel1.Location.X + 50 AndAlso pbCalculadoras.Location.Y <= 380 Then
+
+            loca = pbCarpetas.Location
+            pbCalculadoras.Location = New Point(1000, 689)
+            pbCalculadoras.Enabled = False
+            ' Else
+            '     pbCarpetas.Location = loca
+        End If
+
+    End Sub
+
+    Private Sub pbCalculadorasMouseDown(sender As Object, e As System.Windows.Forms.MouseEventArgs)
+        coordenadas.Y = MousePosition.Y - sender.top
+        coordenadas.X = MousePosition.X - sender.left
+    End Sub
+
+
+
+    'Fin mov. CALCU
+
+
+    'Movimiento de la imagen de TELEFONO
+
+
+    Private Sub Telefono()
+
+        pbTelefono.Cursor = Cursors.SizeAll
+        AddHandler pbTelefono.MouseDown, AddressOf pbTelefonosMouseDown
+        AddHandler pbTelefono.MouseMove, AddressOf pbTelefonos_MouseMove
+
+    End Sub
+
+
+
+    Private Sub pbTelefonos_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbTelefono.MouseMove
+
+        If e.Button = MouseButtons.Left Then
+            sender.top = MousePosition.Y - 65
+            sender.left = MousePosition.X - 50
+        End If
+
+        Dim p As PictureBox = DirectCast(sender, PictureBox)
+        Dim loca As New Point
+        If pbTelefono.Location.X + pbTelefono.Width >= Panel1.Location.X + 50 AndAlso pbTelefono.Location.Y <= 380 Then
+
+            loca = pbTelefono.Location
+            pbTelefono.Location = New Point(1000, 689)
+            pbTelefono.Enabled = False
+            ' Else
+            '     pbCarpetas.Location = loca
+        End If
+
+    End Sub
+
+    Private Sub pbTelefonosMouseDown(sender As Object, e As System.Windows.Forms.MouseEventArgs)
+        coordenadas.Y = MousePosition.Y - sender.top
+        coordenadas.X = MousePosition.X - sender.left
+    End Sub
+
+
+
+    'Fin mov. TELEFONO
+
+    'Movimiento de la imagen de LAPICES
+
+
+    Private Sub Lapices()
+
+        pbLapices.Cursor = Cursors.SizeAll
+        AddHandler pbLapices.MouseDown, AddressOf pbLapicesMouseDown
+        AddHandler pbLapices.MouseMove, AddressOf pbLapices_MouseMove
+
+    End Sub
+
+
+    Private Sub pbLapices_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbLapices.MouseMove
+
+        If e.Button = MouseButtons.Left Then
+            sender.top = MousePosition.Y - 65
+            sender.left = MousePosition.X - 50
+        End If
+
+        Dim p As PictureBox = DirectCast(sender, PictureBox)
+        Dim loca As New Point
+        If pbLapices.Location.X + pbLapices.Width >= Panel1.Location.X + 50 AndAlso pbLapices.Location.Y <= 380 Then
+
+            loca = pbLapices.Location
+            pbLapices.Location = New Point(1000, 689)
+
+            pbLapices.Enabled = False
+            ' Else
+            '     pbCarpetas.Location = loca
+        End If
+
+    End Sub
+
+    Private Sub pbLapicesMouseDown(sender As Object, e As System.Windows.Forms.MouseEventArgs)
+        coordenadas.Y = MousePosition.Y - sender.top
+        coordenadas.X = MousePosition.X - sender.left
+    End Sub
+
+
+
+    'Fin mov. LAPICES
+
+    'Movimiento de la imagen de PERFORADORA
+
+
+    Private Sub Perforadora()
+
+        pbPerforadora.Cursor = Cursors.SizeAll
+        AddHandler pbLapices.MouseDown, AddressOf pbPerforadoraMouseDown
+        AddHandler pbLapices.MouseMove, AddressOf pbPerforadora_MouseMove
+
+    End Sub
+
+
+
+    Private Sub pbPerforadora_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbPerforadora.MouseMove
+
+        If e.Button = MouseButtons.Left Then
+            sender.top = MousePosition.Y - 65
+            sender.left = MousePosition.X - 50
+        End If
+
+        Dim p As PictureBox = DirectCast(sender, PictureBox)
+        Dim loca As New Point
+
+        If pbPerforadora.Location.X + pbPerforadora.Width >= Panel1.Location.X + 50 AndAlso pbPerforadora.Location.Y <= 380 Then
+
+            loca = pbPerforadora.Location
+            pbPerforadora.Location = New Point(1000, 689)
+            pbPerforadora.Enabled = False
+
+            ' Else
+            '     pbCarpetas.Location = loca
+        End If
+
+
+    End Sub
+
+    Private Sub pbPerforadoraMouseDown(sender As Object, e As System.Windows.Forms.MouseEventArgs)
+        coordenadas.Y = MousePosition.Y - sender.top
+        coordenadas.X = MousePosition.X - sender.left
+    End Sub
+
+    Private Sub pbPerforadora_MouseUp(sender As Object, e As MouseEventArgs) Handles pbPerforadora.MouseUp
+        If pbPerforadora.Location.X + pbPerforadora.Width >= Panel1.Location.X + 50 AndAlso pbPerforadora.Location.Y <= 380 Then
+        Else
+            pbPerforadora.Location = localizacionIniPerforadora
+        End If
+
+    End Sub
+
+    'Fin mov. PERFORADORA
+
+
+
+
+
+
+
+
+
+
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()
     End Sub
+    Private Sub pbLapices_MouseUp(sender As Object, e As MouseEventArgs) Handles pbLapices.MouseUp
+        If pbLapices.Location.X + pbLapices.Width >= Panel1.Location.X + 50 AndAlso pbLapices.Location.Y <= 380 Then
+        Else
+            pbLapices.Location = localizacionIniLapices
+        End If
+
+    End Sub
+
+    Private Sub pbTelefono_MouseUp(sender As Object, e As MouseEventArgs) Handles pbTelefono.MouseUp
+        If pbTelefono.Location.X + pbTelefono.Width >= Panel1.Location.X + 50 AndAlso pbTelefono.Location.Y <= 380 Then
+        Else
+
+            pbTelefono.Location = localizacionIniTelefono
+        End If
+
+    End Sub
+
+    Private Sub pbBolis_MouseUp(sender As Object, e As MouseEventArgs) Handles pbBolis.MouseUp
+        If pbBolis.Location.X + pbBolis.Width >= Panel1.Location.X + 50 AndAlso pbBolis.Location.Y <= 380 Then
+        Else
+
+            pbBolis.Location = localizacionIniBolis
+        End If
+
+    End Sub
+
+
+    Private Sub pbCalculadoras_MouseUp(sender As Object, e As MouseEventArgs) Handles pbCalculadoras.MouseUp
+        If pbCalculadoras.Location.X + pbCalculadoras.Width >= Panel1.Location.X + 50 AndAlso pbCalculadoras.Location.Y <= 380 Then
+        Else
+
+            pbCalculadoras.Location = localizacionIniCalculadoras
+        End If
+
+    End Sub
+    Private Sub pbCarpetas_MouseUp(sender As Object, e As MouseEventArgs) Handles pbCarpetas.MouseUp
+        If pbCarpetas.Location.X + pbCarpetas.Width >= Panel1.Location.X + 50 AndAlso pbCarpetas.Location.Y <= 380 Then
+        Else
+
+            pbCarpetas.Location = localizacionIniCarpetas
+        End If
+
+    End Sub
 
 
 
+    Private Sub pbGrapadoras_MouseUp(sender As Object, e As MouseEventArgs) Handles pbGrapadoras.MouseUp
+        If pbGrapadoras.Location.X + pbGrapadoras.Width >= Panel1.Location.X + 50 AndAlso pbGrapadoras.Location.Y <= 380 Then
+        Else
 
-    'Fin mov. CARPETAS
+            pbGrapadoras.Location = localizacionIniGrapadoras
+        End If
+
+    End Sub
+
+    Private Sub pbSubrayadores_MouseUp(sender As Object, e As MouseEventArgs) Handles pbSubrayadores.MouseUp
+        If pbSubrayadores.Location.X + pbSubrayadores.Width >= Panel1.Location.X + 50 AndAlso pbSubrayadores.Location.Y <= 380 Then
+        Else
+
+            pbSubrayadores.Location = localizacionIniSubrayadores
+        End If
+
+    End Sub
+
+    Private Sub pbCuadernos_MouseUp(sender As Object, e As MouseEventArgs) Handles pbCuadernos.MouseUp
+        If pbCuadernos.Location.X + pbCuadernos.Width >= Panel1.Location.X + 50 AndAlso pbCuadernos.Location.Y <= 380 Then
+        Else
+
+            pbCuadernos.Location = localizacionIniCuadernos
+        End If
+
+    End Sub
+
+
+
 
 
 End Class
