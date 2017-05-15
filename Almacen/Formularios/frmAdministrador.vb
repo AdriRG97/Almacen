@@ -100,10 +100,13 @@ Public Class frmAdministrador
     Dim ped As New Pedido
     Public Function NuevoPedido() As String
 
+
         Dim titulo As String = "Te han pedido: "
         Dim nuevalineas As String
         Dim numAlea As Integer
         Dim rnd = New Random
+        Dim debeRenovar As Boolean
+        Dim YaRenovado As Boolean = False
         For i = 0 To 8
             numAlea = rnd.Next(2)
             If numAlea = 0 Then
@@ -111,7 +114,11 @@ Public Class frmAdministrador
             Else
                 cantPed = rnd.Next(51)
                 Variacion(i) = True
-                ped.AñadirProducto(New Producto(productos(i), 50), cantPed)
+                Dim prod As New Producto(productos(i), 50)
+                debeRenovar = prod.ComprobarAlmacen(prod, cantPed)
+
+                ped.AñadirProducto(prod, cantPed)
+                prod.CambiarStock(prod, cantPed)
                 nuevalineas = ControlChars.NewLine & cantPed & " " & productos(i)
                 titulo = titulo & nuevalineas
             End If
