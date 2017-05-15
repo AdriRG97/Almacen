@@ -1,4 +1,6 @@
-﻿Public Class Producto : Implements IEquatable(Of Producto)
+﻿Imports CapaDatos
+
+Public Class Producto : Implements IEquatable(Of Producto)
     Public Property Nombre As String
     Public Property Stock As Integer
     Public Property CantPedida As Integer
@@ -14,4 +16,6 @@
         Me.Nombre = nombre
         Me.Stock = stock
     End Sub
+
+
 End Class

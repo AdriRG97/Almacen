@@ -30,6 +30,8 @@ Partial Class frmAdministrador
         Me.lstPedidos = New MetroFramework.Controls.MetroListView()
         Me.lstUsuarios = New MetroFramework.Controls.MetroListView()
         Me.ptbAñadir = New System.Windows.Forms.PictureBox()
+        Me.btnMostrarUsuarios = New MetroFramework.Controls.MetroButton()
+        Me.btnMostrarPedido = New MetroFramework.Controls.MetroButton()
         CType(Me.ptbAñadir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -39,7 +41,7 @@ Partial Class frmAdministrador
         Me.btnPedidos.Name = "btnPedidos"
         Me.btnPedidos.Size = New System.Drawing.Size(208, 23)
         Me.btnPedidos.TabIndex = 3
-        Me.btnPedidos.Text = "Pedidos"
+        Me.btnPedidos.Text = "Pedido"
         Me.btnPedidos.UseSelectable = True
         '
         'btnProductos
@@ -65,36 +67,42 @@ Partial Class frmAdministrador
         Me.lstProductos.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.lstProductos.FullRowSelect = True
         Me.lstProductos.Location = New System.Drawing.Point(337, 69)
+        Me.lstProductos.MultiSelect = False
         Me.lstProductos.Name = "lstProductos"
         Me.lstProductos.OwnerDraw = True
         Me.lstProductos.Size = New System.Drawing.Size(208, 326)
         Me.lstProductos.TabIndex = 6
         Me.lstProductos.UseCompatibleStateImageBehavior = False
         Me.lstProductos.UseSelectable = True
+        Me.lstProductos.View = System.Windows.Forms.View.List
         '
         'lstPedidos
         '
         Me.lstPedidos.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.lstPedidos.FullRowSelect = True
-        Me.lstPedidos.Location = New System.Drawing.Point(40, 69)
+        Me.lstPedidos.Location = New System.Drawing.Point(40, 78)
+        Me.lstPedidos.MultiSelect = False
         Me.lstPedidos.Name = "lstPedidos"
         Me.lstPedidos.OwnerDraw = True
-        Me.lstPedidos.Size = New System.Drawing.Size(208, 326)
+        Me.lstPedidos.Size = New System.Drawing.Size(208, 317)
         Me.lstPedidos.TabIndex = 7
         Me.lstPedidos.UseCompatibleStateImageBehavior = False
         Me.lstPedidos.UseSelectable = True
+        Me.lstPedidos.View = System.Windows.Forms.View.List
         '
         'lstUsuarios
         '
         Me.lstUsuarios.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.lstUsuarios.FullRowSelect = True
         Me.lstUsuarios.Location = New System.Drawing.Point(643, 69)
+        Me.lstUsuarios.MultiSelect = False
         Me.lstUsuarios.Name = "lstUsuarios"
         Me.lstUsuarios.OwnerDraw = True
         Me.lstUsuarios.Size = New System.Drawing.Size(208, 326)
         Me.lstUsuarios.TabIndex = 8
         Me.lstUsuarios.UseCompatibleStateImageBehavior = False
         Me.lstUsuarios.UseSelectable = True
+        Me.lstUsuarios.View = System.Windows.Forms.View.List
         '
         'ptbAñadir
         '
@@ -106,11 +114,31 @@ Partial Class frmAdministrador
         Me.ptbAñadir.TabIndex = 9
         Me.ptbAñadir.TabStop = False
         '
+        'btnMostrarUsuarios
+        '
+        Me.btnMostrarUsuarios.Location = New System.Drawing.Point(643, 410)
+        Me.btnMostrarUsuarios.Name = "btnMostrarUsuarios"
+        Me.btnMostrarUsuarios.Size = New System.Drawing.Size(208, 23)
+        Me.btnMostrarUsuarios.TabIndex = 10
+        Me.btnMostrarUsuarios.Text = "Mostrar Usuarios"
+        Me.btnMostrarUsuarios.UseSelectable = True
+        '
+        'btnMostrarPedido
+        '
+        Me.btnMostrarPedido.Location = New System.Drawing.Point(40, 410)
+        Me.btnMostrarPedido.Name = "btnMostrarPedido"
+        Me.btnMostrarPedido.Size = New System.Drawing.Size(208, 23)
+        Me.btnMostrarPedido.TabIndex = 11
+        Me.btnMostrarPedido.Text = "Mostrar Pedido"
+        Me.btnMostrarPedido.UseSelectable = True
+        '
         'frmAdministrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(931, 461)
+        Me.Controls.Add(Me.btnMostrarPedido)
+        Me.Controls.Add(Me.btnMostrarUsuarios)
         Me.Controls.Add(Me.ptbAñadir)
         Me.Controls.Add(Me.lstUsuarios)
         Me.Controls.Add(Me.lstPedidos)
@@ -131,4 +159,6 @@ Partial Class frmAdministrador
     Friend WithEvents lstPedidos As MetroFramework.Controls.MetroListView
     Friend WithEvents lstUsuarios As MetroFramework.Controls.MetroListView
     Friend WithEvents ptbAñadir As PictureBox
+    Friend WithEvents btnMostrarUsuarios As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnMostrarPedido As MetroFramework.Controls.MetroButton
 End Class
