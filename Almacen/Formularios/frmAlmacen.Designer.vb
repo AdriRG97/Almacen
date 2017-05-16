@@ -49,12 +49,13 @@ Partial Class frmAlmacen
         Me.lblLapicesQ = New System.Windows.Forms.Label()
         Me.lblLapices = New System.Windows.Forms.Label()
         Me.pbLapices = New System.Windows.Forms.PictureBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.lblTelefonoQ = New System.Windows.Forms.Label()
+        Me.lblTelefono = New System.Windows.Forms.Label()
         Me.pbTelefono = New System.Windows.Forms.PictureBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.lblPerforadoraQ = New System.Windows.Forms.Label()
+        Me.lblPerforadora = New System.Windows.Forms.Label()
         Me.pbPerforadora = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.pbCuadernos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbSubrayadores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -325,25 +326,25 @@ Partial Class frmAlmacen
         Me.pbLapices.TabIndex = 25
         Me.pbLapices.TabStop = False
         '
-        'Label5
+        'lblTelefonoQ
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label5.Location = New System.Drawing.Point(816, 736)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(121, 13)
-        Me.Label5.TabIndex = 30
-        Me.Label5.Text = "Quedan X subrayadores"
+        Me.lblTelefonoQ.AutoSize = True
+        Me.lblTelefonoQ.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.lblTelefonoQ.Location = New System.Drawing.Point(816, 736)
+        Me.lblTelefonoQ.Name = "lblTelefonoQ"
+        Me.lblTelefonoQ.Size = New System.Drawing.Size(121, 13)
+        Me.lblTelefonoQ.TabIndex = 30
+        Me.lblTelefonoQ.Text = "Quedan X subrayadores"
         '
-        'Label6
+        'lblTelefono
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(851, 557)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(57, 13)
-        Me.Label6.TabIndex = 29
-        Me.Label6.Text = "Teléfono"
+        Me.lblTelefono.AutoSize = True
+        Me.lblTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTelefono.Location = New System.Drawing.Point(851, 557)
+        Me.lblTelefono.Name = "lblTelefono"
+        Me.lblTelefono.Size = New System.Drawing.Size(57, 13)
+        Me.lblTelefono.TabIndex = 29
+        Me.lblTelefono.Text = "Teléfono"
         '
         'pbTelefono
         '
@@ -355,25 +356,25 @@ Partial Class frmAlmacen
         Me.pbTelefono.TabIndex = 28
         Me.pbTelefono.TabStop = False
         '
-        'Label9
+        'lblPerforadoraQ
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label9.Location = New System.Drawing.Point(1078, 482)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(121, 13)
-        Me.Label9.TabIndex = 33
-        Me.Label9.Text = "Quedan X subrayadores"
+        Me.lblPerforadoraQ.AutoSize = True
+        Me.lblPerforadoraQ.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.lblPerforadoraQ.Location = New System.Drawing.Point(1078, 482)
+        Me.lblPerforadoraQ.Name = "lblPerforadoraQ"
+        Me.lblPerforadoraQ.Size = New System.Drawing.Size(121, 13)
+        Me.lblPerforadoraQ.TabIndex = 33
+        Me.lblPerforadoraQ.Text = "Quedan X subrayadores"
         '
-        'Label10
+        'lblPerforadora
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(1073, 303)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(147, 13)
-        Me.Label10.TabIndex = 32
-        Me.Label10.Text = "Paquete de perforadoras"
+        Me.lblPerforadora.AutoSize = True
+        Me.lblPerforadora.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPerforadora.Location = New System.Drawing.Point(1073, 303)
+        Me.lblPerforadora.Name = "lblPerforadora"
+        Me.lblPerforadora.Size = New System.Drawing.Size(147, 13)
+        Me.lblPerforadora.TabIndex = 32
+        Me.lblPerforadora.Text = "Paquete de perforadoras"
         '
         'pbPerforadora
         '
@@ -385,17 +386,27 @@ Partial Class frmAlmacen
         Me.pbPerforadora.TabIndex = 31
         Me.pbPerforadora.TabStop = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(1113, 786)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 34
+        Me.Label1.Text = "Label1"
+        '
         'frmAlmacen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(1932, 1092)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblPerforadoraQ)
+        Me.Controls.Add(Me.lblPerforadora)
         Me.Controls.Add(Me.pbPerforadora)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.lblTelefonoQ)
+        Me.Controls.Add(Me.lblTelefono)
         Me.Controls.Add(Me.pbTelefono)
         Me.Controls.Add(Me.lblLapicesQ)
         Me.Controls.Add(Me.lblLapices)
@@ -469,10 +480,11 @@ Partial Class frmAlmacen
     Friend WithEvents lblLapicesQ As Label
     Friend WithEvents lblLapices As Label
     Friend WithEvents pbLapices As PictureBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents lblTelefonoQ As Label
+    Friend WithEvents lblTelefono As Label
     Friend WithEvents pbTelefono As PictureBox
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
+    Friend WithEvents lblPerforadoraQ As Label
+    Friend WithEvents lblPerforadora As Label
     Friend WithEvents pbPerforadora As PictureBox
+    Friend WithEvents Label1 As Label
 End Class

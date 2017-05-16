@@ -13,10 +13,13 @@ Public Class frmAlmacen
     Private localizacionIniLapices As Point
     Private localizacionIniTelefono As Point
     Private localizacionIniPerforadora As Point
+    Private frmacantidad As New frmCantidadPedida
 
-    Dim nombresProductos As String() = {"Cuadernos", "Subrayadores", "Grapadoras", "Carpetas", "Bolis", "Calculadoras", "Lapices", "Telefono", "Telefono"}
+    Dim nombresProductos As String() = {"Cuadernos", "Subrayadores", "Bolis", "Lapices", "Perforadoras", "Grapadoras", "Carpetas", "Calculadoras", "Telefono"}
 
     Private Sub frmAlmacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
 
         localizacionIniCuadernos = pbCuadernos.Location
         localizacionIniSubrayadores = pbSubrayadores.Location
@@ -27,6 +30,9 @@ Public Class frmAlmacen
         localizacionIniTelefono = pbTelefono.Location
         localizacionIniPerforadora = pbPerforadora.Location
         localizacionIniBolis = pbBolis.Location
+
+
+
 
         lblTitulo.SendToBack()
         PictureBox2.SendToBack()
@@ -69,9 +75,8 @@ Public Class frmAlmacen
         If pbSubrayadores.Location.X + pbSubrayadores.Width >= Panel1.Location.X + 50 AndAlso pbSubrayadores.Location.Y <= 380 Then
             pbSubrayadores.Location = New Point(810, 466)
             pbSubrayadores.Enabled = False
-            Dim frmacantidad As New frmCantidadPedida
-            frmacantidad.ShowDialog()
 
+            frmacantidad.ShowDialog()
         End If
 
     End Sub
@@ -109,9 +114,20 @@ Public Class frmAlmacen
         End If
 
         Dim p As PictureBox = DirectCast(sender, PictureBox)
+        Dim copiaCuaderno = New PictureBox
+        copiaCuaderno.Image = pbCuadernos.Image
+        copiaCuaderno.Size = New System.Drawing.Size(74, 70)
+
         If pbCuadernos.Location.X + pbCuadernos.Width >= Panel1.Location.X + 50 AndAlso pbCuadernos.Location.Y <= 380 Then
-            pbCuadernos.Location = New Point(1000, 466)
-            pbCuadernos.Enabled = False
+
+            copiaCuaderno.Visible = True
+
+
+            copiaCuaderno.Location = New Point(1113, 786)
+
+            pbCuadernos.Location = localizacionIniCuadernos
+            copiaCuaderno.Enabled = False
+            frmacantidad.ShowDialog()
         End If
 
     End Sub
@@ -153,6 +169,7 @@ Public Class frmAlmacen
         If pbGrapadoras.Location.X + pbGrapadoras.Width >= Panel1.Location.X + 50 AndAlso pbGrapadoras.Location.Y <= 380 Then
             pbGrapadoras.Location = New Point(810, 666)
             pbGrapadoras.Enabled = False
+            frmacantidad.ShowDialog()
         End If
 
     End Sub
@@ -194,6 +211,7 @@ Public Class frmAlmacen
             loca = pbCarpetas.Location
             pbCarpetas.Location = New Point(1000, 689)
             pbCarpetas.Enabled = False
+            frmacantidad.ShowDialog()
             ' Else
             '     pbCarpetas.Location = loca
         End If
@@ -238,6 +256,7 @@ Public Class frmAlmacen
             loca = pbCarpetas.Location
             pbBolis.Location = New Point(1000, 689)
             pbBolis.Enabled = False
+            frmacantidad.ShowDialog()
             ' Else
             '     pbCarpetas.Location = loca
         End If
@@ -282,6 +301,7 @@ Public Class frmAlmacen
             loca = pbCarpetas.Location
             pbCalculadoras.Location = New Point(1000, 689)
             pbCalculadoras.Enabled = False
+            frmacantidad.ShowDialog()
             ' Else
             '     pbCarpetas.Location = loca
         End If
@@ -325,6 +345,7 @@ Public Class frmAlmacen
             loca = pbTelefono.Location
             pbTelefono.Location = New Point(1000, 689)
             pbTelefono.Enabled = False
+            frmacantidad.ShowDialog()
             ' Else
             '     pbCarpetas.Location = loca
         End If
@@ -367,6 +388,7 @@ Public Class frmAlmacen
             pbLapices.Location = New Point(1000, 689)
 
             pbLapices.Enabled = False
+            frmacantidad.ShowDialog()
             ' Else
             '     pbCarpetas.Location = loca
         End If
@@ -410,6 +432,7 @@ Public Class frmAlmacen
             loca = pbPerforadora.Location
             pbPerforadora.Location = New Point(1000, 689)
             pbPerforadora.Enabled = False
+            frmacantidad.ShowDialog()
 
             ' Else
             '     pbCarpetas.Location = loca
@@ -518,9 +541,6 @@ Public Class frmAlmacen
         End If
 
     End Sub
-
-
-
 
 
 End Class
