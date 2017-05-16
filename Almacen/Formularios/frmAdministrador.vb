@@ -18,6 +18,7 @@ Public Class frmAdministrador
         objReader.Close()
 
         If String.IsNullOrWhiteSpace(sline) Then
+            'Añadir los que faltan
             My.Computer.FileSystem.WriteAllText(ruta, "Lapices;", True)
             My.Computer.FileSystem.WriteAllText(ruta, "bolis;", True)
             My.Computer.FileSystem.WriteAllText(ruta, "cuadernos;", True)
@@ -93,8 +94,6 @@ Public Class frmAdministrador
     Dim cantPed As Integer
     Dim ped As New Pedido
     Public Function NuevoPedido() As String
-
-
         Dim titulo As String = "Te han pedido: "
         Dim nuevalineas As String
         Dim numAlea As Integer
@@ -118,15 +117,5 @@ Public Class frmAdministrador
             End If
         Next
         Return titulo
-
-
-
-
-
-
-
-
-
-
     End Function
 End Class
