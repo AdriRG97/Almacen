@@ -70,12 +70,19 @@ Public Class frmAlmacen
             sender.top = MousePosition.Y - 65
             sender.left = MousePosition.X - 50
         End If
+        copiaSubrayadores.Width = 68
+        copiaSubrayadores.Height = 70
 
         Dim p As PictureBox = DirectCast(sender, PictureBox)
         If pbSubrayadores.Location.X + pbSubrayadores.Width >= Panel1.Location.X + 50 AndAlso pbSubrayadores.Location.Y <= 380 Then
-            pbSubrayadores.Location = New Point(810, 466)
-            pbSubrayadores.Enabled = False
 
+            copiaSubrayadores.Location = New Point(1320, 765)
+
+
+            copiaSubrayadores.Enabled = False
+            pbSubrayadores.Location = localizacionIniSubrayadores
+            lblSubrayadoresF.Visible = True
+            copiaSubrayadores.Visible = True
             frmacantidad.ShowDialog()
         End If
 
@@ -114,19 +121,20 @@ Public Class frmAlmacen
         End If
 
         Dim p As PictureBox = DirectCast(sender, PictureBox)
-        Dim copiaCuaderno = New PictureBox
-        copiaCuaderno.Image = pbCuadernos.Image
-        copiaCuaderno.Size = New System.Drawing.Size(74, 70)
+
+        copiaCuaderno.Width = 74
+        copiaCuaderno.Height = 70
+
 
         If pbCuadernos.Location.X + pbCuadernos.Width >= Panel1.Location.X + 50 AndAlso pbCuadernos.Location.Y <= 380 Then
 
             copiaCuaderno.Visible = True
 
-
-            copiaCuaderno.Location = New Point(1113, 786)
+            copiaCuaderno.Location = New Point(1175, 765)
 
             pbCuadernos.Location = localizacionIniCuadernos
-            copiaCuaderno.Enabled = False
+            lblCuadernosF.Visible = True
+            copiaCuaderno.Enabled = True
             frmacantidad.ShowDialog()
         End If
 
@@ -251,11 +259,20 @@ Public Class frmAlmacen
 
         Dim p As PictureBox = DirectCast(sender, PictureBox)
         Dim loca As New Point
+
         If pbBolis.Location.X + pbBolis.Width >= Panel1.Location.X + 50 AndAlso pbBolis.Location.Y <= 380 Then
 
+
+            copiaBolis.Width = 65
+            copiaBolis.Height = 70
+
+
             loca = pbCarpetas.Location
-            pbBolis.Location = New Point(1000, 689)
-            pbBolis.Enabled = False
+
+            pbBolis.Location = localizacionIniBolis
+            copiaBolis.Location = New Point(1465, 765)
+            copiaBolis.Visible = True
+            lblBolisF.Visible = True
             frmacantidad.ShowDialog()
             ' Else
             '     pbCarpetas.Location = loca
@@ -384,10 +401,15 @@ Public Class frmAlmacen
         Dim loca As New Point
         If pbLapices.Location.X + pbLapices.Width >= Panel1.Location.X + 50 AndAlso pbLapices.Location.Y <= 380 Then
 
-            loca = pbLapices.Location
-            pbLapices.Location = New Point(1000, 689)
 
-            pbLapices.Enabled = False
+            copiaLapices.Width = 65
+            copiaLapices.Height = 70
+            loca = pbLapices.Location
+            copiaLapices.Location = New Point(1623, 765)
+            pbLapices.Location = localizacionIniLapices
+            copiaLapices.Enabled = False
+            copiaLapices.Visible = True
+            lblLapicesF.Visible = True
             frmacantidad.ShowDialog()
             ' Else
             '     pbCarpetas.Location = loca
