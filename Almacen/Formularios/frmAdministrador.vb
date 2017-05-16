@@ -5,39 +5,38 @@ Public Class frmAdministrador
 
     Private Sub frmAdministrador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Dim ruta = My.Application.Info.DirectoryPath & "/Productos.txt"
+        Dim ruta = "Ficheros/Productos.txt"
         Dim sline As String = ""
         Dim pedidos As New List(Of String)
         If Not File.Exists(ruta) Then
-            'File.Create(ruta)
             Dim fic As New StreamWriter(ruta)
             fic.Close()
         End If
-        Dim fich As New StreamReader(ruta)
-        fich.Close()
         Dim objReader As New StreamReader(ruta)
         Dim arrayDatos() As String
         sline = objReader.ReadLine
-        If sline = "" Then
-            My.Computer.FileSystem.WriteAllText(ruta, "Lapices;" & vbCrLf, True)
-            My.Computer.FileSystem.WriteAllText(ruta, "bolis;" & vbCrLf, True)
-            My.Computer.FileSystem.WriteAllText(ruta, "cuadernos;" & vbCrLf, True)
-            My.Computer.FileSystem.WriteAllText(ruta, "hojas;" & vbCrLf, True)
-        End If
-        Do
-            If Not sline = "" Then
-                If sline.Contains(";") Then
-                    arrayDatos = sline.Split(";")
-                    lstProductos.Items.Add(arrayDatos(0))
-                End If
-            End If
-            sline = objReader.ReadLine
-        Loop Until sline = "" OrElse IsNothing(sline)
         objReader.Close()
+
+        If String.IsNullOrWhiteSpace(sline) Then
+            My.Computer.FileSystem.WriteAllText(ruta, "Lapices;", True)
+            My.Computer.FileSystem.WriteAllText(ruta, "bolis;", True)
+            My.Computer.FileSystem.WriteAllText(ruta, "cuadernos;", True)
+            My.Computer.FileSystem.WriteAllText(ruta, "hojas;", True)
+            objReader = New StreamReader(ruta)
+            sline = objReader.ReadLine
+            objReader.Close()
+        End If
+        If sline.Contains(";") Then
+            arrayDatos = sline.Split(";")
+            For i = 0 To arrayDatos.Length - 1
+                lstProductos.Items.Add(arrayDatos(i))
+            Next
+            lstProductos.Items.RemoveAt(lstProductos.Items.Count - 1)
+        End If
     End Sub
 
     Private Sub ptbAñadir_Click(sender As Object, e As EventArgs) Handles ptbAñadir.Click
-        Dim ruta = My.Application.Info.DirectoryPath & "/Productos.txt"
+        Dim ruta = "Ficheros/Productos.txt"
         Dim sline As String = ""
         Dim objeto As String
         objeto = InputBox("Introduce objeto")
@@ -49,7 +48,7 @@ Public Class frmAdministrador
     End Sub
 
     Private Sub btnMostrarUsuarios_Click(sender As Object, e As EventArgs) Handles btnMostrarUsuarios.Click
-        Dim ruta = My.Application.Info.DirectoryPath & "/usuarios.txt"
+        Dim ruta = "Ficheros/Usuarios.txt"
         Dim sline As String = ""
         Dim objReader As New StreamReader(ruta)
         Dim arrayDatos() As String
@@ -67,21 +66,16 @@ Public Class frmAdministrador
     End Sub
 
     Private Sub btnMostrarPedido_Click(sender As Object, e As EventArgs) Handles btnMostrarPedido.Click
-        File.Delete("/Pedidos.txt")
-        Dim ruta = My.Application.Info.DirectoryPath & "/Pedidos.txt"
+        Dim ruta = "Ficheros/Pedidos.txt"
         Dim sline As String = ""
         Dim pedidos As New List(Of String)
         If Not File.Exists(ruta) Then
-            'File.Create(ruta)
             Dim fic As New StreamWriter(ruta)
             fic.Close()
         End If
-        Dim fich As New StreamReader(ruta)
-        fich.Close()
-
         Dim objReader As New StreamReader(ruta)
         Dim arrayDatos() As String
-
+        'Completar para que lea los pedidos de el fichero
 
         sline = objReader.ReadLine
         objReader.Close()
