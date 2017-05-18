@@ -178,34 +178,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Resources\Estanteria.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cinta.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Grapadora.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Lapices.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Libro.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Lupa.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Maletin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Maquina.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Reloj.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Telefono.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ficheros\Pedidos.txt">
@@ -217,6 +189,18 @@
     <Content Include="Ficheros\Usuarios.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\tlf.jpg" />
+    <None Include="Resources\perforadora.jpg" />
+    <None Include="Resources\pack-10-boligrafos-paper-mate-s0957191.jpg" />
+    <None Include="Resources\marcadores_fluorescentes_stabilo_boss_original_70-500x500.jpg" />
+    <None Include="Resources\Libretas-Duquesa-en-varios-colores-para-regalos-de-empresa-o-merchandising.jpg" />
+    <None Include="Resources\lapices.jpg" />
+    <None Include="Resources\icono.png" />
+    <None Include="Resources\icon1.png" />
+    <None Include="Resources\grapadoras.jpg" />
+    <None Include="Resources\carrito.jpg" />
+    <None Include="Resources\carpetas.GIF" />
+    <None Include="Resources\calculadoras.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
