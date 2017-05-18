@@ -71,7 +71,6 @@ Partial Class frmAlmacen
         Me.copiaGrapadoras = New System.Windows.Forms.PictureBox()
         Me.copiaCarpetas = New System.Windows.Forms.PictureBox()
         Me.copiaCalculadoras = New System.Windows.Forms.PictureBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         CType(Me.pbCuadernos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbSubrayadores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -585,17 +584,10 @@ Partial Class frmAlmacen
         Me.copiaCalculadoras.TabStop = False
         Me.copiaCalculadoras.Visible = False
         '
-        'Panel2
-        '
-        Me.Panel2.Location = New System.Drawing.Point(-2, 48)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1408, 1032)
-        Me.Panel2.TabIndex = 50
-        '
         'frmAlmacen
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(1932, 1092)
         Me.Controls.Add(Me.copiaCalculadoras)
@@ -645,7 +637,6 @@ Partial Class frmAlmacen
         Me.Controls.Add(Me.copiaLapices)
         Me.Controls.Add(Me.copiaGrapadoras)
         Me.Controls.Add(Me.copiaCarpetas)
-        Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmAlmacen"
@@ -722,5 +713,4 @@ Partial Class frmAlmacen
     Friend WithEvents copiaGrapadoras As PictureBox
     Friend WithEvents copiaCarpetas As PictureBox
     Friend WithEvents copiaCalculadoras As PictureBox
-    Friend WithEvents Panel2 As Panel
 End Class

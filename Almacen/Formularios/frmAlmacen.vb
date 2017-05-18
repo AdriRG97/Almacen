@@ -17,6 +17,15 @@ Public Class frmAlmacen
 
     Dim nombresProductos As String() = {"Cuadernos", "Subrayadores", "Bolis", "Lapices", "Perforadoras", "Grapadoras", "Carpetas", "Calculadoras", "Telefono"}
 
+
+
+
+    '  Sub PlayBackgroundSoundFile()
+    '      My.Computer.Audio.Play("./song.mp3",
+    '      AudioPlayMode.BackgroundLoop)
+    '  End Sub
+
+
     Private Sub frmAlmacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
@@ -41,25 +50,8 @@ Public Class frmAlmacen
             nuestroAlmacen.Add(nuevoProducto)
         Next
 
-        Me.WindowState = FormWindowState.Maximized
-        ' txtUsuario.CharacterCasing = CharacterCasing.Upper
 
     End Sub
-
-
-    Private Sub CentrarControl(ByVal ctrl As Control)
-        If ctrl.Parent Is Nothing Then Return
-        With ctrl
-            .Top = (.Parent.ClientSize.Height - .Height) \ 2
-            .Left = (.Parent.ClientSize.Width - .Width) \ 2
-        End With
-    End Sub
-
-    Private Sub Login_Resize(sender As Object, e As EventArgs) Handles Me.Resize
-        CentrarControl(Panel1)
-        CentrarControl(Panel2)
-    End Sub
-
 
 
 
