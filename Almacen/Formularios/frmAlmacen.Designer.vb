@@ -54,7 +54,6 @@ Partial Class frmAlmacen
         Me.lblCarpetasF = New System.Windows.Forms.Label()
         Me.lblCalculadorasF = New System.Windows.Forms.Label()
         Me.lblTelefonoF = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.copiaCalculadoras = New System.Windows.Forms.PictureBox()
         Me.pbPerforadora = New System.Windows.Forms.PictureBox()
         Me.pbTelefono = New System.Windows.Forms.PictureBox()
@@ -398,13 +397,6 @@ Partial Class frmAlmacen
         Me.lblTelefonoF.TabIndex = 44
         Me.lblTelefonoF.Text = "Teléfonos"
         Me.lblTelefonoF.Visible = False
-        '
-        'Panel2
-        '
-        Me.Panel2.Location = New System.Drawing.Point(-2, 48)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1408, 1032)
-        Me.Panel2.TabIndex = 50
         '
         'copiaCalculadoras
         '
