@@ -30,26 +30,9 @@ Public Class frmAlmacen
 
 
 
-        Dim AnchoPantallaInicial As Integer = 1920
-        Dim AltoPantallaInicial As Integer = 1080
-        Dim ResolucionDestino As Size
-        ResolucionDestino = System.Windows.Forms.SystemInformation.PrimaryMonitorSize
-        Dim AnchoPantallaDestino As Integer = ResolucionDestino.Width
-        Dim AltoPantallaDestino As Integer = ResolucionDestino.Height
-        Dim AnchoFormularioInicial As Double = 600
-        Dim AltoformularioInicial As Double = 600
-        Dim AnchoFormularioDestino = CDbl((AnchoFormularioInicial / AnchoPantallaInicial) * AnchoPantallaDestino)
-        Dim AltoFormularioDestino = CDbl((AltoformularioInicial / AltoPantallaInicial) * AltoPantallaDestino)
-        Me.Width = AnchoFormularioDestino
-        Me.Height = AltoFormularioDestino
 
 
-
-
-
-
-
-        '    My.Computer.Audio.Play(My.Resources.ResourceManager.)
+        'My.Computer.Audio.Play(My.Resources.ResourceManager.)
 
         localizacionIniCuadernos = pbCuadernos.Location
         localizacionIniSubrayadores = pbSubrayadores.Location
@@ -98,7 +81,7 @@ Public Class frmAlmacen
     End Sub
 
     Private Sub PictureBox1_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbSubrayadores.MouseMove
-
+        pbSubrayadores.BringToFront()
         If e.Button = MouseButtons.Left Then
             sender.top = MousePosition.Y - 65
             sender.left = MousePosition.X - 50
@@ -147,7 +130,7 @@ Public Class frmAlmacen
     End Sub
 
     Private Sub pbCuadernos_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbCuadernos.MouseMove
-
+        pbCuadernos.BringToFront()
         If e.Button = MouseButtons.Left Then
             sender.top = MousePosition.Y - 65
             sender.left = MousePosition.X - 50
@@ -200,7 +183,7 @@ Public Class frmAlmacen
     End Sub
 
     Private Sub pbGrapadoras_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbGrapadoras.MouseMove
-
+        pbGrapadoras.BringToFront()
         If e.Button = MouseButtons.Left Then
             sender.top = MousePosition.Y - 65
             sender.left = MousePosition.X - 50
@@ -239,7 +222,7 @@ Public Class frmAlmacen
 
 
     Private Sub pbCarpetas_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbCarpetas.MouseMove
-
+        pbCarpetas.BringToFront()
         If e.Button = MouseButtons.Left Then
             sender.top = MousePosition.Y - 65
             sender.left = MousePosition.X - 50
@@ -284,7 +267,7 @@ Public Class frmAlmacen
 
 
     Private Sub pbBolis_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbBolis.MouseMove
-
+        pbBolis.BringToFront()
         If e.Button = MouseButtons.Left Then
             sender.top = MousePosition.Y - 65
             sender.left = MousePosition.X - 50
@@ -338,7 +321,7 @@ Public Class frmAlmacen
 
 
     Private Sub pbCalculadoras_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbCalculadoras.MouseMove
-
+        pbCalculadoras.BringToFront()
         If e.Button = MouseButtons.Left Then
             sender.top = MousePosition.Y - 65
             sender.left = MousePosition.X - 50
@@ -382,7 +365,7 @@ Public Class frmAlmacen
 
 
     Private Sub pbTelefonos_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbTelefono.MouseMove
-
+        pbTelefono.BringToFront()
         If e.Button = MouseButtons.Left Then
             sender.top = MousePosition.Y - 65
             sender.left = MousePosition.X - 50
@@ -424,7 +407,7 @@ Public Class frmAlmacen
 
 
     Private Sub pbLapices_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbLapices.MouseMove
-
+        pbLapices.BringToFront()
         If e.Button = MouseButtons.Left Then
             sender.top = MousePosition.Y - 65
             sender.left = MousePosition.X - 50
@@ -473,7 +456,7 @@ Public Class frmAlmacen
 
 
     Private Sub pbPerforadora_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbPerforadora.MouseMove
-
+        pbPerforadora.BringToFront()
         If e.Button = MouseButtons.Left Then
             sender.top = MousePosition.Y - 65
             sender.left = MousePosition.X - 50
@@ -573,7 +556,6 @@ Public Class frmAlmacen
     Private Sub pbGrapadoras_MouseUp(sender As Object, e As MouseEventArgs) Handles pbGrapadoras.MouseUp
         If pbGrapadoras.Location.X + pbGrapadoras.Width >= Panel1.Location.X + 50 AndAlso pbGrapadoras.Location.Y <= 380 Then
         Else
-
             pbGrapadoras.Location = localizacionIniGrapadoras
         End If
 
