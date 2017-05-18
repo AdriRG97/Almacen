@@ -29,6 +29,9 @@ Public Class frmAlmacen
     Private Sub frmAlmacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
+        Dim classResize As New clsResizeForm
+        classResize.ResizeForm(Me, 1920, 1080)
+
 
         Dim AnchoPantallaInicial As Integer = 1920
         Dim AltoPantallaInicial As Integer = 1080
@@ -36,8 +39,8 @@ Public Class frmAlmacen
         ResolucionDestino = System.Windows.Forms.SystemInformation.PrimaryMonitorSize
         Dim AnchoPantallaDestino As Integer = ResolucionDestino.Width
         Dim AltoPantallaDestino As Integer = ResolucionDestino.Height
-        Dim AnchoFormularioInicial As Double = 600
-        Dim AltoformularioInicial As Double = 600
+        Dim AnchoFormularioInicial As Double = 900
+        Dim AltoformularioInicial As Double = 900
         Dim AnchoFormularioDestino = CDbl((AnchoFormularioInicial / AnchoPantallaInicial) * AnchoPantallaDestino)
         Dim AltoFormularioDestino = CDbl((AltoformularioInicial / AltoPantallaInicial) * AltoPantallaDestino)
         Me.Width = AnchoFormularioDestino
