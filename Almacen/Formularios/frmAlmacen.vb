@@ -32,8 +32,6 @@ Public Class frmAlmacen
         localizacionIniBolis = pbBolis.Location
 
 
-
-
         lblTitulo.SendToBack()
         PictureBox2.SendToBack()
         Panel1.SendToBack()
@@ -42,7 +40,29 @@ Public Class frmAlmacen
             Dim nuevoProducto As New Producto(nombresProductos(x), 50)
             nuestroAlmacen.Add(nuevoProducto)
         Next
+
+        Me.WindowState = FormWindowState.Maximized
+        ' txtUsuario.CharacterCasing = CharacterCasing.Upper
+
     End Sub
+
+
+    Private Sub CentrarControl(ByVal ctrl As Control)
+        If ctrl.Parent Is Nothing Then Return
+        With ctrl
+            .Top = (.Parent.ClientSize.Height - .Height) \ 2
+            .Left = (.Parent.ClientSize.Width - .Width) \ 2
+        End With
+    End Sub
+
+    Private Sub Login_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+        CentrarControl(Panel1)
+        CentrarControl(Panel2)
+    End Sub
+
+
+
+
     Private Sub frmAlmacen_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         End
     End Sub

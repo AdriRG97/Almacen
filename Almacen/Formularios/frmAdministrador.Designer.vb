@@ -78,13 +78,15 @@ Partial Class frmAdministrador
         '
         'lstPedidos
         '
+        Me.lstPedidos.CausesValidation = False
         Me.lstPedidos.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.lstPedidos.FullRowSelect = True
-        Me.lstPedidos.Location = New System.Drawing.Point(40, 78)
+        Me.lstPedidos.Location = New System.Drawing.Point(40, 69)
         Me.lstPedidos.MultiSelect = False
         Me.lstPedidos.Name = "lstPedidos"
         Me.lstPedidos.OwnerDraw = True
-        Me.lstPedidos.Size = New System.Drawing.Size(208, 317)
+        Me.lstPedidos.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.lstPedidos.Size = New System.Drawing.Size(208, 326)
         Me.lstPedidos.TabIndex = 7
         Me.lstPedidos.UseCompatibleStateImageBehavior = False
         Me.lstPedidos.UseSelectable = True
