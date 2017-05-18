@@ -30,6 +30,27 @@ Public Class frmAlmacen
 
 
 
+        Dim AnchoPantallaInicial As Integer = 1920
+        Dim AltoPantallaInicial As Integer = 1080
+        Dim ResolucionDestino As Size
+        ResolucionDestino = System.Windows.Forms.SystemInformation.PrimaryMonitorSize
+        Dim AnchoPantallaDestino As Integer = ResolucionDestino.Width
+        Dim AltoPantallaDestino As Integer = ResolucionDestino.Height
+        Dim AnchoFormularioInicial As Double = 600
+        Dim AltoformularioInicial As Double = 600
+        Dim AnchoFormularioDestino = CDbl((AnchoFormularioInicial / AnchoPantallaInicial) * AnchoPantallaDestino)
+        Dim AltoFormularioDestino = CDbl((AltoformularioInicial / AltoPantallaInicial) * AltoPantallaDestino)
+        Me.Width = AnchoFormularioDestino
+        Me.Height = AltoFormularioDestino
+
+
+
+
+
+
+
+        '    My.Computer.Audio.Play(My.Resources.ResourceManager.)
+
         localizacionIniCuadernos = pbCuadernos.Location
         localizacionIniSubrayadores = pbSubrayadores.Location
         localizacionIniGrapadoras = pbGrapadoras.Location
