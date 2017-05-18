@@ -1,6 +1,8 @@
 ﻿Public Class Pedido
     Public Property NPedido As Integer
     Public Property ProductosPedidos As New List(Of Producto)
+
+
     Public Function AñadirProducto(ByVal producto As Producto, ByVal cantidad As Integer) As String
         If Not ProductosPedidos.Contains(producto) Then
             producto.CantPedida = cantidad

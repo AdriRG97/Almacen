@@ -43,8 +43,8 @@ Public Class frmUsuarios
                     objReader.Close()
                     frmAdmin.ShowDialog()
                     Exit Sub
+                    End If
                 End If
-            End If
         Loop Until sline = "" OrElse IsNothing(sline)
         objReader.Close()
 

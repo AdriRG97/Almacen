@@ -5,6 +5,8 @@ Public Class Producto : Implements IEquatable(Of Producto)
     Public Property Nombre As String
     Public Property Stock As Integer
     Public Property CantPedida As Integer
+
+
     Public Function Restock(ByVal cantidadPedida As Integer) As String
         Stock += cantidadPedida
         Return "Stock actualizado correctamente"
