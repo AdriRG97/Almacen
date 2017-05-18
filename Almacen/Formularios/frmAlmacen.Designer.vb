@@ -594,8 +594,8 @@ Partial Class frmAlmacen
         '
         'frmAlmacen
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(1932, 1092)
         Me.Controls.Add(Me.copiaCalculadoras)
@@ -645,7 +645,6 @@ Partial Class frmAlmacen
         Me.Controls.Add(Me.copiaLapices)
         Me.Controls.Add(Me.copiaGrapadoras)
         Me.Controls.Add(Me.copiaCarpetas)
-        Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmAlmacen"
@@ -722,5 +721,4 @@ Partial Class frmAlmacen
     Friend WithEvents copiaGrapadoras As PictureBox
     Friend WithEvents copiaCarpetas As PictureBox
     Friend WithEvents copiaCalculadoras As PictureBox
-    Friend WithEvents Panel2 As Panel
 End Class

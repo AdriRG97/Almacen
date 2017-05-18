@@ -17,9 +17,42 @@ Public Class frmAlmacen
 
     Dim nombresProductos As String() = {"Cuadernos", "Subrayadores", "Bolis", "Lapices", "Perforadoras", "Grapadoras", "Carpetas", "Calculadoras", "Telefono"}
 
+
+
+
+    '  Sub PlayBackgroundSoundFile()
+    '      My.Computer.Audio.Play("./song.mp3",
+    '      AudioPlayMode.BackgroundLoop)
+    '  End Sub
+
+
     Private Sub frmAlmacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
+        Dim classResize As New clsResizeForm
+        classResize.ResizeForm(Me, 1920, 1080)
+
+
+        Dim AnchoPantallaInicial As Integer = 1920
+        Dim AltoPantallaInicial As Integer = 1080
+        Dim ResolucionDestino As Size
+        ResolucionDestino = System.Windows.Forms.SystemInformation.PrimaryMonitorSize
+        Dim AnchoPantallaDestino As Integer = ResolucionDestino.Width
+        Dim AltoPantallaDestino As Integer = ResolucionDestino.Height
+        Dim AnchoFormularioInicial As Double = 900
+        Dim AltoformularioInicial As Double = 900
+        Dim AnchoFormularioDestino = CDbl((AnchoFormularioInicial / AnchoPantallaInicial) * AnchoPantallaDestino)
+        Dim AltoFormularioDestino = CDbl((AltoformularioInicial / AltoPantallaInicial) * AltoPantallaDestino)
+        Me.Width = AnchoFormularioDestino
+        Me.Height = AltoFormularioDestino
+
+
+
+
+
+
+
+        '    My.Computer.Audio.Play(My.Resources.ResourceManager.)
 
         localizacionIniCuadernos = pbCuadernos.Location
         localizacionIniSubrayadores = pbSubrayadores.Location
@@ -41,25 +74,8 @@ Public Class frmAlmacen
             nuestroAlmacen.Add(nuevoProducto)
         Next
 
-        Me.WindowState = FormWindowState.Maximized
-        ' txtUsuario.CharacterCasing = CharacterCasing.Upper
 
     End Sub
-
-
-    Private Sub CentrarControl(ByVal ctrl As Control)
-        If ctrl.Parent Is Nothing Then Return
-        With ctrl
-            .Top = (.Parent.ClientSize.Height - .Height) \ 2
-            .Left = (.Parent.ClientSize.Width - .Width) \ 2
-        End With
-    End Sub
-
-    Private Sub Login_Resize(sender As Object, e As EventArgs) Handles Me.Resize
-        CentrarControl(Panel1)
-        CentrarControl(Panel2)
-    End Sub
-
 
 
 
