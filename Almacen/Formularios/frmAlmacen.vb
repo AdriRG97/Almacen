@@ -74,7 +74,10 @@ Public Class frmAlmacen
             nuestroAlmacen.Add(nuevoProducto)
         Next
 
-
+        Dim pedi As String
+        Dim ped As New Pedido
+        pedi = ped.NuevoPedido()
+        lblPedido.Text = pedi
     End Sub
 
 

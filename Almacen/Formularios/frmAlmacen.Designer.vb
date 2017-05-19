@@ -71,6 +71,7 @@ Partial Class frmAlmacen
         Me.copiaGrapadoras = New System.Windows.Forms.PictureBox()
         Me.copiaCarpetas = New System.Windows.Forms.PictureBox()
         Me.copiaCalculadoras = New System.Windows.Forms.PictureBox()
+        Me.lblPedido = New MetroFramework.Controls.MetroLabel()
         CType(Me.pbCuadernos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbSubrayadores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -584,12 +585,20 @@ Partial Class frmAlmacen
         Me.copiaCalculadoras.TabStop = False
         Me.copiaCalculadoras.Visible = False
         '
+        'lblPedido
+        '
+        Me.lblPedido.Location = New System.Drawing.Point(1023, 573)
+        Me.lblPedido.Name = "lblPedido"
+        Me.lblPedido.Size = New System.Drawing.Size(343, 290)
+        Me.lblPedido.TabIndex = 50
+        '
         'frmAlmacen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(1932, 1092)
+        Me.ClientSize = New System.Drawing.Size(1378, 780)
+        Me.Controls.Add(Me.lblPedido)
         Me.Controls.Add(Me.copiaCalculadoras)
         Me.Controls.Add(Me.lblTelefonoF)
         Me.Controls.Add(Me.lblCalculadorasF)
@@ -713,4 +722,5 @@ Partial Class frmAlmacen
     Friend WithEvents copiaGrapadoras As PictureBox
     Friend WithEvents copiaCarpetas As PictureBox
     Friend WithEvents copiaCalculadoras As PictureBox
+    Friend WithEvents lblPedido As MetroFramework.Controls.MetroLabel
 End Class

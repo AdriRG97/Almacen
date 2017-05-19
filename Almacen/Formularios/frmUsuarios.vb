@@ -2,7 +2,7 @@
 Imports CapaDatos
 
 Public Class frmUsuarios
-    Public Property Usuarios As New List(Of ClUsuario)
+    Public Property Usuarios As New List(Of Usuario)
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
         lblErrorAdmin.Text = ""
         lblError.Text = ""
@@ -16,7 +16,7 @@ Public Class frmUsuarios
 
 
         Do
-            Dim usu As New ClUsuario
+            Dim usu As New Usuario
             sline = objReader.ReadLine
             If Not sline = "" Then
                 If sline.Contains(":") Then
@@ -43,8 +43,8 @@ Public Class frmUsuarios
                     objReader.Close()
                     frmAdmin.ShowDialog()
                     Exit Sub
-                    End If
                 End If
+            End If
         Loop Until sline = "" OrElse IsNothing(sline)
         objReader.Close()
 
@@ -52,7 +52,7 @@ Public Class frmUsuarios
         Dim boolError As Boolean = False
         Dim boolError2 As Boolean = False
         Dim objReader2 As New StreamReader(ruta)
-        Dim usu2 As New ClUsuario
+        Dim usu2 As New Usuario
 
         Do
             sline = objReader2.ReadLine
