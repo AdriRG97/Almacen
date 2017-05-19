@@ -21,8 +21,11 @@ Public Class frmAñadirUsuario
         Dim arrayDatos() As String
         Dim compro As Boolean = False
 
+
+
+
         Do
-            Dim usu As New ClUsuario
+            Dim usu As New Usuario
             sline = objReader.ReadLine
             If Not sline = "" Then
                 If sline.Contains("-") Then
