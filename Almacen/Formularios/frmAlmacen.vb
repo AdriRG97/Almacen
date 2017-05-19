@@ -78,7 +78,6 @@ Public Class frmAlmacen
     End Sub
 
 
-
     Private Sub frmAlmacen_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         End
     End Sub
@@ -101,24 +100,22 @@ Public Class frmAlmacen
     End Sub
 
     Private Sub PictureBox1_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbSubrayadores.MouseMove
-
+        pbSubrayadores.BringToFront()
         If e.Button = MouseButtons.Left Then
             sender.top = MousePosition.Y - 65
             sender.left = MousePosition.X - 50
         End If
-        copiaSubrayadores.Width = 68
-        copiaSubrayadores.Height = 70
+
 
         Dim p As PictureBox = DirectCast(sender, PictureBox)
-        If pbSubrayadores.Location.X + pbSubrayadores.Width >= Panel1.Location.X + 50 AndAlso pbSubrayadores.Location.Y <= 380 Then
+        If pbSubrayadores.Location.X + pbSubrayadores.Width >= Panel1.Location.X + 50 AndAlso pbSubrayadores.Location.Y >= 330 AndAlso pbSubrayadores.Location.Y <= 700 Then
 
-            copiaSubrayadores.Location = New Point(1320, 765)
+            '   copiaSubrayadores.Location = New Point(1320, 765)
 
 
             copiaSubrayadores.Enabled = False
             pbSubrayadores.Location = localizacionIniSubrayadores
-            lblSubrayadoresF.Visible = True
-            copiaSubrayadores.Visible = True
+
             frmacantidad.ShowDialog()
         End If
 
@@ -150,7 +147,7 @@ Public Class frmAlmacen
     End Sub
 
     Private Sub pbCuadernos_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbCuadernos.MouseMove
-
+        pbCuadernos.BringToFront()
         If e.Button = MouseButtons.Left Then
             sender.top = MousePosition.Y - 65
             sender.left = MousePosition.X - 50
@@ -158,18 +155,15 @@ Public Class frmAlmacen
 
         Dim p As PictureBox = DirectCast(sender, PictureBox)
 
-        copiaCuaderno.Width = 74
-        copiaCuaderno.Height = 70
 
+        If pbCuadernos.Location.X + pbCuadernos.Width >= Panel1.Location.X + 50 AndAlso pbCuadernos.Location.Y >= 330 AndAlso pbCuadernos.Location.Y <= 700 Then
 
-        If pbCuadernos.Location.X + pbCuadernos.Width >= Panel1.Location.X + 50 AndAlso pbCuadernos.Location.Y <= 380 Then
-
-            copiaCuaderno.Visible = True
-
-            copiaCuaderno.Location = New Point(1175, 765)
 
             pbCuadernos.Location = localizacionIniCuadernos
-            lblCuadernosF.Visible = True
+            '   copiaCuaderno.Location = New Point(1175, 765)
+
+            '     pbCuadernos.Location = localizacionIniCuadernos
+
             copiaCuaderno.Enabled = True
             frmacantidad.ShowDialog()
         End If
@@ -203,15 +197,15 @@ Public Class frmAlmacen
     End Sub
 
     Private Sub pbGrapadoras_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbGrapadoras.MouseMove
-
+        pbGrapadoras.BringToFront()
         If e.Button = MouseButtons.Left Then
             sender.top = MousePosition.Y - 65
             sender.left = MousePosition.X - 50
         End If
 
         Dim p As PictureBox = DirectCast(sender, PictureBox)
-        If pbGrapadoras.Location.X + pbGrapadoras.Width >= Panel1.Location.X + 50 AndAlso pbGrapadoras.Location.Y <= 380 Then
-            pbGrapadoras.Location = New Point(810, 666)
+        If pbGrapadoras.Location.X + pbGrapadoras.Width >= Panel1.Location.X + 50 AndAlso pbGrapadoras.Location.Y >= 330 AndAlso pbGrapadoras.Location.Y <= 700 Then
+            pbGrapadoras.Location = localizacionIniGrapadoras
             pbGrapadoras.Enabled = False
             frmacantidad.ShowDialog()
         End If
@@ -242,7 +236,7 @@ Public Class frmAlmacen
 
 
     Private Sub pbCarpetas_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbCarpetas.MouseMove
-
+        pbCarpetas.BringToFront()
         If e.Button = MouseButtons.Left Then
             sender.top = MousePosition.Y - 65
             sender.left = MousePosition.X - 50
@@ -250,10 +244,10 @@ Public Class frmAlmacen
 
         Dim p As PictureBox = DirectCast(sender, PictureBox)
         Dim loca As New Point
-        If pbCarpetas.Location.X + pbCarpetas.Width >= Panel1.Location.X + 50 AndAlso pbCarpetas.Location.Y <= 380 Then
+        If pbCarpetas.Location.X + pbCarpetas.Width >= Panel1.Location.X + 50 AndAlso pbCarpetas.Location.Y >= 330 AndAlso pbCalculadoras.Location.Y <= 700 Then
 
             loca = pbCarpetas.Location
-            pbCarpetas.Location = New Point(1000, 689)
+            pbCarpetas.Location = localizacionIniCarpetas
             pbCarpetas.Enabled = False
             frmacantidad.ShowDialog()
             ' Else
@@ -287,7 +281,7 @@ Public Class frmAlmacen
 
 
     Private Sub pbBolis_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbBolis.MouseMove
-
+        pbBolis.BringToFront()
         If e.Button = MouseButtons.Left Then
             sender.top = MousePosition.Y - 65
             sender.left = MousePosition.X - 50
@@ -296,19 +290,18 @@ Public Class frmAlmacen
         Dim p As PictureBox = DirectCast(sender, PictureBox)
         Dim loca As New Point
 
-        If pbBolis.Location.X + pbBolis.Width >= Panel1.Location.X + 50 AndAlso pbBolis.Location.Y <= 380 Then
+        If pbBolis.Location.X + pbBolis.Width >= Panel1.Location.X + 50 AndAlso pbBolis.Location.Y >= 330 AndAlso pbBolis.Location.Y <= 700 Then
 
 
-            copiaBolis.Width = 65
-            copiaBolis.Height = 70
+            '   copiaBolis.Width = 65
+            '  copiaBolis.Height = 70
 
 
             loca = pbCarpetas.Location
 
             pbBolis.Location = localizacionIniBolis
-            copiaBolis.Location = New Point(1465, 765)
-            copiaBolis.Visible = True
-            lblBolisF.Visible = True
+
+
             frmacantidad.ShowDialog()
             ' Else
             '     pbCarpetas.Location = loca
@@ -341,7 +334,7 @@ Public Class frmAlmacen
 
 
     Private Sub pbCalculadoras_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbCalculadoras.MouseMove
-
+        pbCalculadoras.BringToFront()
         If e.Button = MouseButtons.Left Then
             sender.top = MousePosition.Y - 65
             sender.left = MousePosition.X - 50
@@ -349,10 +342,10 @@ Public Class frmAlmacen
 
         Dim p As PictureBox = DirectCast(sender, PictureBox)
         Dim loca As New Point
-        If pbCalculadoras.Location.X + pbCalculadoras.Width >= Panel1.Location.X + 50 AndAlso pbCalculadoras.Location.Y <= 380 Then
+        If pbCalculadoras.Location.X + pbCalculadoras.Width >= Panel1.Location.X + 50 AndAlso pbCalculadoras.Location.Y >= 330 AndAlso pbCalculadoras.Location.Y <= 700 Then
 
             loca = pbCarpetas.Location
-            pbCalculadoras.Location = New Point(1000, 689)
+            pbCalculadoras.Location = localizacionIniCalculadoras
             pbCalculadoras.Enabled = False
             frmacantidad.ShowDialog()
             ' Else
@@ -385,7 +378,7 @@ Public Class frmAlmacen
 
 
     Private Sub pbTelefonos_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbTelefono.MouseMove
-
+        pbTelefono.BringToFront()
         If e.Button = MouseButtons.Left Then
             sender.top = MousePosition.Y - 65
             sender.left = MousePosition.X - 50
@@ -393,10 +386,16 @@ Public Class frmAlmacen
 
         Dim p As PictureBox = DirectCast(sender, PictureBox)
         Dim loca As New Point
-        If pbTelefono.Location.X + pbTelefono.Width >= Panel1.Location.X + 50 AndAlso pbTelefono.Location.Y <= 380 Then
+        If pbTelefono.Location.X + pbTelefono.Width >= Panel1.Location.X + 50 AndAlso pbTelefono.Location.Y >= 330 AndAlso pbTelefono.Location.Y <= 700 Then
 
+
+
+            copiaTelefono.Visible = True
+            copiaTelefono.Enabled = False
+            pbTelefono.Location = localizacionIniTelefono
+            lblTelefono.Visible = True
             loca = pbTelefono.Location
-            pbTelefono.Location = New Point(1000, 689)
+            '  pbTelefono.Location = New Point(1000, 689)
             pbTelefono.Enabled = False
             frmacantidad.ShowDialog()
             ' Else
@@ -427,7 +426,7 @@ Public Class frmAlmacen
 
 
     Private Sub pbLapices_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbLapices.MouseMove
-
+        pbLapices.BringToFront()
         If e.Button = MouseButtons.Left Then
             sender.top = MousePosition.Y - 65
             sender.left = MousePosition.X - 50
@@ -435,17 +434,16 @@ Public Class frmAlmacen
 
         Dim p As PictureBox = DirectCast(sender, PictureBox)
         Dim loca As New Point
-        If pbLapices.Location.X + pbLapices.Width >= Panel1.Location.X + 50 AndAlso pbLapices.Location.Y <= 380 Then
+        If pbLapices.Location.X + pbLapices.Width >= Panel1.Location.X + 50 AndAlso pbLapices.Location.Y >= 330 AndAlso pbLapices.Location.Y <= 700 Then
 
 
             copiaLapices.Width = 65
             copiaLapices.Height = 70
             loca = pbLapices.Location
-            copiaLapices.Location = New Point(1623, 765)
+            '  copiaLapices.Location = New Point(1623, 765)
             pbLapices.Location = localizacionIniLapices
             copiaLapices.Enabled = False
             copiaLapices.Visible = True
-            lblLapicesF.Visible = True
             frmacantidad.ShowDialog()
             ' Else
             '     pbCarpetas.Location = loca
@@ -476,20 +474,21 @@ Public Class frmAlmacen
 
 
     Private Sub pbPerforadora_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbPerforadora.MouseMove
-
+        pbPerforadora.BringToFront()
         If e.Button = MouseButtons.Left Then
             sender.top = MousePosition.Y - 65
             sender.left = MousePosition.X - 50
         End If
 
         Dim p As PictureBox = DirectCast(sender, PictureBox)
-        Dim loca As New Point
 
-        If pbPerforadora.Location.X + pbPerforadora.Width >= Panel1.Location.X + 50 AndAlso pbPerforadora.Location.Y <= 380 Then
 
-            loca = pbPerforadora.Location
-            pbPerforadora.Location = New Point(1000, 689)
-            pbPerforadora.Enabled = False
+        If pbPerforadora.Location.X + pbPerforadora.Width >= Panel1.Location.X + 50 AndAlso pbPerforadora.Location.Y >= 330 AndAlso pbPerforadora.Location.Y <= 700 Then
+
+
+            pbPerforadora.Location = localizacionIniPerforadora
+
+
             frmacantidad.ShowDialog()
 
             ' Else
