@@ -23,11 +23,6 @@ Partial Class frmAlmacen
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAlmacen))
-        Me.pbCuadernos = New System.Windows.Forms.PictureBox()
-        Me.pbSubrayadores = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.pbCarpetas = New System.Windows.Forms.PictureBox()
-        Me.pbGrapadoras = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblCuadernosT = New System.Windows.Forms.Label()
         Me.lblSubrayadoresT = New System.Windows.Forms.Label()
@@ -40,24 +35,17 @@ Partial Class frmAlmacen
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.btnSalir = New MetroFramework.Controls.MetroButton()
         Me.btnFinalizar = New MetroFramework.Controls.MetroButton()
-        Me.pbBolis = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblBolisQ = New System.Windows.Forms.Label()
         Me.lblCalculadorasQ = New System.Windows.Forms.Label()
         Me.lblCalculadoras = New System.Windows.Forms.Label()
-        Me.pbCalculadoras = New System.Windows.Forms.PictureBox()
         Me.lblLapicesQ = New System.Windows.Forms.Label()
         Me.lblLapices = New System.Windows.Forms.Label()
-        Me.pbLapices = New System.Windows.Forms.PictureBox()
         Me.lblTelefonoQ = New System.Windows.Forms.Label()
         Me.lblTelefono = New System.Windows.Forms.Label()
-        Me.pbTelefono = New System.Windows.Forms.PictureBox()
         Me.lblPerforadoraQ = New System.Windows.Forms.Label()
         Me.lblPerforadora = New System.Windows.Forms.Label()
-        Me.pbPerforadora = New System.Windows.Forms.PictureBox()
         Me.lblCuadernosF = New System.Windows.Forms.Label()
-        Me.copiaCuaderno = New System.Windows.Forms.PictureBox()
-        Me.copiaSubrayadores = New System.Windows.Forms.PictureBox()
         Me.lblSubrayadoresF = New System.Windows.Forms.Label()
         Me.lblBolisF = New System.Windows.Forms.Label()
         Me.lblLapicesF = New System.Windows.Forms.Label()
@@ -66,85 +54,42 @@ Partial Class frmAlmacen
         Me.lblCarpetasF = New System.Windows.Forms.Label()
         Me.lblCalculadorasF = New System.Windows.Forms.Label()
         Me.lblTelefonoF = New System.Windows.Forms.Label()
+        Me.copiaCalculadoras = New System.Windows.Forms.PictureBox()
+        Me.pbPerforadora = New System.Windows.Forms.PictureBox()
+        Me.pbTelefono = New System.Windows.Forms.PictureBox()
+        Me.pbLapices = New System.Windows.Forms.PictureBox()
+        Me.pbCalculadoras = New System.Windows.Forms.PictureBox()
+        Me.pbBolis = New System.Windows.Forms.PictureBox()
+        Me.pbGrapadoras = New System.Windows.Forms.PictureBox()
+        Me.pbCarpetas = New System.Windows.Forms.PictureBox()
+        Me.pbCuadernos = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.copiaCuaderno = New System.Windows.Forms.PictureBox()
+        Me.pbSubrayadores = New System.Windows.Forms.PictureBox()
+        Me.copiaSubrayadores = New System.Windows.Forms.PictureBox()
         Me.copiaBolis = New System.Windows.Forms.PictureBox()
         Me.copiaLapices = New System.Windows.Forms.PictureBox()
         Me.copiaGrapadoras = New System.Windows.Forms.PictureBox()
         Me.copiaCarpetas = New System.Windows.Forms.PictureBox()
-        Me.copiaCalculadoras = New System.Windows.Forms.PictureBox()
-        Me.lblPedido = New MetroFramework.Controls.MetroLabel()
-        CType(Me.pbCuadernos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbSubrayadores, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbCarpetas, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbGrapadoras, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        CType(Me.pbBolis, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbCalculadoras, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbLapices, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbTelefono, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.copiaCalculadoras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbPerforadora, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbTelefono, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbLapices, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbCalculadoras, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbBolis, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbGrapadoras, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbCarpetas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbCuadernos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.copiaCuaderno, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbSubrayadores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.copiaSubrayadores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.copiaBolis, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.copiaLapices, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.copiaGrapadoras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.copiaCarpetas, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.copiaCalculadoras, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'pbCuadernos
-        '
-        Me.pbCuadernos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.pbCuadernos.Image = CType(resources.GetObject("pbCuadernos.Image"), System.Drawing.Image)
-        Me.pbCuadernos.Location = New System.Drawing.Point(92, 330)
-        Me.pbCuadernos.Name = "pbCuadernos"
-        Me.pbCuadernos.Size = New System.Drawing.Size(148, 140)
-        Me.pbCuadernos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbCuadernos.TabIndex = 2
-        Me.pbCuadernos.TabStop = False
-        '
-        'pbSubrayadores
-        '
-        Me.pbSubrayadores.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.pbSubrayadores.Image = CType(resources.GetObject("pbSubrayadores.Image"), System.Drawing.Image)
-        Me.pbSubrayadores.Location = New System.Drawing.Point(316, 330)
-        Me.pbSubrayadores.Name = "pbSubrayadores"
-        Me.pbSubrayadores.Size = New System.Drawing.Size(136, 140)
-        Me.pbSubrayadores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbSubrayadores.TabIndex = 1
-        Me.pbSubrayadores.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(30, 30)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(333, 368)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
-        '
-        'pbCarpetas
-        '
-        Me.pbCarpetas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pbCarpetas.Image = CType(resources.GetObject("pbCarpetas.Image"), System.Drawing.Image)
-        Me.pbCarpetas.Location = New System.Drawing.Point(282, 597)
-        Me.pbCarpetas.Name = "pbCarpetas"
-        Me.pbCarpetas.Size = New System.Drawing.Size(184, 125)
-        Me.pbCarpetas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbCarpetas.TabIndex = 3
-        Me.pbCarpetas.TabStop = False
-        '
-        'pbGrapadoras
-        '
-        Me.pbGrapadoras.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.pbGrapadoras.Image = CType(resources.GetObject("pbGrapadoras.Image"), System.Drawing.Image)
-        Me.pbGrapadoras.Location = New System.Drawing.Point(92, 599)
-        Me.pbGrapadoras.Name = "pbGrapadoras"
-        Me.pbGrapadoras.Size = New System.Drawing.Size(147, 137)
-        Me.pbGrapadoras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbGrapadoras.TabIndex = 4
-        Me.pbGrapadoras.TabStop = False
         '
         'Panel1
         '
@@ -263,17 +208,6 @@ Partial Class frmAlmacen
         Me.btnFinalizar.Text = "Finalizar pedido"
         Me.btnFinalizar.UseSelectable = True
         '
-        'pbBolis
-        '
-        Me.pbBolis.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.pbBolis.Image = CType(resources.GetObject("pbBolis.Image"), System.Drawing.Image)
-        Me.pbBolis.Location = New System.Drawing.Point(559, 330)
-        Me.pbBolis.Name = "pbBolis"
-        Me.pbBolis.Size = New System.Drawing.Size(135, 140)
-        Me.pbBolis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbBolis.TabIndex = 19
-        Me.pbBolis.TabStop = False
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -314,17 +248,6 @@ Partial Class frmAlmacen
         Me.lblCalculadoras.TabIndex = 23
         Me.lblCalculadoras.Text = "Paquete de 3 calculadoras"
         '
-        'pbCalculadoras
-        '
-        Me.pbCalculadoras.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.pbCalculadoras.Image = CType(resources.GetObject("pbCalculadoras.Image"), System.Drawing.Image)
-        Me.pbCalculadoras.Location = New System.Drawing.Point(559, 584)
-        Me.pbCalculadoras.Name = "pbCalculadoras"
-        Me.pbCalculadoras.Size = New System.Drawing.Size(135, 140)
-        Me.pbCalculadoras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbCalculadoras.TabIndex = 22
-        Me.pbCalculadoras.TabStop = False
-        '
         'lblLapicesQ
         '
         Me.lblLapicesQ.AutoSize = True
@@ -344,17 +267,6 @@ Partial Class frmAlmacen
         Me.lblLapices.Size = New System.Drawing.Size(127, 13)
         Me.lblLapices.TabIndex = 26
         Me.lblLapices.Text = "Paquete de 5 lápices"
-        '
-        'pbLapices
-        '
-        Me.pbLapices.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.pbLapices.Image = CType(resources.GetObject("pbLapices.Image"), System.Drawing.Image)
-        Me.pbLapices.Location = New System.Drawing.Point(807, 330)
-        Me.pbLapices.Name = "pbLapices"
-        Me.pbLapices.Size = New System.Drawing.Size(135, 140)
-        Me.pbLapices.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbLapices.TabIndex = 25
-        Me.pbLapices.TabStop = False
         '
         'lblTelefonoQ
         '
@@ -376,17 +288,6 @@ Partial Class frmAlmacen
         Me.lblTelefono.TabIndex = 29
         Me.lblTelefono.Text = "Teléfono"
         '
-        'pbTelefono
-        '
-        Me.pbTelefono.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.pbTelefono.Image = CType(resources.GetObject("pbTelefono.Image"), System.Drawing.Image)
-        Me.pbTelefono.Location = New System.Drawing.Point(807, 584)
-        Me.pbTelefono.Name = "pbTelefono"
-        Me.pbTelefono.Size = New System.Drawing.Size(135, 140)
-        Me.pbTelefono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbTelefono.TabIndex = 28
-        Me.pbTelefono.TabStop = False
-        '
         'lblPerforadoraQ
         '
         Me.lblPerforadoraQ.AutoSize = True
@@ -407,17 +308,6 @@ Partial Class frmAlmacen
         Me.lblPerforadora.TabIndex = 32
         Me.lblPerforadora.Text = "Paquete de perforadoras"
         '
-        'pbPerforadora
-        '
-        Me.pbPerforadora.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.pbPerforadora.Image = CType(resources.GetObject("pbPerforadora.Image"), System.Drawing.Image)
-        Me.pbPerforadora.Location = New System.Drawing.Point(1069, 330)
-        Me.pbPerforadora.Name = "pbPerforadora"
-        Me.pbPerforadora.Size = New System.Drawing.Size(135, 140)
-        Me.pbPerforadora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbPerforadora.TabIndex = 31
-        Me.pbPerforadora.TabStop = False
-        '
         'lblCuadernosF
         '
         Me.lblCuadernosF.AutoSize = True
@@ -427,28 +317,6 @@ Partial Class frmAlmacen
         Me.lblCuadernosF.TabIndex = 34
         Me.lblCuadernosF.Text = "Cuadernos"
         Me.lblCuadernosF.Visible = False
-        '
-        'copiaCuaderno
-        '
-        Me.copiaCuaderno.Image = CType(resources.GetObject("copiaCuaderno.Image"), System.Drawing.Image)
-        Me.copiaCuaderno.Location = New System.Drawing.Point(92, 330)
-        Me.copiaCuaderno.Name = "copiaCuaderno"
-        Me.copiaCuaderno.Size = New System.Drawing.Size(148, 140)
-        Me.copiaCuaderno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.copiaCuaderno.TabIndex = 35
-        Me.copiaCuaderno.TabStop = False
-        Me.copiaCuaderno.Visible = False
-        '
-        'copiaSubrayadores
-        '
-        Me.copiaSubrayadores.Image = CType(resources.GetObject("copiaSubrayadores.Image"), System.Drawing.Image)
-        Me.copiaSubrayadores.Location = New System.Drawing.Point(316, 330)
-        Me.copiaSubrayadores.Name = "copiaSubrayadores"
-        Me.copiaSubrayadores.Size = New System.Drawing.Size(136, 140)
-        Me.copiaSubrayadores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.copiaSubrayadores.TabIndex = 36
-        Me.copiaSubrayadores.TabStop = False
-        Me.copiaSubrayadores.Visible = False
         '
         'lblSubrayadoresF
         '
@@ -530,6 +398,148 @@ Partial Class frmAlmacen
         Me.lblTelefonoF.Text = "Teléfonos"
         Me.lblTelefonoF.Visible = False
         '
+        'copiaCalculadoras
+        '
+        Me.copiaCalculadoras.Image = Global.Formularios.My.Resources.Resources.calculadoras
+        Me.copiaCalculadoras.Location = New System.Drawing.Point(557, 584)
+        Me.copiaCalculadoras.Name = "copiaCalculadoras"
+        Me.copiaCalculadoras.Size = New System.Drawing.Size(135, 140)
+        Me.copiaCalculadoras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.copiaCalculadoras.TabIndex = 49
+        Me.copiaCalculadoras.TabStop = False
+        Me.copiaCalculadoras.Visible = False
+        '
+        'pbPerforadora
+        '
+        Me.pbPerforadora.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.pbPerforadora.Image = Global.Formularios.My.Resources.Resources.perforadora
+        Me.pbPerforadora.Location = New System.Drawing.Point(1069, 330)
+        Me.pbPerforadora.Name = "pbPerforadora"
+        Me.pbPerforadora.Size = New System.Drawing.Size(135, 140)
+        Me.pbPerforadora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbPerforadora.TabIndex = 31
+        Me.pbPerforadora.TabStop = False
+        '
+        'pbTelefono
+        '
+        Me.pbTelefono.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.pbTelefono.Image = Global.Formularios.My.Resources.Resources.tlf
+        Me.pbTelefono.Location = New System.Drawing.Point(807, 584)
+        Me.pbTelefono.Name = "pbTelefono"
+        Me.pbTelefono.Size = New System.Drawing.Size(135, 140)
+        Me.pbTelefono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbTelefono.TabIndex = 28
+        Me.pbTelefono.TabStop = False
+        '
+        'pbLapices
+        '
+        Me.pbLapices.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.pbLapices.Image = CType(resources.GetObject("pbLapices.Image"), System.Drawing.Image)
+        Me.pbLapices.Location = New System.Drawing.Point(807, 330)
+        Me.pbLapices.Name = "pbLapices"
+        Me.pbLapices.Size = New System.Drawing.Size(135, 140)
+        Me.pbLapices.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbLapices.TabIndex = 25
+        Me.pbLapices.TabStop = False
+        '
+        'pbCalculadoras
+        '
+        Me.pbCalculadoras.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.pbCalculadoras.Image = CType(resources.GetObject("pbCalculadoras.Image"), System.Drawing.Image)
+        Me.pbCalculadoras.Location = New System.Drawing.Point(559, 584)
+        Me.pbCalculadoras.Name = "pbCalculadoras"
+        Me.pbCalculadoras.Size = New System.Drawing.Size(135, 140)
+        Me.pbCalculadoras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbCalculadoras.TabIndex = 22
+        Me.pbCalculadoras.TabStop = False
+        '
+        'pbBolis
+        '
+        Me.pbBolis.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.pbBolis.Image = Global.Formularios.My.Resources.Resources.pack_10_boligrafos_paper_mate_s0957191
+        Me.pbBolis.Location = New System.Drawing.Point(559, 330)
+        Me.pbBolis.Name = "pbBolis"
+        Me.pbBolis.Size = New System.Drawing.Size(135, 140)
+        Me.pbBolis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbBolis.TabIndex = 19
+        Me.pbBolis.TabStop = False
+        '
+        'pbGrapadoras
+        '
+        Me.pbGrapadoras.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.pbGrapadoras.Image = Global.Formularios.My.Resources.Resources.grapadoras
+        Me.pbGrapadoras.Location = New System.Drawing.Point(92, 599)
+        Me.pbGrapadoras.Name = "pbGrapadoras"
+        Me.pbGrapadoras.Size = New System.Drawing.Size(147, 137)
+        Me.pbGrapadoras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbGrapadoras.TabIndex = 4
+        Me.pbGrapadoras.TabStop = False
+        '
+        'pbCarpetas
+        '
+        Me.pbCarpetas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pbCarpetas.Image = Global.Formularios.My.Resources.Resources.carpetas
+        Me.pbCarpetas.Location = New System.Drawing.Point(282, 597)
+        Me.pbCarpetas.Name = "pbCarpetas"
+        Me.pbCarpetas.Size = New System.Drawing.Size(184, 125)
+        Me.pbCarpetas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbCarpetas.TabIndex = 3
+        Me.pbCarpetas.TabStop = False
+        '
+        'pbCuadernos
+        '
+        Me.pbCuadernos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.pbCuadernos.Image = Global.Formularios.My.Resources.Resources.Libretas_Duquesa_en_varios_colores_para_regalos_de_empresa_o_merchandising
+        Me.pbCuadernos.Location = New System.Drawing.Point(92, 330)
+        Me.pbCuadernos.Name = "pbCuadernos"
+        Me.pbCuadernos.Size = New System.Drawing.Size(148, 140)
+        Me.pbCuadernos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbCuadernos.TabIndex = 2
+        Me.pbCuadernos.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(30, 30)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(333, 368)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
+        '
+        'copiaCuaderno
+        '
+        Me.copiaCuaderno.Image = CType(resources.GetObject("copiaCuaderno.Image"), System.Drawing.Image)
+        Me.copiaCuaderno.Location = New System.Drawing.Point(92, 330)
+        Me.copiaCuaderno.Name = "copiaCuaderno"
+        Me.copiaCuaderno.Size = New System.Drawing.Size(148, 140)
+        Me.copiaCuaderno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.copiaCuaderno.TabIndex = 35
+        Me.copiaCuaderno.TabStop = False
+        Me.copiaCuaderno.Visible = False
+        '
+        'pbSubrayadores
+        '
+        Me.pbSubrayadores.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.pbSubrayadores.Image = Global.Formularios.My.Resources.Resources.marcadores_fluorescentes_stabilo_boss_original_70_500x500
+        Me.pbSubrayadores.Location = New System.Drawing.Point(316, 330)
+        Me.pbSubrayadores.Name = "pbSubrayadores"
+        Me.pbSubrayadores.Size = New System.Drawing.Size(136, 140)
+        Me.pbSubrayadores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbSubrayadores.TabIndex = 1
+        Me.pbSubrayadores.TabStop = False
+        '
+        'copiaSubrayadores
+        '
+        Me.copiaSubrayadores.Image = CType(resources.GetObject("copiaSubrayadores.Image"), System.Drawing.Image)
+        Me.copiaSubrayadores.Location = New System.Drawing.Point(316, 330)
+        Me.copiaSubrayadores.Name = "copiaSubrayadores"
+        Me.copiaSubrayadores.Size = New System.Drawing.Size(136, 140)
+        Me.copiaSubrayadores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.copiaSubrayadores.TabIndex = 36
+        Me.copiaSubrayadores.TabStop = False
+        Me.copiaSubrayadores.Visible = False
+        '
         'copiaBolis
         '
         Me.copiaBolis.Image = CType(resources.GetObject("copiaBolis.Image"), System.Drawing.Image)
@@ -573,24 +583,6 @@ Partial Class frmAlmacen
         Me.copiaCarpetas.TabIndex = 48
         Me.copiaCarpetas.TabStop = False
         Me.copiaCarpetas.Visible = False
-        '
-        'copiaCalculadoras
-        '
-        Me.copiaCalculadoras.Image = CType(resources.GetObject("copiaCalculadoras.Image"), System.Drawing.Image)
-        Me.copiaCalculadoras.Location = New System.Drawing.Point(557, 584)
-        Me.copiaCalculadoras.Name = "copiaCalculadoras"
-        Me.copiaCalculadoras.Size = New System.Drawing.Size(135, 140)
-        Me.copiaCalculadoras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.copiaCalculadoras.TabIndex = 49
-        Me.copiaCalculadoras.TabStop = False
-        Me.copiaCalculadoras.Visible = False
-        '
-        'lblPedido
-        '
-        Me.lblPedido.Location = New System.Drawing.Point(1023, 573)
-        Me.lblPedido.Name = "lblPedido"
-        Me.lblPedido.Size = New System.Drawing.Size(343, 290)
-        Me.lblPedido.TabIndex = 50
         '
         'frmAlmacen
         '
@@ -652,24 +644,24 @@ Partial Class frmAlmacen
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "r5"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.pbCuadernos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbSubrayadores, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbCarpetas, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbGrapadoras, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
-        CType(Me.pbBolis, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbCalculadoras, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbLapices, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbTelefono, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.copiaCalculadoras, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbPerforadora, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbTelefono, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbLapices, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbCalculadoras, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbBolis, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbGrapadoras, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbCarpetas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbCuadernos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.copiaCuaderno, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbSubrayadores, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.copiaSubrayadores, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.copiaBolis, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.copiaLapices, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.copiaGrapadoras, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.copiaCarpetas, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.copiaCalculadoras, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
