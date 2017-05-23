@@ -117,10 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TxtBox_instrucciones.Text" xml:space="preserve">
-    <value>A lo largo del juego te irán apareciendo múltiples pedidos. Tu función es seleccionar los objetos adecuados y arrastrarlos al carro. Una vez lo hagas, deberás marcar la cantidad correcta...pero cuidado! no olvides vigilar el almacén puesto que no podrás vender más existencias de las que tienes. </value>
-  </data>
-  <metadata name="Btn_Entendido.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>

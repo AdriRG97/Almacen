@@ -208,4 +208,9 @@ Public Class frmAlmacen
         pedido.ShowDialog()
     End Sub
 
+
+    Private Sub btnTutorial_Click(sender As Object, e As EventArgs) Handles btnTutorial.Click
+        Dim tuto As New Instrucciones
+        tuto.ShowDialog()
+    End Sub
 End Class

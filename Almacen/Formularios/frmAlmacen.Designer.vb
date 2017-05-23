@@ -66,6 +66,7 @@ Partial Class frmAlmacen
         Me.btnSalir = New MetroFramework.Controls.MetroButton()
         Me.btnVerPedido = New MetroFramework.Controls.MetroButton()
         Me.btnStock = New MetroFramework.Controls.MetroButton()
+        Me.btnTutorial = New MetroFramework.Controls.MetroButton()
         CType(Me.pbCuadernos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbSubrayadores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,7 +92,7 @@ Partial Class frmAlmacen
         '
         Me.pbCuadernos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.pbCuadernos.Image = CType(resources.GetObject("pbCuadernos.Image"), System.Drawing.Image)
-        Me.pbCuadernos.Location = New System.Drawing.Point(91, 330)
+        Me.pbCuadernos.Location = New System.Drawing.Point(58, 400)
         Me.pbCuadernos.Name = "pbCuadernos"
         Me.pbCuadernos.Size = New System.Drawing.Size(148, 140)
         Me.pbCuadernos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -103,7 +104,7 @@ Partial Class frmAlmacen
         '
         Me.pbSubrayadores.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.pbSubrayadores.Image = CType(resources.GetObject("pbSubrayadores.Image"), System.Drawing.Image)
-        Me.pbSubrayadores.Location = New System.Drawing.Point(316, 330)
+        Me.pbSubrayadores.Location = New System.Drawing.Point(387, 400)
         Me.pbSubrayadores.Name = "pbSubrayadores"
         Me.pbSubrayadores.Size = New System.Drawing.Size(136, 140)
         Me.pbSubrayadores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -125,9 +126,9 @@ Partial Class frmAlmacen
         '
         Me.pbCarpetas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pbCarpetas.Image = CType(resources.GetObject("pbCarpetas.Image"), System.Drawing.Image)
-        Me.pbCarpetas.Location = New System.Drawing.Point(304, 595)
+        Me.pbCarpetas.Location = New System.Drawing.Point(367, 664)
         Me.pbCarpetas.Name = "pbCarpetas"
-        Me.pbCarpetas.Size = New System.Drawing.Size(197, 140)
+        Me.pbCarpetas.Size = New System.Drawing.Size(197, 143)
         Me.pbCarpetas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbCarpetas.TabIndex = 3
         Me.pbCarpetas.TabStop = False
@@ -137,7 +138,7 @@ Partial Class frmAlmacen
         '
         Me.pbGrapadoras.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.pbGrapadoras.Image = CType(resources.GetObject("pbGrapadoras.Image"), System.Drawing.Image)
-        Me.pbGrapadoras.Location = New System.Drawing.Point(91, 597)
+        Me.pbGrapadoras.Location = New System.Drawing.Point(57, 667)
         Me.pbGrapadoras.Name = "pbGrapadoras"
         Me.pbGrapadoras.Size = New System.Drawing.Size(147, 137)
         Me.pbGrapadoras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -149,7 +150,7 @@ Partial Class frmAlmacen
         '
         Me.lblCuadernosT.AutoSize = True
         Me.lblCuadernosT.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCuadernosT.Location = New System.Drawing.Point(67, 282)
+        Me.lblCuadernosT.Location = New System.Drawing.Point(33, 352)
         Me.lblCuadernosT.Name = "lblCuadernosT"
         Me.lblCuadernosT.Size = New System.Drawing.Size(205, 20)
         Me.lblCuadernosT.TabIndex = 7
@@ -159,7 +160,7 @@ Partial Class frmAlmacen
         '
         Me.lblSubrayadoresT.AutoSize = True
         Me.lblSubrayadoresT.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSubrayadoresT.Location = New System.Drawing.Point(283, 282)
+        Me.lblSubrayadoresT.Location = New System.Drawing.Point(335, 352)
         Me.lblSubrayadoresT.Name = "lblSubrayadoresT"
         Me.lblSubrayadoresT.Size = New System.Drawing.Size(229, 20)
         Me.lblSubrayadoresT.TabIndex = 8
@@ -169,7 +170,7 @@ Partial Class frmAlmacen
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(67, 557)
+        Me.Label3.Location = New System.Drawing.Point(31, 623)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(212, 20)
         Me.Label3.TabIndex = 9
@@ -179,7 +180,7 @@ Partial Class frmAlmacen
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(299, 557)
+        Me.Label4.Location = New System.Drawing.Point(362, 626)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(201, 20)
         Me.Label4.TabIndex = 10
@@ -189,8 +190,8 @@ Partial Class frmAlmacen
         '
         Me.lblCuadernosQ.AutoSize = True
         Me.lblCuadernosQ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCuadernosQ.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.lblCuadernosQ.Location = New System.Drawing.Point(75, 487)
+        Me.lblCuadernosQ.ForeColor = System.Drawing.Color.Teal
+        Me.lblCuadernosQ.Location = New System.Drawing.Point(54, 557)
         Me.lblCuadernosQ.Name = "lblCuadernosQ"
         Me.lblCuadernosQ.Size = New System.Drawing.Size(148, 18)
         Me.lblCuadernosQ.TabIndex = 11
@@ -200,8 +201,8 @@ Partial Class frmAlmacen
         '
         Me.lblSubrayadoresQ.AutoSize = True
         Me.lblSubrayadoresQ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSubrayadoresQ.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.lblSubrayadoresQ.Location = New System.Drawing.Point(285, 487)
+        Me.lblSubrayadoresQ.ForeColor = System.Drawing.Color.Teal
+        Me.lblSubrayadoresQ.Location = New System.Drawing.Point(370, 557)
         Me.lblSubrayadoresQ.Name = "lblSubrayadoresQ"
         Me.lblSubrayadoresQ.Size = New System.Drawing.Size(168, 18)
         Me.lblSubrayadoresQ.TabIndex = 12
@@ -211,8 +212,8 @@ Partial Class frmAlmacen
         '
         Me.lblGrapadorasQ.AutoSize = True
         Me.lblGrapadorasQ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblGrapadorasQ.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.lblGrapadorasQ.Location = New System.Drawing.Point(70, 741)
+        Me.lblGrapadorasQ.ForeColor = System.Drawing.Color.Teal
+        Me.lblGrapadorasQ.Location = New System.Drawing.Point(51, 814)
         Me.lblGrapadorasQ.Name = "lblGrapadorasQ"
         Me.lblGrapadorasQ.Size = New System.Drawing.Size(153, 18)
         Me.lblGrapadorasQ.TabIndex = 13
@@ -222,8 +223,8 @@ Partial Class frmAlmacen
         '
         Me.lblCarpetasQ.AutoSize = True
         Me.lblCarpetasQ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCarpetasQ.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.lblCarpetasQ.Location = New System.Drawing.Point(313, 741)
+        Me.lblCarpetasQ.ForeColor = System.Drawing.Color.Teal
+        Me.lblCarpetasQ.Location = New System.Drawing.Point(392, 814)
         Me.lblCarpetasQ.Name = "lblCarpetasQ"
         Me.lblCarpetasQ.Size = New System.Drawing.Size(135, 18)
         Me.lblCarpetasQ.TabIndex = 14
@@ -255,7 +256,7 @@ Partial Class frmAlmacen
         '
         Me.pbBolis.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.pbBolis.Image = CType(resources.GetObject("pbBolis.Image"), System.Drawing.Image)
-        Me.pbBolis.Location = New System.Drawing.Point(557, 330)
+        Me.pbBolis.Location = New System.Drawing.Point(707, 400)
         Me.pbBolis.Name = "pbBolis"
         Me.pbBolis.Size = New System.Drawing.Size(135, 140)
         Me.pbBolis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -267,7 +268,7 @@ Partial Class frmAlmacen
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(524, 282)
+        Me.Label2.Location = New System.Drawing.Point(674, 352)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(210, 20)
         Me.Label2.TabIndex = 20
@@ -277,8 +278,8 @@ Partial Class frmAlmacen
         '
         Me.lblBolisQ.AutoSize = True
         Me.lblBolisQ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBolisQ.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.lblBolisQ.Location = New System.Drawing.Point(570, 487)
+        Me.lblBolisQ.ForeColor = System.Drawing.Color.Teal
+        Me.lblBolisQ.Location = New System.Drawing.Point(720, 557)
         Me.lblBolisQ.Name = "lblBolisQ"
         Me.lblBolisQ.Size = New System.Drawing.Size(109, 18)
         Me.lblBolisQ.TabIndex = 21
@@ -288,8 +289,8 @@ Partial Class frmAlmacen
         '
         Me.lblCalculadorasQ.AutoSize = True
         Me.lblCalculadorasQ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCalculadorasQ.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.lblCalculadorasQ.Location = New System.Drawing.Point(542, 741)
+        Me.lblCalculadorasQ.ForeColor = System.Drawing.Color.Teal
+        Me.lblCalculadorasQ.Location = New System.Drawing.Point(693, 811)
         Me.lblCalculadorasQ.Name = "lblCalculadorasQ"
         Me.lblCalculadorasQ.Size = New System.Drawing.Size(168, 18)
         Me.lblCalculadorasQ.TabIndex = 24
@@ -299,7 +300,7 @@ Partial Class frmAlmacen
         '
         Me.lblCalculadoras.AutoSize = True
         Me.lblCalculadoras.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCalculadoras.Location = New System.Drawing.Point(524, 557)
+        Me.lblCalculadoras.Location = New System.Drawing.Point(674, 626)
         Me.lblCalculadoras.Name = "lblCalculadoras"
         Me.lblCalculadoras.Size = New System.Drawing.Size(222, 20)
         Me.lblCalculadoras.TabIndex = 23
@@ -309,7 +310,7 @@ Partial Class frmAlmacen
         '
         Me.pbCalculadoras.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.pbCalculadoras.Image = CType(resources.GetObject("pbCalculadoras.Image"), System.Drawing.Image)
-        Me.pbCalculadoras.Location = New System.Drawing.Point(557, 594)
+        Me.pbCalculadoras.Location = New System.Drawing.Point(707, 664)
         Me.pbCalculadoras.Name = "pbCalculadoras"
         Me.pbCalculadoras.Size = New System.Drawing.Size(135, 140)
         Me.pbCalculadoras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -321,8 +322,8 @@ Partial Class frmAlmacen
         '
         Me.lblLapicesQ.AutoSize = True
         Me.lblLapicesQ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLapicesQ.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.lblLapicesQ.Location = New System.Drawing.Point(804, 487)
+        Me.lblLapicesQ.ForeColor = System.Drawing.Color.Teal
+        Me.lblLapicesQ.Location = New System.Drawing.Point(1004, 557)
         Me.lblLapicesQ.Name = "lblLapicesQ"
         Me.lblLapicesQ.Size = New System.Drawing.Size(124, 18)
         Me.lblLapicesQ.TabIndex = 27
@@ -332,7 +333,7 @@ Partial Class frmAlmacen
         '
         Me.lblLapices.AutoSize = True
         Me.lblLapices.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLapices.Location = New System.Drawing.Point(790, 282)
+        Me.lblLapices.Location = New System.Drawing.Point(980, 352)
         Me.lblLapices.Name = "lblLapices"
         Me.lblLapices.Size = New System.Drawing.Size(177, 20)
         Me.lblLapices.TabIndex = 26
@@ -342,7 +343,7 @@ Partial Class frmAlmacen
         '
         Me.pbLapices.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.pbLapices.Image = CType(resources.GetObject("pbLapices.Image"), System.Drawing.Image)
-        Me.pbLapices.Location = New System.Drawing.Point(807, 330)
+        Me.pbLapices.Location = New System.Drawing.Point(997, 400)
         Me.pbLapices.Name = "pbLapices"
         Me.pbLapices.Size = New System.Drawing.Size(135, 140)
         Me.pbLapices.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -354,8 +355,8 @@ Partial Class frmAlmacen
         '
         Me.lblTelefonoQ.AutoSize = True
         Me.lblTelefonoQ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTelefonoQ.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.lblTelefonoQ.Location = New System.Drawing.Point(753, 741)
+        Me.lblTelefonoQ.ForeColor = System.Drawing.Color.Teal
+        Me.lblTelefonoQ.Location = New System.Drawing.Point(978, 810)
         Me.lblTelefonoQ.Name = "lblTelefonoQ"
         Me.lblTelefonoQ.Size = New System.Drawing.Size(168, 18)
         Me.lblTelefonoQ.TabIndex = 30
@@ -365,7 +366,7 @@ Partial Class frmAlmacen
         '
         Me.lblTelefono.AutoSize = True
         Me.lblTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTelefono.Location = New System.Drawing.Point(803, 557)
+        Me.lblTelefono.Location = New System.Drawing.Point(1029, 626)
         Me.lblTelefono.Name = "lblTelefono"
         Me.lblTelefono.Size = New System.Drawing.Size(79, 20)
         Me.lblTelefono.TabIndex = 29
@@ -375,7 +376,7 @@ Partial Class frmAlmacen
         '
         Me.pbTelefono.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.pbTelefono.Image = CType(resources.GetObject("pbTelefono.Image"), System.Drawing.Image)
-        Me.pbTelefono.Location = New System.Drawing.Point(774, 594)
+        Me.pbTelefono.Location = New System.Drawing.Point(997, 662)
         Me.pbTelefono.Name = "pbTelefono"
         Me.pbTelefono.Size = New System.Drawing.Size(135, 140)
         Me.pbTelefono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -387,8 +388,8 @@ Partial Class frmAlmacen
         '
         Me.lblPerforadoraQ.AutoSize = True
         Me.lblPerforadoraQ.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPerforadoraQ.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.lblPerforadoraQ.Location = New System.Drawing.Point(1056, 487)
+        Me.lblPerforadoraQ.ForeColor = System.Drawing.Color.Teal
+        Me.lblPerforadoraQ.Location = New System.Drawing.Point(1263, 652)
         Me.lblPerforadoraQ.Name = "lblPerforadoraQ"
         Me.lblPerforadoraQ.Size = New System.Drawing.Size(163, 18)
         Me.lblPerforadoraQ.TabIndex = 33
@@ -398,7 +399,7 @@ Partial Class frmAlmacen
         '
         Me.lblPerforadora.AutoSize = True
         Me.lblPerforadora.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPerforadora.Location = New System.Drawing.Point(1077, 282)
+        Me.lblPerforadora.Location = New System.Drawing.Point(1284, 447)
         Me.lblPerforadora.Name = "lblPerforadora"
         Me.lblPerforadora.Size = New System.Drawing.Size(104, 20)
         Me.lblPerforadora.TabIndex = 32
@@ -408,7 +409,7 @@ Partial Class frmAlmacen
         '
         Me.pbPerforadora.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.pbPerforadora.Image = CType(resources.GetObject("pbPerforadora.Image"), System.Drawing.Image)
-        Me.pbPerforadora.Location = New System.Drawing.Point(1069, 330)
+        Me.pbPerforadora.Location = New System.Drawing.Point(1276, 495)
         Me.pbPerforadora.Name = "pbPerforadora"
         Me.pbPerforadora.Size = New System.Drawing.Size(135, 140)
         Me.pbPerforadora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -419,7 +420,7 @@ Partial Class frmAlmacen
         'copiaCuaderno
         '
         Me.copiaCuaderno.Image = CType(resources.GetObject("copiaCuaderno.Image"), System.Drawing.Image)
-        Me.copiaCuaderno.Location = New System.Drawing.Point(92, 330)
+        Me.copiaCuaderno.Location = New System.Drawing.Point(58, 400)
         Me.copiaCuaderno.Name = "copiaCuaderno"
         Me.copiaCuaderno.Size = New System.Drawing.Size(148, 140)
         Me.copiaCuaderno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -429,7 +430,7 @@ Partial Class frmAlmacen
         'copiaSubrayadores
         '
         Me.copiaSubrayadores.Image = CType(resources.GetObject("copiaSubrayadores.Image"), System.Drawing.Image)
-        Me.copiaSubrayadores.Location = New System.Drawing.Point(316, 330)
+        Me.copiaSubrayadores.Location = New System.Drawing.Point(387, 400)
         Me.copiaSubrayadores.Name = "copiaSubrayadores"
         Me.copiaSubrayadores.Size = New System.Drawing.Size(136, 140)
         Me.copiaSubrayadores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -439,7 +440,7 @@ Partial Class frmAlmacen
         'copiaBolis
         '
         Me.copiaBolis.Image = CType(resources.GetObject("copiaBolis.Image"), System.Drawing.Image)
-        Me.copiaBolis.Location = New System.Drawing.Point(557, 330)
+        Me.copiaBolis.Location = New System.Drawing.Point(707, 400)
         Me.copiaBolis.Name = "copiaBolis"
         Me.copiaBolis.Size = New System.Drawing.Size(135, 140)
         Me.copiaBolis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -449,7 +450,7 @@ Partial Class frmAlmacen
         'copiaLapices
         '
         Me.copiaLapices.Image = CType(resources.GetObject("copiaLapices.Image"), System.Drawing.Image)
-        Me.copiaLapices.Location = New System.Drawing.Point(807, 330)
+        Me.copiaLapices.Location = New System.Drawing.Point(997, 400)
         Me.copiaLapices.Name = "copiaLapices"
         Me.copiaLapices.Size = New System.Drawing.Size(135, 140)
         Me.copiaLapices.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -459,7 +460,7 @@ Partial Class frmAlmacen
         'copiaGrapadoras
         '
         Me.copiaGrapadoras.Image = CType(resources.GetObject("copiaGrapadoras.Image"), System.Drawing.Image)
-        Me.copiaGrapadoras.Location = New System.Drawing.Point(91, 597)
+        Me.copiaGrapadoras.Location = New System.Drawing.Point(57, 667)
         Me.copiaGrapadoras.Name = "copiaGrapadoras"
         Me.copiaGrapadoras.Size = New System.Drawing.Size(147, 137)
         Me.copiaGrapadoras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -469,7 +470,7 @@ Partial Class frmAlmacen
         'copiaCarpetas
         '
         Me.copiaCarpetas.Image = CType(resources.GetObject("copiaCarpetas.Image"), System.Drawing.Image)
-        Me.copiaCarpetas.Location = New System.Drawing.Point(304, 594)
+        Me.copiaCarpetas.Location = New System.Drawing.Point(367, 666)
         Me.copiaCarpetas.Name = "copiaCarpetas"
         Me.copiaCarpetas.Size = New System.Drawing.Size(196, 141)
         Me.copiaCarpetas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -479,7 +480,7 @@ Partial Class frmAlmacen
         'copiaCalculadoras
         '
         Me.copiaCalculadoras.Image = CType(resources.GetObject("copiaCalculadoras.Image"), System.Drawing.Image)
-        Me.copiaCalculadoras.Location = New System.Drawing.Point(556, 594)
+        Me.copiaCalculadoras.Location = New System.Drawing.Point(707, 664)
         Me.copiaCalculadoras.Name = "copiaCalculadoras"
         Me.copiaCalculadoras.Size = New System.Drawing.Size(135, 140)
         Me.copiaCalculadoras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -489,7 +490,7 @@ Partial Class frmAlmacen
         'copiaTelefono
         '
         Me.copiaTelefono.Image = CType(resources.GetObject("copiaTelefono.Image"), System.Drawing.Image)
-        Me.copiaTelefono.Location = New System.Drawing.Point(774, 593)
+        Me.copiaTelefono.Location = New System.Drawing.Point(997, 662)
         Me.copiaTelefono.Name = "copiaTelefono"
         Me.copiaTelefono.Size = New System.Drawing.Size(135, 140)
         Me.copiaTelefono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -499,7 +500,7 @@ Partial Class frmAlmacen
         'copiaPerforadora
         '
         Me.copiaPerforadora.Image = CType(resources.GetObject("copiaPerforadora.Image"), System.Drawing.Image)
-        Me.copiaPerforadora.Location = New System.Drawing.Point(1069, 330)
+        Me.copiaPerforadora.Location = New System.Drawing.Point(1276, 495)
         Me.copiaPerforadora.Name = "copiaPerforadora"
         Me.copiaPerforadora.Size = New System.Drawing.Size(135, 140)
         Me.copiaPerforadora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -539,12 +540,27 @@ Partial Class frmAlmacen
         Me.btnStock.Text = "Recargar Stock"
         Me.btnStock.UseSelectable = True
         '
+        'btnTutorial
+        '
+        Me.btnTutorial.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnTutorial.FontSize = MetroFramework.MetroButtonSize.Tall
+        Me.btnTutorial.Location = New System.Drawing.Point(1266, 94)
+        Me.btnTutorial.Name = "btnTutorial"
+        Me.btnTutorial.Size = New System.Drawing.Size(154, 88)
+        Me.btnTutorial.Style = MetroFramework.MetroColorStyle.Orange
+        Me.btnTutorial.TabIndex = 57
+        Me.btnTutorial.Text = "¿Cómo se juega?"
+        Me.btnTutorial.UseCustomBackColor = True
+        Me.btnTutorial.UseCustomForeColor = True
+        Me.btnTutorial.UseSelectable = True
+        '
         'frmAlmacen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(1927, 1092)
+        Me.Controls.Add(Me.btnTutorial)
         Me.Controls.Add(Me.btnStock)
         Me.Controls.Add(Me.btnVerPedido)
         Me.Controls.Add(Me.btnSalir)
@@ -659,4 +675,5 @@ Partial Class frmAlmacen
     Friend WithEvents btnSalir As MetroFramework.Controls.MetroButton
     Friend WithEvents btnVerPedido As MetroFramework.Controls.MetroButton
     Friend WithEvents btnStock As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnTutorial As MetroFramework.Controls.MetroButton
 End Class

@@ -99,8 +99,8 @@ Public Class frmUsuarios
             My.Computer.Audio.Play(My.Resources._error, AudioPlayMode.Background)
         End If
 
-        If (boolError = False AndAlso boolError = False) OrElse (String.IsNullOrWhiteSpace(txtUsuario.Text) AndAlso String.IsNullOrWhiteSpace(txtContraseña.Text)) Then
-            lblError.Text = "Error, usuario y contraseña INCORRECTOS."
+        If (String.IsNullOrWhiteSpace(txtUsuario.Text) AndAlso String.IsNullOrWhiteSpace(txtContraseña.Text)) Then
+            lblError.Text = "Error, usuario y contraseña incorrectos."
             My.Computer.Audio.Play(My.Resources._error, AudioPlayMode.Background)
         End If
         objReader2.Close()

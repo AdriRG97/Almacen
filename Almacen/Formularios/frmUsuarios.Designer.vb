@@ -56,7 +56,7 @@ Partial Class frmUsuarios
         Me.BunifuCustomLabel2.Location = New System.Drawing.Point(27, 254)
         Me.BunifuCustomLabel2.Name = "BunifuCustomLabel2"
         Me.BunifuCustomLabel2.Size = New System.Drawing.Size(118, 23)
-        Me.BunifuCustomLabel2.TabIndex = 3
+        Me.BunifuCustomLabel2.TabIndex = 55
         Me.BunifuCustomLabel2.Text = "Contraseña"
         Me.BunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
