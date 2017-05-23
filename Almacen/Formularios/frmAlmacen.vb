@@ -140,8 +140,6 @@ Public Class frmAlmacen
                 My.Computer.Audio.Play(My.Resources._error, AudioPlayMode.Background)
                 errores += 1
                 Return MsgBox("No hay suficiente stock")
-
-
             End If
         End If
         Return "Pedido correctamente"
@@ -208,4 +206,13 @@ Public Class frmAlmacen
         pedido.ShowDialog()
     End Sub
 
+    Private Sub btnStock_Click(sender As Object, e As EventArgs) Handles btnStock.Click
+        Dim stock As New frmStock
+        stock.ShowDialog()
+    End Sub
+
+    Private Sub btnInstrucc_Click(sender As Object, e As EventArgs) Handles btnInstrucc.Click
+        Dim instrucciones As New Instrucciones
+        instrucciones.ShowDialog()
+    End Sub
 End Class

@@ -66,6 +66,7 @@ Partial Class frmAlmacen
         Me.btnSalir = New MetroFramework.Controls.MetroButton()
         Me.btnVerPedido = New MetroFramework.Controls.MetroButton()
         Me.btnStock = New MetroFramework.Controls.MetroButton()
+        Me.btnInstrucc = New System.Windows.Forms.PictureBox()
         CType(Me.pbCuadernos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbSubrayadores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,6 +86,7 @@ Partial Class frmAlmacen
         CType(Me.copiaCalculadoras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.copiaTelefono, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.copiaPerforadora, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnInstrucc, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pbCuadernos
@@ -539,12 +541,21 @@ Partial Class frmAlmacen
         Me.btnStock.Text = "Recargar Stock"
         Me.btnStock.UseSelectable = True
         '
+        'btnInstrucc
+        '
+        Me.btnInstrucc.Location = New System.Drawing.Point(1787, 38)
+        Me.btnInstrucc.Name = "btnInstrucc"
+        Me.btnInstrucc.Size = New System.Drawing.Size(100, 50)
+        Me.btnInstrucc.TabIndex = 57
+        Me.btnInstrucc.TabStop = False
+        '
         'frmAlmacen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(1927, 1092)
+        Me.Controls.Add(Me.btnInstrucc)
         Me.Controls.Add(Me.btnStock)
         Me.Controls.Add(Me.btnVerPedido)
         Me.Controls.Add(Me.btnSalir)
@@ -612,6 +623,7 @@ Partial Class frmAlmacen
         CType(Me.copiaCalculadoras, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.copiaTelefono, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.copiaPerforadora, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnInstrucc, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -659,4 +671,5 @@ Partial Class frmAlmacen
     Friend WithEvents btnSalir As MetroFramework.Controls.MetroButton
     Friend WithEvents btnVerPedido As MetroFramework.Controls.MetroButton
     Friend WithEvents btnStock As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnInstrucc As PictureBox
 End Class
