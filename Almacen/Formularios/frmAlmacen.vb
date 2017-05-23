@@ -130,9 +130,9 @@ Public Class frmAlmacen
         Dim producto As New Producto(nombreProducto)
         Dim cantidad As Integer = 0
         Do
-        Loop Until Integer.TryParse(InputBox("¿Cuantos paquetes quieres?"), cantidad)
+        Loop Until Integer.TryParse(InputBox("¿Cuantos paquetes quieres?"), cantidad) AndAlso cantidad > 0
         If nuestroAlmacen.Contains(producto) Then
-            If cantidad < nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock * paquetesProductos(nuestroAlmacen.IndexOf(producto)) Then
+            If cantidad <= nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock / paquetesProductos(nuestroAlmacen.IndexOf(producto)) Then
                 nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock -= cantidad * paquetesProductos(nuestroAlmacen.IndexOf(producto))
                 actualizarEtiquetas()
             Else
