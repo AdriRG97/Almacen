@@ -206,13 +206,9 @@ Public Class frmAlmacen
         pedido.ShowDialog()
     End Sub
 
-    Private Sub btnStock_Click(sender As Object, e As EventArgs) Handles btnStock.Click
-        Dim stock As New frmStock
-        stock.ShowDialog()
-    End Sub
 
-    Private Sub btnInstrucc_Click(sender As Object, e As EventArgs) Handles btnInstrucc.Click
-        Dim instrucciones As New Instrucciones
-        instrucciones.ShowDialog()
+    Private Sub btnTutorial_Click(sender As Object, e As EventArgs) Handles btnTutorial.Click
+        Dim tuto As New Instrucciones
+        tuto.ShowDialog()
     End Sub
 End Class

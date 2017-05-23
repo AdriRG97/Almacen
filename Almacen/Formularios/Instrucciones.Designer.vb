@@ -22,7 +22,6 @@ Partial Class Instrucciones
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Instrucciones))
         Me.TxtBox_instrucciones = New System.Windows.Forms.TextBox()
         Me.Label_instrucciones = New System.Windows.Forms.Label()
         Me.Btn_Entendido = New System.Windows.Forms.Button()
@@ -30,33 +29,36 @@ Partial Class Instrucciones
         '
         'TxtBox_instrucciones
         '
-        Me.TxtBox_instrucciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.45!)
-        Me.TxtBox_instrucciones.Location = New System.Drawing.Point(138, 106)
+        Me.TxtBox_instrucciones.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.TxtBox_instrucciones.Font = New System.Drawing.Font("Nunito", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtBox_instrucciones.Location = New System.Drawing.Point(143, 104)
         Me.TxtBox_instrucciones.Multiline = True
         Me.TxtBox_instrucciones.Name = "TxtBox_instrucciones"
-        Me.TxtBox_instrucciones.Size = New System.Drawing.Size(409, 190)
-        Me.TxtBox_instrucciones.TabIndex = 0
-        Me.TxtBox_instrucciones.Text = resources.GetString("TxtBox_instrucciones.Text")
+        Me.TxtBox_instrucciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TxtBox_instrucciones.Size = New System.Drawing.Size(378, 309)
+        Me.TxtBox_instrucciones.TabIndex = 3
+        Me.TxtBox_instrucciones.Text = "Lo importante está en el load xD"
         '
         'Label_instrucciones
         '
         Me.Label_instrucciones.AutoSize = True
-        Me.Label_instrucciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle))
-        Me.Label_instrucciones.Location = New System.Drawing.Point(250, 64)
+        Me.Label_instrucciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_instrucciones.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label_instrucciones.Location = New System.Drawing.Point(205, 34)
         Me.Label_instrucciones.Name = "Label_instrucciones"
-        Me.Label_instrucciones.Size = New System.Drawing.Size(196, 25)
-        Me.Label_instrucciones.TabIndex = 1
+        Me.Label_instrucciones.Size = New System.Drawing.Size(255, 31)
+        Me.Label_instrucciones.TabIndex = 2
         Me.Label_instrucciones.Text = "INSTRUCCIONES"
         Me.Label_instrucciones.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Btn_Entendido
         '
-        Me.Btn_Entendido.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Btn_Entendido.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.Btn_Entendido.FlatAppearance.BorderSize = 6
-        Me.Btn_Entendido.Location = New System.Drawing.Point(287, 319)
+        Me.Btn_Entendido.Location = New System.Drawing.Point(252, 456)
         Me.Btn_Entendido.Name = "Btn_Entendido"
-        Me.Btn_Entendido.Size = New System.Drawing.Size(104, 31)
-        Me.Btn_Entendido.TabIndex = 2
+        Me.Btn_Entendido.Size = New System.Drawing.Size(131, 64)
+        Me.Btn_Entendido.TabIndex = 1
         Me.Btn_Entendido.Text = "Entendido"
         Me.Btn_Entendido.UseVisualStyleBackColor = False
         '
@@ -65,18 +67,19 @@ Partial Class Instrucciones
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(644, 387)
+        Me.ClientSize = New System.Drawing.Size(673, 580)
         Me.Controls.Add(Me.Btn_Entendido)
         Me.Controls.Add(Me.Label_instrucciones)
         Me.Controls.Add(Me.TxtBox_instrucciones)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Instrucciones"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Instrucciones"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents TxtBox_instrucciones As TextBox
     Friend WithEvents Label_instrucciones As Label
     Friend WithEvents Btn_Entendido As Button
+    Friend WithEvents TxtBox_instrucciones As TextBox
 End Class

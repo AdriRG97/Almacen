@@ -8,6 +8,7 @@ Public Class frmAñadirUsuario
         End If
         If txtContraseña.text = "" Then
             MsgBox("Error, debes introducir una contraseña")
+            Exit Sub
         End If
 
         Dim ruta = "Ficheros\Usuarios.txt"
@@ -54,6 +55,7 @@ Public Class frmAñadirUsuario
 
         If compro = True Then
             MsgBox("Error, el usuario introducido ya existe.")
+            Exit Sub
         End If
 
 
