@@ -21,7 +21,7 @@ Public Class Producto : Implements IEquatable(Of Producto)
     End Function
     Public Sub New(nombre As String)
         Me.Nombre = nombre
-        Me.Stock = 50
+        Stock = 50
     End Sub
 
 

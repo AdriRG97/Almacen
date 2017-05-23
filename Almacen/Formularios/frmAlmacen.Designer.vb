@@ -37,7 +37,6 @@ Partial Class frmAlmacen
         Me.lblGrapadorasQ = New System.Windows.Forms.Label()
         Me.lblCarpetasQ = New System.Windows.Forms.Label()
         Me.lblTitulo = New System.Windows.Forms.Label()
-        Me.btnSalir = New MetroFramework.Controls.MetroButton()
         Me.btnFinalizar = New MetroFramework.Controls.MetroButton()
         Me.pbBolis = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -64,7 +63,9 @@ Partial Class frmAlmacen
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.copiaTelefono = New System.Windows.Forms.PictureBox()
         Me.copiaPerforadora = New System.Windows.Forms.PictureBox()
-        Me.btnVerPedido = New System.Windows.Forms.Button()
+        Me.btnSalir = New MetroFramework.Controls.MetroButton()
+        Me.btnVerPedido = New MetroFramework.Controls.MetroButton()
+        Me.btnStock = New MetroFramework.Controls.MetroButton()
         CType(Me.pbCuadernos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbSubrayadores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -238,17 +239,6 @@ Partial Class frmAlmacen
         Me.lblTitulo.Size = New System.Drawing.Size(481, 73)
         Me.lblTitulo.TabIndex = 15
         Me.lblTitulo.Text = "Juego almacén"
-        '
-        'btnSalir
-        '
-        Me.btnSalir.FontSize = MetroFramework.MetroButtonSize.Tall
-        Me.btnSalir.Highlight = True
-        Me.btnSalir.Location = New System.Drawing.Point(830, 961)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(269, 52)
-        Me.btnSalir.TabIndex = 17
-        Me.btnSalir.Text = "Salir"
-        Me.btnSalir.UseSelectable = True
         '
         'btnFinalizar
         '
@@ -516,14 +506,38 @@ Partial Class frmAlmacen
         Me.copiaPerforadora.TabIndex = 52
         Me.copiaPerforadora.TabStop = False
         '
+        'btnSalir
+        '
+        Me.btnSalir.FontSize = MetroFramework.MetroButtonSize.Tall
+        Me.btnSalir.Highlight = True
+        Me.btnSalir.Location = New System.Drawing.Point(859, 961)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(262, 52)
+        Me.btnSalir.TabIndex = 54
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseSelectable = True
+        '
         'btnVerPedido
         '
-        Me.btnVerPedido.Location = New System.Drawing.Point(1491, 905)
+        Me.btnVerPedido.FontSize = MetroFramework.MetroButtonSize.Tall
+        Me.btnVerPedido.Highlight = True
+        Me.btnVerPedido.Location = New System.Drawing.Point(1282, 798)
         Me.btnVerPedido.Name = "btnVerPedido"
-        Me.btnVerPedido.Size = New System.Drawing.Size(205, 78)
-        Me.btnVerPedido.TabIndex = 53
-        Me.btnVerPedido.Text = "VER CÓMO VA NUESTRO PEDIDO"
-        Me.btnVerPedido.UseVisualStyleBackColor = True
+        Me.btnVerPedido.Size = New System.Drawing.Size(247, 87)
+        Me.btnVerPedido.TabIndex = 55
+        Me.btnVerPedido.Text = "Ver como va nuestro pedido"
+        Me.btnVerPedido.UseSelectable = True
+        '
+        'btnStock
+        '
+        Me.btnStock.FontSize = MetroFramework.MetroButtonSize.Tall
+        Me.btnStock.Highlight = True
+        Me.btnStock.Location = New System.Drawing.Point(1591, 798)
+        Me.btnStock.Name = "btnStock"
+        Me.btnStock.Size = New System.Drawing.Size(247, 87)
+        Me.btnStock.TabIndex = 56
+        Me.btnStock.Text = "Recargar Stock"
+        Me.btnStock.UseSelectable = True
         '
         'frmAlmacen
         '
@@ -531,8 +545,10 @@ Partial Class frmAlmacen
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(1927, 1092)
-        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.btnStock)
         Me.Controls.Add(Me.btnVerPedido)
+        Me.Controls.Add(Me.btnSalir)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.lblPerforadoraQ)
         Me.Controls.Add(Me.lblPerforadora)
         Me.Controls.Add(Me.pbPerforadora)
@@ -549,7 +565,6 @@ Partial Class frmAlmacen
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.pbBolis)
         Me.Controls.Add(Me.btnFinalizar)
-        Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.lblTitulo)
         Me.Controls.Add(Me.lblCarpetasQ)
         Me.Controls.Add(Me.lblGrapadorasQ)
@@ -615,7 +630,6 @@ Partial Class frmAlmacen
     Friend WithEvents lblGrapadorasQ As Label
     Friend WithEvents lblCarpetasQ As Label
     Friend WithEvents lblTitulo As Label
-    Friend WithEvents btnSalir As MetroFramework.Controls.MetroButton
     Friend WithEvents btnFinalizar As MetroFramework.Controls.MetroButton
     Friend WithEvents pbBolis As PictureBox
     Friend WithEvents Label2 As Label
@@ -642,5 +656,7 @@ Partial Class frmAlmacen
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents copiaTelefono As PictureBox
     Friend WithEvents copiaPerforadora As PictureBox
-    Friend WithEvents btnVerPedido As Button
+    Friend WithEvents btnSalir As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnVerPedido As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnStock As MetroFramework.Controls.MetroButton
 End Class
