@@ -40,9 +40,6 @@ Public Class frmAlmacen
         Me.Height = AltoFormularioDestino
 
 
-
-
-
         localizacionIni.Add(pbCuadernos.Location)
         localizacionIni.Add(pbSubrayadores.Location)
         localizacionIni.Add(pbBolis.Location)
@@ -93,7 +90,7 @@ Public Class frmAlmacen
         End If
 
 
-        If pictureEnMovimiento.Location.X >= PictureBox2.Location.X AndAlso pictureEnMovimiento.Location.X <= PictureBox2.Location.X + PictureBox2.Width AndAlso pictureEnMovimiento.Location.Y >= PictureBox2.Location.Y AndAlso pictureEnMovimiento.Location.Y <= PictureBox2.Location.Y + PictureBox2.Height Then
+        If pictureEnMovimiento.Location.X >= PictureBox2.Location.X AndAlso pictureEnMovimiento.Location.X <= PictureBox2.Location.X + PictureBox2.Width - pictureEnMovimiento.Width AndAlso pictureEnMovimiento.Location.Y >= PictureBox2.Location.Y AndAlso pictureEnMovimiento.Location.Y <= PictureBox2.Location.Y + PictureBox2.Height - pictureEnMovimiento.Width Then
 
 
             If sender.Equals(pbCuadernos) Then
