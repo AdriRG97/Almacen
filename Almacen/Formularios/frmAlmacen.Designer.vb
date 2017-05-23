@@ -62,12 +62,9 @@ Partial Class frmAlmacen
         Me.copiaCarpetas = New System.Windows.Forms.PictureBox()
         Me.copiaCalculadoras = New System.Windows.Forms.PictureBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.copiaTelefono = New System.Windows.Forms.PictureBox()
         Me.copiaPerforadora = New System.Windows.Forms.PictureBox()
         Me.btnVerPedido = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.pbCuadernos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbSubrayadores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -486,15 +483,6 @@ Partial Class frmAlmacen
         Me.copiaCalculadoras.TabIndex = 49
         Me.copiaCalculadoras.TabStop = False
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(1632, 704)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 50
-        Me.Label1.Text = "Label1"
-        '
         'copiaTelefono
         '
         Me.copiaTelefono.Image = CType(resources.GetObject("copiaTelefono.Image"), System.Drawing.Image)
@@ -524,33 +512,14 @@ Partial Class frmAlmacen
         Me.btnVerPedido.Text = "VER CÓMO VA NUESTRO PEDIDO"
         Me.btnVerPedido.UseVisualStyleBackColor = True
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(464, 129)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(39, 13)
-        Me.Label5.TabIndex = 54
-        Me.Label5.Text = "Label5"
-        '
-        'Panel1
-        '
-        Me.Panel1.Location = New System.Drawing.Point(1214, 668)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(200, 100)
-        Me.Panel1.TabIndex = 55
-        '
         'frmAlmacen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(1927, 1092)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btnVerPedido)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblPerforadoraQ)
         Me.Controls.Add(Me.lblPerforadora)
         Me.Controls.Add(Me.pbPerforadora)
@@ -658,10 +627,7 @@ Partial Class frmAlmacen
     Friend WithEvents copiaCarpetas As PictureBox
     Friend WithEvents copiaCalculadoras As PictureBox
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents Label1 As Label
     Friend WithEvents copiaTelefono As PictureBox
     Friend WithEvents copiaPerforadora As PictureBox
     Friend WithEvents btnVerPedido As Button
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Panel1 As Panel
 End Class
