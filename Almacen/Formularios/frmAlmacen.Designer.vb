@@ -241,18 +241,22 @@ Partial Class frmAlmacen
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(830, 990)
+        Me.btnSalir.FontSize = MetroFramework.MetroButtonSize.Tall
+        Me.btnSalir.Highlight = True
+        Me.btnSalir.Location = New System.Drawing.Point(830, 961)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(194, 23)
+        Me.btnSalir.Size = New System.Drawing.Size(269, 52)
         Me.btnSalir.TabIndex = 17
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseSelectable = True
         '
         'btnFinalizar
         '
-        Me.btnFinalizar.Location = New System.Drawing.Point(613, 990)
+        Me.btnFinalizar.FontSize = MetroFramework.MetroButtonSize.Tall
+        Me.btnFinalizar.Highlight = True
+        Me.btnFinalizar.Location = New System.Drawing.Point(545, 961)
         Me.btnFinalizar.Name = "btnFinalizar"
-        Me.btnFinalizar.Size = New System.Drawing.Size(194, 23)
+        Me.btnFinalizar.Size = New System.Drawing.Size(262, 52)
         Me.btnFinalizar.TabIndex = 18
         Me.btnFinalizar.Text = "Finalizar pedido"
         Me.btnFinalizar.UseSelectable = True

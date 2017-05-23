@@ -10,7 +10,7 @@ Public Class frmAlmacen
     Private frmacantidad As New frmCantidadPedida
 
     Dim nombresProductos As String() = {"Cuadernos", "Subrayadores", "Bolis", "Lapices", "Perforadora", "Grapadoras", "Carpetas", "Calculadoras", "Telefono"}
-    Dim paquetesProductos As Integer() = {}
+    Dim paquetesProductos As Integer() = {5, 3, 10, 5, 1, 2, 10, 3, 1}
 
 
     Private Sub frmAlmacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -80,8 +80,6 @@ Public Class frmAlmacen
 
 
         If pictureEnMovimiento.Location.X >= PictureBox2.Location.X AndAlso pictureEnMovimiento.Location.X <= PictureBox2.Location.X + PictureBox2.Width - pictureEnMovimiento.Width AndAlso pictureEnMovimiento.Location.Y >= PictureBox2.Location.Y AndAlso pictureEnMovimiento.Location.Y <= PictureBox2.Location.Y + PictureBox2.Height - pictureEnMovimiento.Width Then
-
-
             If sender.Equals(pbCuadernos) Then
                 pbCuadernos.Location = localizacionIni(0)
                 pedirCantidad("Cuadernos")
@@ -124,14 +122,9 @@ Public Class frmAlmacen
 
             If sender.Equals(pbTelefono) Then
                 pbTelefono.Location = localizacionIni(8)
-
                 pedirCantidad("Telefono")
             End If
-
-
-
         End If
-
     End Sub
     Private Function pedirCantidad(ByVal nombreProducto As String) As String
         Dim producto As New Producto(nombreProducto)
@@ -139,8 +132,8 @@ Public Class frmAlmacen
         Do
         Loop Until Integer.TryParse(InputBox("¿Cuantos paquetes quieres?"), cantidad)
         If nuestroAlmacen.Contains(producto) Then
-            If cantidad < nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock Then '/nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).tag Then
-                nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock -= cantidad
+            If cantidad < nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock * paquetesProductos(nuestroAlmacen.IndexOf(producto)) Then
+                nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock -= cantidad * paquetesProductos(nuestroAlmacen.IndexOf(producto))
                 actualizarEtiquetas()
             Else
                 Return MsgBox("No hay suficiente stock")
@@ -210,4 +203,5 @@ Public Class frmAlmacen
         Dim pedido As New frmCantidadPedida
         pedido.ShowDialog()
     End Sub
+
 End Class
