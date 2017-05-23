@@ -23,8 +23,6 @@ Partial Class frmUsuarios
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUsuarios))
-        Me.txtUsuario = New Bunifu.Framework.UI.BunifuTextbox()
-        Me.txtContraseña = New Bunifu.Framework.UI.BunifuTextbox()
         Me.BunifuCustomLabel1 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomLabel2 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomLabel3 = New Bunifu.Framework.UI.BunifuCustomLabel()
@@ -33,43 +31,19 @@ Partial Class frmUsuarios
         Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.lblErrorAdmin = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtContraseña = New MetroFramework.Controls.MetroTextBox()
+        Me.txtUsuario = New MetroFramework.Controls.MetroTextBox()
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'txtUsuario
-        '
-        Me.txtUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtUsuario.BackgroundImage = CType(resources.GetObject("txtUsuario.BackgroundImage"), System.Drawing.Image)
-        Me.txtUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.txtUsuario.ForeColor = System.Drawing.Color.SeaGreen
-        Me.txtUsuario.Icon = CType(resources.GetObject("txtUsuario.Icon"), System.Drawing.Image)
-        Me.txtUsuario.Location = New System.Drawing.Point(165, 141)
-        Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(250, 42)
-        Me.txtUsuario.TabIndex = 0
-        Me.txtUsuario.text = ""
-        '
-        'txtContraseña
-        '
-        Me.txtContraseña.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtContraseña.BackgroundImage = CType(resources.GetObject("txtContraseña.BackgroundImage"), System.Drawing.Image)
-        Me.txtContraseña.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.txtContraseña.ForeColor = System.Drawing.Color.SeaGreen
-        Me.txtContraseña.Icon = CType(resources.GetObject("txtContraseña.Icon"), System.Drawing.Image)
-        Me.txtContraseña.Location = New System.Drawing.Point(165, 244)
-        Me.txtContraseña.Name = "txtContraseña"
-        Me.txtContraseña.Size = New System.Drawing.Size(250, 42)
-        Me.txtContraseña.TabIndex = 1
-        Me.txtContraseña.text = ""
         '
         'BunifuCustomLabel1
         '
         Me.BunifuCustomLabel1.BackColor = System.Drawing.Color.LightSeaGreen
         Me.BunifuCustomLabel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.BunifuCustomLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(27, 141)
+        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(27, 180)
         Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
-        Me.BunifuCustomLabel1.Size = New System.Drawing.Size(118, 42)
+        Me.BunifuCustomLabel1.Size = New System.Drawing.Size(118, 23)
         Me.BunifuCustomLabel1.TabIndex = 2
         Me.BunifuCustomLabel1.Text = "Usuario"
         Me.BunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -79,9 +53,9 @@ Partial Class frmUsuarios
         Me.BunifuCustomLabel2.BackColor = System.Drawing.Color.LightSeaGreen
         Me.BunifuCustomLabel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.BunifuCustomLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(27, 244)
+        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(27, 254)
         Me.BunifuCustomLabel2.Name = "BunifuCustomLabel2"
-        Me.BunifuCustomLabel2.Size = New System.Drawing.Size(118, 42)
+        Me.BunifuCustomLabel2.Size = New System.Drawing.Size(118, 23)
         Me.BunifuCustomLabel2.TabIndex = 3
         Me.BunifuCustomLabel2.Text = "Contraseña"
         Me.BunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -91,7 +65,7 @@ Partial Class frmUsuarios
         Me.BunifuCustomLabel3.BackColor = System.Drawing.Color.Orchid
         Me.BunifuCustomLabel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.BunifuCustomLabel3.Font = New System.Drawing.Font("Comic Sans MS", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(41, 32)
+        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(38, 50)
         Me.BunifuCustomLabel3.Name = "BunifuCustomLabel3"
         Me.BunifuCustomLabel3.Size = New System.Drawing.Size(409, 67)
         Me.BunifuCustomLabel3.TabIndex = 4
@@ -167,11 +141,73 @@ Partial Class frmUsuarios
         Me.Button1.Text = "Salir"
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'txtContraseña
+        '
+        '
+        '
+        '
+        Me.txtContraseña.CustomButton.Image = Nothing
+        Me.txtContraseña.CustomButton.Location = New System.Drawing.Point(228, 1)
+        Me.txtContraseña.CustomButton.Name = ""
+        Me.txtContraseña.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtContraseña.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtContraseña.CustomButton.TabIndex = 1
+        Me.txtContraseña.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtContraseña.CustomButton.UseSelectable = True
+        Me.txtContraseña.CustomButton.Visible = False
+        Me.txtContraseña.Lines = New String(-1) {}
+        Me.txtContraseña.Location = New System.Drawing.Point(165, 254)
+        Me.txtContraseña.MaxLength = 32767
+        Me.txtContraseña.Name = "txtContraseña"
+        Me.txtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtContraseña.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtContraseña.SelectedText = ""
+        Me.txtContraseña.SelectionLength = 0
+        Me.txtContraseña.SelectionStart = 0
+        Me.txtContraseña.ShortcutsEnabled = True
+        Me.txtContraseña.Size = New System.Drawing.Size(250, 23)
+        Me.txtContraseña.TabIndex = 10
+        Me.txtContraseña.UseSelectable = True
+        Me.txtContraseña.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtContraseña.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'txtUsuario
+        '
+        '
+        '
+        '
+        Me.txtUsuario.CustomButton.Image = Nothing
+        Me.txtUsuario.CustomButton.Location = New System.Drawing.Point(228, 1)
+        Me.txtUsuario.CustomButton.Name = ""
+        Me.txtUsuario.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtUsuario.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtUsuario.CustomButton.TabIndex = 1
+        Me.txtUsuario.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtUsuario.CustomButton.UseSelectable = True
+        Me.txtUsuario.CustomButton.Visible = False
+        Me.txtUsuario.Lines = New String(-1) {}
+        Me.txtUsuario.Location = New System.Drawing.Point(165, 180)
+        Me.txtUsuario.MaxLength = 32767
+        Me.txtUsuario.Name = "txtUsuario"
+        Me.txtUsuario.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtUsuario.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtUsuario.SelectedText = ""
+        Me.txtUsuario.SelectionLength = 0
+        Me.txtUsuario.SelectionStart = 0
+        Me.txtUsuario.ShortcutsEnabled = True
+        Me.txtUsuario.Size = New System.Drawing.Size(250, 23)
+        Me.txtUsuario.TabIndex = 11
+        Me.txtUsuario.UseSelectable = True
+        Me.txtUsuario.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtUsuario.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
         'frmUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(482, 437)
+        Me.Controls.Add(Me.txtUsuario)
+        Me.Controls.Add(Me.txtContraseña)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblErrorAdmin)
         Me.Controls.Add(Me.BunifuImageButton1)
@@ -180,8 +216,6 @@ Partial Class frmUsuarios
         Me.Controls.Add(Me.BunifuCustomLabel3)
         Me.Controls.Add(Me.BunifuCustomLabel2)
         Me.Controls.Add(Me.BunifuCustomLabel1)
-        Me.Controls.Add(Me.txtContraseña)
-        Me.Controls.Add(Me.txtUsuario)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmUsuarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -190,9 +224,6 @@ Partial Class frmUsuarios
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents txtUsuario As Bunifu.Framework.UI.BunifuTextbox
-    Friend WithEvents txtContraseña As Bunifu.Framework.UI.BunifuTextbox
     Friend WithEvents BunifuCustomLabel1 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents BunifuCustomLabel2 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents BunifuCustomLabel3 As Bunifu.Framework.UI.BunifuCustomLabel
@@ -201,4 +232,6 @@ Partial Class frmUsuarios
     Friend WithEvents BunifuImageButton1 As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents lblErrorAdmin As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents Button1 As Button
+    Friend WithEvents txtContraseña As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtUsuario As MetroFramework.Controls.MetroTextBox
 End Class
