@@ -104,7 +104,7 @@ Partial Class frmUsuarios
         Me.btnAceptar.OnHoverTextColor = System.Drawing.Color.White
         Me.btnAceptar.selected = False
         Me.btnAceptar.Size = New System.Drawing.Size(241, 48)
-        Me.btnAceptar.TabIndex = 6
+        Me.btnAceptar.TabIndex = 3
         Me.btnAceptar.Textcolor = System.Drawing.Color.White
         Me.btnAceptar.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
@@ -137,7 +137,7 @@ Partial Class frmUsuarios
         Me.Button1.Location = New System.Drawing.Point(361, 377)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 55)
-        Me.Button1.TabIndex = 9
+        Me.Button1.TabIndex = 4
         Me.Button1.Text = "Salir"
         Me.Button1.UseVisualStyleBackColor = False
         '
@@ -166,7 +166,7 @@ Partial Class frmUsuarios
         Me.txtContraseña.SelectionStart = 0
         Me.txtContraseña.ShortcutsEnabled = True
         Me.txtContraseña.Size = New System.Drawing.Size(250, 23)
-        Me.txtContraseña.TabIndex = 10
+        Me.txtContraseña.TabIndex = 2
         Me.txtContraseña.UseSelectable = True
         Me.txtContraseña.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtContraseña.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -196,7 +196,7 @@ Partial Class frmUsuarios
         Me.txtUsuario.SelectionStart = 0
         Me.txtUsuario.ShortcutsEnabled = True
         Me.txtUsuario.Size = New System.Drawing.Size(250, 23)
-        Me.txtUsuario.TabIndex = 11
+        Me.txtUsuario.TabIndex = 1
         Me.txtUsuario.UseSelectable = True
         Me.txtUsuario.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtUsuario.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
