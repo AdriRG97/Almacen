@@ -23,17 +23,17 @@ Partial Class frmCantidadPedida
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCantidadPedida))
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.grbPedidos = New System.Windows.Forms.GroupBox()
         Me.SuspendLayout()
         '
-        'GroupBox1
+        'grbPedidos
         '
-        Me.GroupBox1.Location = New System.Drawing.Point(34, 23)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(447, 370)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
+        Me.grbPedidos.Location = New System.Drawing.Point(34, 23)
+        Me.grbPedidos.Name = "grbPedidos"
+        Me.grbPedidos.Size = New System.Drawing.Size(447, 370)
+        Me.grbPedidos.TabIndex = 0
+        Me.grbPedidos.TabStop = False
+        Me.grbPedidos.Text = "Productos pedidos:"
         '
         'frmCantidadPedida
         '
@@ -41,15 +41,15 @@ Partial Class frmCantidadPedida
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(528, 422)
         Me.ControlBox = False
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.grbPedidos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmCantidadPedida"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmCantidadPedida"
+        Me.Text = "Pedido"
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents grbPedidos As GroupBox
 End Class

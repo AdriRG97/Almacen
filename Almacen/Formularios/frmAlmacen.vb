@@ -14,6 +14,7 @@ Public Class frmAlmacen
 
 
     Private Sub frmAlmacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        My.Computer.Audio.Play(My.Resources.pedidoCompletado, AudioPlayMode.BackgroundLoop)
 
 
         Dim classResize As New clsResizeForm
@@ -66,6 +67,7 @@ Public Class frmAlmacen
     End Sub
 
 
+    'Movimiento de las imágenes
     Private Sub PictureBox_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbTelefono.MouseMove, pbSubrayadores.MouseMove, pbPerforadora.MouseMove, pbLapices.MouseMove, pbGrapadoras.MouseMove, pbCuadernos.MouseMove, pbCarpetas.MouseMove, pbCalculadoras.MouseMove, pbBolis.MouseMove ', MyBase.MouseMove
 
         Dim pictureEnMovimiento As PictureBox = TryCast(sender, PictureBox)
@@ -163,7 +165,7 @@ Public Class frmAlmacen
         Me.Close()
     End Sub
 
-
+    'Que las imágenes vuelvan a al inicio (cuando se suelte el ratón).
     Private Sub pbCuadernos_MouseUp_1(sender As Object, e As MouseEventArgs) Handles pbTelefono.MouseUp, pbSubrayadores.MouseUp, pbPerforadora.MouseUp, pbLapices.MouseUp, pbGrapadoras.MouseUp, pbCuadernos.MouseUp, pbCarpetas.MouseUp, pbCalculadoras.MouseUp, pbBolis.MouseUp
 
         If sender.Equals(pbCuadernos) Then

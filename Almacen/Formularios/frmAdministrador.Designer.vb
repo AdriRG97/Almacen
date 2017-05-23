@@ -23,44 +23,17 @@ Partial Class frmAdministrador
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAdministrador))
-        Me.btnPedidos = New MetroFramework.Controls.MetroButton()
-        Me.btnProductos = New MetroFramework.Controls.MetroButton()
-        Me.btnUsuarios = New MetroFramework.Controls.MetroButton()
         Me.lstProductos = New MetroFramework.Controls.MetroListView()
         Me.lstPedidos = New MetroFramework.Controls.MetroListView()
         Me.lstUsuarios = New MetroFramework.Controls.MetroListView()
         Me.ptbAñadir = New System.Windows.Forms.PictureBox()
         Me.btnMostrarUsuarios = New MetroFramework.Controls.MetroButton()
         Me.btnMostrarPedido = New MetroFramework.Controls.MetroButton()
+        Me.lblPedido = New MetroFramework.Controls.MetroLabel()
+        Me.lblProductos = New MetroFramework.Controls.MetroLabel()
+        Me.lblUsuarios = New MetroFramework.Controls.MetroLabel()
         CType(Me.ptbAñadir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'btnPedidos
-        '
-        Me.btnPedidos.Location = New System.Drawing.Point(40, 29)
-        Me.btnPedidos.Name = "btnPedidos"
-        Me.btnPedidos.Size = New System.Drawing.Size(208, 23)
-        Me.btnPedidos.TabIndex = 3
-        Me.btnPedidos.Text = "Pedido"
-        Me.btnPedidos.UseSelectable = True
-        '
-        'btnProductos
-        '
-        Me.btnProductos.Location = New System.Drawing.Point(337, 29)
-        Me.btnProductos.Name = "btnProductos"
-        Me.btnProductos.Size = New System.Drawing.Size(208, 23)
-        Me.btnProductos.TabIndex = 4
-        Me.btnProductos.Text = "Productos"
-        Me.btnProductos.UseSelectable = True
-        '
-        'btnUsuarios
-        '
-        Me.btnUsuarios.Location = New System.Drawing.Point(643, 29)
-        Me.btnUsuarios.Name = "btnUsuarios"
-        Me.btnUsuarios.Size = New System.Drawing.Size(208, 23)
-        Me.btnUsuarios.TabIndex = 5
-        Me.btnUsuarios.Text = "Usuarios"
-        Me.btnUsuarios.UseSelectable = True
         '
         'lstProductos
         '
@@ -109,7 +82,7 @@ Partial Class frmAdministrador
         'ptbAñadir
         '
         Me.ptbAñadir.Image = CType(resources.GetObject("ptbAñadir.Image"), System.Drawing.Image)
-        Me.ptbAñadir.Location = New System.Drawing.Point(337, 401)
+        Me.ptbAñadir.Location = New System.Drawing.Point(409, 410)
         Me.ptbAñadir.Name = "ptbAñadir"
         Me.ptbAñadir.Size = New System.Drawing.Size(47, 41)
         Me.ptbAñadir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -118,49 +91,77 @@ Partial Class frmAdministrador
         '
         'btnMostrarUsuarios
         '
-        Me.btnMostrarUsuarios.Location = New System.Drawing.Point(643, 410)
+        Me.btnMostrarUsuarios.Location = New System.Drawing.Point(643, 415)
         Me.btnMostrarUsuarios.Name = "btnMostrarUsuarios"
-        Me.btnMostrarUsuarios.Size = New System.Drawing.Size(208, 23)
+        Me.btnMostrarUsuarios.Size = New System.Drawing.Size(208, 22)
         Me.btnMostrarUsuarios.TabIndex = 10
         Me.btnMostrarUsuarios.Text = "Mostrar Usuarios"
         Me.btnMostrarUsuarios.UseSelectable = True
         '
         'btnMostrarPedido
         '
-        Me.btnMostrarPedido.Location = New System.Drawing.Point(40, 410)
+        Me.btnMostrarPedido.Location = New System.Drawing.Point(40, 415)
         Me.btnMostrarPedido.Name = "btnMostrarPedido"
         Me.btnMostrarPedido.Size = New System.Drawing.Size(208, 23)
         Me.btnMostrarPedido.TabIndex = 11
         Me.btnMostrarPedido.Text = "Mostrar Pedido"
         Me.btnMostrarPedido.UseSelectable = True
         '
+        'lblPedido
+        '
+        Me.lblPedido.AutoSize = True
+        Me.lblPedido.Location = New System.Drawing.Point(113, 29)
+        Me.lblPedido.Name = "lblPedido"
+        Me.lblPedido.Size = New System.Drawing.Size(50, 19)
+        Me.lblPedido.TabIndex = 12
+        Me.lblPedido.Text = "Pedido"
+        '
+        'lblProductos
+        '
+        Me.lblProductos.AutoSize = True
+        Me.lblProductos.Location = New System.Drawing.Point(404, 29)
+        Me.lblProductos.Name = "lblProductos"
+        Me.lblProductos.Size = New System.Drawing.Size(63, 19)
+        Me.lblProductos.TabIndex = 13
+        Me.lblProductos.Text = "Producto"
+        '
+        'lblUsuarios
+        '
+        Me.lblUsuarios.AutoSize = True
+        Me.lblUsuarios.Location = New System.Drawing.Point(729, 29)
+        Me.lblUsuarios.Name = "lblUsuarios"
+        Me.lblUsuarios.Size = New System.Drawing.Size(58, 19)
+        Me.lblUsuarios.TabIndex = 14
+        Me.lblUsuarios.Text = "Usuarios"
+        '
         'frmAdministrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(931, 461)
+        Me.Controls.Add(Me.lblUsuarios)
+        Me.Controls.Add(Me.lblProductos)
+        Me.Controls.Add(Me.lblPedido)
         Me.Controls.Add(Me.btnMostrarPedido)
         Me.Controls.Add(Me.btnMostrarUsuarios)
         Me.Controls.Add(Me.ptbAñadir)
         Me.Controls.Add(Me.lstUsuarios)
         Me.Controls.Add(Me.lstPedidos)
         Me.Controls.Add(Me.lstProductos)
-        Me.Controls.Add(Me.btnUsuarios)
-        Me.Controls.Add(Me.btnProductos)
-        Me.Controls.Add(Me.btnPedidos)
         Me.Name = "frmAdministrador"
-        Me.Text = "frmAdministrador"
+        Me.Text = "Administrador"
         CType(Me.ptbAñadir, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btnPedidos As MetroFramework.Controls.MetroButton
-    Friend WithEvents btnProductos As MetroFramework.Controls.MetroButton
-    Friend WithEvents btnUsuarios As MetroFramework.Controls.MetroButton
     Friend WithEvents lstProductos As MetroFramework.Controls.MetroListView
     Friend WithEvents lstPedidos As MetroFramework.Controls.MetroListView
     Friend WithEvents lstUsuarios As MetroFramework.Controls.MetroListView
     Friend WithEvents ptbAñadir As PictureBox
     Friend WithEvents btnMostrarUsuarios As MetroFramework.Controls.MetroButton
     Friend WithEvents btnMostrarPedido As MetroFramework.Controls.MetroButton
+    Friend WithEvents lblPedido As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblProductos As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblUsuarios As MetroFramework.Controls.MetroLabel
 End Class
