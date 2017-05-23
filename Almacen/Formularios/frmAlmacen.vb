@@ -1,6 +1,7 @@
 ﻿Imports CapaDatos
 Module Module1
     Public nuestroAlmacen As New List(Of Producto)
+
 End Module
 Public Class frmAlmacen
 
@@ -11,15 +12,9 @@ Public Class frmAlmacen
     Dim nombresProductos As String() = {"Cuadernos", "Subrayadores", "Bolis", "Lapices", "Perforadoras", "Grapadoras", "Carpetas", "Calculadoras", "Telefono"}
 
 
-
-
-    '  Sub PlayBackgroundSoundFile()
-    '      My.Computer.Audio.Play("./song.mp3",
-    '      AudioPlayMode.BackgroundLoop)
-    '  End Sub
-
-
     Private Sub frmAlmacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
 
 
         Dim classResize As New clsResizeForm
@@ -49,10 +44,6 @@ Public Class frmAlmacen
         localizacionIni.Add(pbCarpetas.Location)
         localizacionIni.Add(pbCalculadoras.Location)
         localizacionIni.Add(pbTelefono.Location)
-
-
-
-        '    My.Computer.Audio.Play(My.Resources.ResourceManager.)
 
 
 
@@ -177,5 +168,10 @@ Public Class frmAlmacen
             pbTelefono.Location = localizacionIni(8)
         End If
 
+    End Sub
+
+    Private Sub btnVerPedido_Click(sender As Object, e As EventArgs) Handles btnVerPedido.Click
+        Dim pedido As New frmCantidadPedida
+        pedido.ShowDialog()
     End Sub
 End Class
