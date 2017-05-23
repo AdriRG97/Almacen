@@ -1,7 +1,8 @@
 ﻿Imports CapaDatos
 Module Module1
     Public nuestroAlmacen As New List(Of Producto)
-
+    Public paquetesProductos As Integer() = {5, 3, 10, 5, 1, 2, 10, 3, 1}
+    Public nombresProductos As String() = {"Cuadernos", "Subrayadores", "Bolis", "Lapices", "Perforadora", "Grapadoras", "Carpetas", "Calculadoras", "Telefono"}
 End Module
 Public Class frmAlmacen
 
@@ -9,8 +10,8 @@ Public Class frmAlmacen
     Private errores As Integer = 0
     Private frmacantidad As New frmCantidadPedida
 
-    Dim nombresProductos As String() = {"Cuadernos", "Subrayadores", "Bolis", "Lapices", "Perforadora", "Grapadoras", "Carpetas", "Calculadoras", "Telefono"}
-    Dim paquetesProductos As Integer() = {5, 3, 10, 5, 1, 2, 10, 3, 1}
+
+
 
 
     Private Sub frmAlmacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -206,6 +207,11 @@ Public Class frmAlmacen
         pedido.ShowDialog()
     End Sub
 
+    Private Sub btnStock_Click(sender As Object, e As EventArgs) Handles btnStock.Click
+        Dim stock As New frmStock
+        stock.ShowDialog()
+        actualizarEtiquetas()
+    End Sub
 
     Private Sub btnTutorial_Click(sender As Object, e As EventArgs) Handles btnTutorial.Click
         Dim tuto As New Instrucciones

@@ -628,7 +628,6 @@ Partial Class frmAlmacen
         CType(Me.copiaCalculadoras, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.copiaTelefono, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.copiaPerforadora, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnInstrucc, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
