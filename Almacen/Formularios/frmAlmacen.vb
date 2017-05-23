@@ -6,10 +6,10 @@ End Module
 Public Class frmAlmacen
 
     Private localizacionIni As New List(Of Point)
-
+    Private errores As Integer = 0
     Private frmacantidad As New frmCantidadPedida
 
-    Dim nombresProductos As String() = {"Cuadernos", "Subrayadores", "Bolis", "Lapices", "Perforadoras", "Grapadoras", "Carpetas", "Calculadoras", "Telefono"}
+    Dim nombresProductos As String() = {"Cuadernos", "Subrayadores", "Bolis", "Lapices", "Perforadora", "Grapadoras", "Carpetas", "Calculadoras", "Telefono"}
 
 
     Private Sub frmAlmacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -50,14 +50,14 @@ Public Class frmAlmacen
         PictureBox2.SendToBack()
         'Creamos los productos predeterminados
         For x = 0 To nombresProductos.Length - 1
-            Dim nuevoProducto As New Producto(nombresProductos(x), 50)
+            Dim nuevoProducto As New Producto(nombresProductos(x)) 'Stock si eso
             nuestroAlmacen.Add(nuevoProducto)
         Next
 
-        Dim pedi As String
-        Dim ped As New Pedido
-        pedi = ped.NuevoPedido()
-
+        'Dim pedi As String
+        'Dim ped As New Pedido
+        'pedi = ped.NuevoPedido()
+        actualizarEtiquetas()
     End Sub
 
 
@@ -65,9 +65,6 @@ Public Class frmAlmacen
         End
     End Sub
 
-    Private Sub PictureBox1_MouseUp(sender As Object, e As System.Windows.Forms.MouseEventArgs)
-
-    End Sub
 
     'Movimiento de las imágenes
     Private Sub PictureBox_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pbTelefono.MouseMove, pbSubrayadores.MouseMove, pbPerforadora.MouseMove, pbLapices.MouseMove, pbGrapadoras.MouseMove, pbCuadernos.MouseMove, pbCarpetas.MouseMove, pbCalculadoras.MouseMove, pbBolis.MouseMove ', MyBase.MouseMove
@@ -86,44 +83,81 @@ Public Class frmAlmacen
 
             If sender.Equals(pbCuadernos) Then
                 pbCuadernos.Location = localizacionIni(0)
+                pedirCantidad("Cuadernos")
             End If
 
             If sender.Equals(pbSubrayadores) Then
                 pbSubrayadores.Location = localizacionIni(1)
+                pedirCantidad("Subrayadores")
             End If
 
             If sender.Equals(pbBolis) Then
                 pbBolis.Location = localizacionIni(2)
+                pedirCantidad("Bolis")
             End If
 
             If sender.Equals(pbLapices) Then
                 pbLapices.Location = localizacionIni(3)
+                pedirCantidad("Lapices")
             End If
 
             If sender.Equals(pbPerforadora) Then
                 pbPerforadora.Location = localizacionIni(4)
+                pedirCantidad("Perforadora")
             End If
 
             If sender.Equals(pbGrapadoras) Then
                 pbGrapadoras.Location = localizacionIni(5)
+                pedirCantidad("Grapadoras")
             End If
 
             If sender.Equals(pbCarpetas) Then
                 pbCarpetas.Location = localizacionIni(6)
+                pedirCantidad("Carpetas")
             End If
 
             If sender.Equals(pbCalculadoras) Then
                 pbCalculadoras.Location = localizacionIni(7)
+                pedirCantidad("Calculadoras")
             End If
 
             If sender.Equals(pbTelefono) Then
                 pbTelefono.Location = localizacionIni(8)
+                pedirCantidad("Telefono")
             End If
-            frmacantidad.ShowDialog()
+
+
+
         End If
 
     End Sub
-
+    Private Function pedirCantidad(ByVal nombreProducto As String) As String
+        Dim producto As New Producto(nombreProducto)
+        Dim cantidad As Integer = 0
+        Do
+        Loop Until Integer.TryParse(InputBox("¿Cuantos quieres?"), cantidad)
+        If nuestroAlmacen.Contains(producto) Then
+            If cantidad < nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock Then
+                nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock -= cantidad
+                actualizarEtiquetas()
+            Else
+                Return MsgBox("No hay suficiente stock")
+                errores += 1
+            End If
+        End If
+        Return "Pedido correctamente"
+    End Function
+    Private Sub actualizarEtiquetas()
+        lblCuadernosQ.Text = "Quedan " & nuestroAlmacen(0).Stock & " cuadernos."
+        lblSubrayadoresQ.Text = "Quedan " & nuestroAlmacen(1).Stock & " subrayadores."
+        lblBolisQ.Text = "Quedan " & nuestroAlmacen(2).Stock & " bolis."
+        lblLapicesQ.Text = "Quedan " & nuestroAlmacen(3).Stock & " lapices."
+        lblPerforadoraQ.Text = "Quedan " & nuestroAlmacen(4).Stock & " perforadoras."
+        lblGrapadorasQ.Text = "Quedan " & nuestroAlmacen(5).Stock & " grapadoras."
+        lblCarpetasQ.Text = "Quedan " & nuestroAlmacen(6).Stock & " carpetas."
+        lblCalculadorasQ.Text = "Quedan " & nuestroAlmacen(7).Stock & " calculadoras."
+        lblTelefonoQ.Text = "Quedan " & nuestroAlmacen(8).Stock & " teléfonos."
+    End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()

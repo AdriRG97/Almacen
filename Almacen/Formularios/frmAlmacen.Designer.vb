@@ -96,6 +96,7 @@ Partial Class frmAlmacen
         Me.pbCuadernos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbCuadernos.TabIndex = 2
         Me.pbCuadernos.TabStop = False
+        Me.pbCuadernos.Tag = "5"
         '
         'pbSubrayadores
         '
@@ -107,6 +108,7 @@ Partial Class frmAlmacen
         Me.pbSubrayadores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbSubrayadores.TabIndex = 1
         Me.pbSubrayadores.TabStop = False
+        Me.pbSubrayadores.Tag = "3"
         '
         'PictureBox2
         '
@@ -128,6 +130,7 @@ Partial Class frmAlmacen
         Me.pbCarpetas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbCarpetas.TabIndex = 3
         Me.pbCarpetas.TabStop = False
+        Me.pbCarpetas.Tag = "10"
         '
         'pbGrapadoras
         '
@@ -139,6 +142,7 @@ Partial Class frmAlmacen
         Me.pbGrapadoras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbGrapadoras.TabIndex = 4
         Me.pbGrapadoras.TabStop = False
+        Me.pbGrapadoras.Tag = "2"
         '
         'lblCuadernosT
         '
@@ -263,6 +267,7 @@ Partial Class frmAlmacen
         Me.pbBolis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbBolis.TabIndex = 19
         Me.pbBolis.TabStop = False
+        Me.pbBolis.Tag = "10"
         '
         'Label2
         '
@@ -316,6 +321,7 @@ Partial Class frmAlmacen
         Me.pbCalculadoras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbCalculadoras.TabIndex = 22
         Me.pbCalculadoras.TabStop = False
+        Me.pbCalculadoras.Tag = "3"
         '
         'lblLapicesQ
         '
@@ -348,6 +354,7 @@ Partial Class frmAlmacen
         Me.pbLapices.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbLapices.TabIndex = 25
         Me.pbLapices.TabStop = False
+        Me.pbLapices.Tag = "5"
         '
         'lblTelefonoQ
         '
@@ -380,6 +387,7 @@ Partial Class frmAlmacen
         Me.pbTelefono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbTelefono.TabIndex = 28
         Me.pbTelefono.TabStop = False
+        Me.pbTelefono.Tag = "1"
         '
         'lblPerforadoraQ
         '
@@ -412,6 +420,7 @@ Partial Class frmAlmacen
         Me.pbPerforadora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbPerforadora.TabIndex = 31
         Me.pbPerforadora.TabStop = False
+        Me.pbPerforadora.Tag = "1"
         '
         'copiaCuaderno
         '

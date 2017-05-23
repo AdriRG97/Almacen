@@ -69,29 +69,29 @@ Public Class Pedido
     Dim productos() As String = {"Lapices", "bolis", "cuadernos", "hojas", "grapadora", "cintas", "tijeras", "Telefono", "calculadoras"}
     Dim Variacion() As Boolean = {False, False, False, False, False, False, False, False, False}
     Dim cantPed As Integer
-    Public Function NuevoPedido() As String
-        Dim titulo As String = "Te han pedido: "
-        Dim nuevalineas As String
-        Dim numAlea As Integer
-        Dim rnd = New Random
-        Dim debeRenovar As Boolean
-        Dim YaRenovado As Boolean = False
-        For i = 0 To 8
-            numAlea = rnd.Next(2)
-            If numAlea = 0 Then
-                Variacion(i) = False
-            Else
-                cantPed = rnd.Next(51)
-                Variacion(i) = True
-                Dim prod As New Producto(productos(i), 50)
-                debeRenovar = prod.ComprobarAlmacen(prod, cantPed)
+    'Public Function NuevoPedido() As String
+    '    Dim titulo As String = "Te han pedido: "
+    '    Dim nuevalineas As String
+    '    Dim numAlea As Integer
+    '    Dim rnd = New Random
+    '    Dim debeRenovar As Boolean
+    '    Dim YaRenovado As Boolean = False
+    '    For i = 0 To 8
+    '        numAlea = rnd.Next(2)
+    '        If numAlea = 0 Then
+    '            Variacion(i) = False
+    '        Else
+    '            cantPed = rnd.Next(51)
+    '            Variacion(i) = True
+    '            Dim prod As New Producto(productos(i), 50)
+    '            debeRenovar = prod.ComprobarAlmacen(prod, cantPed)
 
-                AñadirProducto(prod, cantPed)
-                prod.CambiarStock(prod, cantPed)
-                nuevalineas = ControlChars.NewLine & cantPed & " " & productos(i)
-                titulo = titulo & nuevalineas
-            End If
-        Next
-        Return titulo
-    End Function
+    '            AñadirProducto(prod, cantPed)
+    '            prod.CambiarStock(prod, cantPed)
+    '            nuevalineas = ControlChars.NewLine & cantPed & " " & productos(i)
+    '            titulo = titulo & nuevalineas
+    '        End If
+    '    Next
+    '    Return titulo
+    'End Function
 End Class
