@@ -135,6 +135,7 @@ Public Class frmAlmacen
             If cantidad <= nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock / paquetesProductos(nuestroAlmacen.IndexOf(producto)) Then
                 nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock -= cantidad * paquetesProductos(nuestroAlmacen.IndexOf(producto))
                 actualizarEtiquetas()
+                My.Computer.Audio.Play(My.Resources.correcto, AudioPlayMode.Background)
             Else
                 My.Computer.Audio.Play(My.Resources._error, AudioPlayMode.Background)
                 errores += 1

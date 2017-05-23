@@ -26,12 +26,12 @@ Partial Class frmAdministrador
         Me.lstProductos = New MetroFramework.Controls.MetroListView()
         Me.lstPedidos = New MetroFramework.Controls.MetroListView()
         Me.lstUsuarios = New MetroFramework.Controls.MetroListView()
-        Me.ptbAñadir = New System.Windows.Forms.PictureBox()
         Me.btnMostrarUsuarios = New MetroFramework.Controls.MetroButton()
         Me.btnMostrarPedido = New MetroFramework.Controls.MetroButton()
         Me.lblPedido = New MetroFramework.Controls.MetroLabel()
         Me.lblProductos = New MetroFramework.Controls.MetroLabel()
         Me.lblUsuarios = New MetroFramework.Controls.MetroLabel()
+        Me.ptbAñadir = New System.Windows.Forms.PictureBox()
         CType(Me.ptbAñadir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -79,16 +79,6 @@ Partial Class frmAdministrador
         Me.lstUsuarios.UseSelectable = True
         Me.lstUsuarios.View = System.Windows.Forms.View.List
         '
-        'ptbAñadir
-        '
-        Me.ptbAñadir.Image = CType(resources.GetObject("ptbAñadir.Image"), System.Drawing.Image)
-        Me.ptbAñadir.Location = New System.Drawing.Point(409, 410)
-        Me.ptbAñadir.Name = "ptbAñadir"
-        Me.ptbAñadir.Size = New System.Drawing.Size(47, 41)
-        Me.ptbAñadir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.ptbAñadir.TabIndex = 9
-        Me.ptbAñadir.TabStop = False
-        '
         'btnMostrarUsuarios
         '
         Me.btnMostrarUsuarios.Location = New System.Drawing.Point(643, 415)
@@ -133,6 +123,16 @@ Partial Class frmAdministrador
         Me.lblUsuarios.Size = New System.Drawing.Size(58, 19)
         Me.lblUsuarios.TabIndex = 14
         Me.lblUsuarios.Text = "Usuarios"
+        '
+        'ptbAñadir
+        '
+        Me.ptbAñadir.Image = CType(resources.GetObject("ptbAñadir.Image"), System.Drawing.Image)
+        Me.ptbAñadir.Location = New System.Drawing.Point(409, 410)
+        Me.ptbAñadir.Name = "ptbAñadir"
+        Me.ptbAñadir.Size = New System.Drawing.Size(47, 41)
+        Me.ptbAñadir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptbAñadir.TabIndex = 9
+        Me.ptbAñadir.TabStop = False
         '
         'frmAdministrador
         '

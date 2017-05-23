@@ -93,6 +93,8 @@ Public Class frmAdministrador
     Dim Variacion() As Boolean = {False, False, False, False, False, False, False, False, False}
     Dim cantPed As Integer
     Dim ped As New Pedido
+
+
     'Public Function NuevoPedido() As String
     '    Dim titulo As String = "Te han pedido: "
     '    Dim nuevalineas As String

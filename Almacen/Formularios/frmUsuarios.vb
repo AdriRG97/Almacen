@@ -36,10 +36,11 @@ Public Class frmUsuarios
             End If
 
             If usu.Usuario <> "" OrElse usu.Contraseña <> "" Then
-                If usu.Usuario = txtUsuario.text AndAlso usu.Contraseña = txtContraseña.text Then
+                If usu.Usuario = txtUsuario.Text AndAlso usu.Contraseña = txtContraseña.Text Then
                     lblErrorAdmin.Visible = True
                     lblError.Visible = False
                     lblErrorAdmin.Text = "Bienvenida Miriam"
+                    My.Computer.Audio.Play(My.Resources.acierto, AudioPlayMode.Background)
                     Dim frmAdmin As New frmAdministrador
                     objReader.Close()
                     frmAdmin.ShowDialog()
@@ -70,7 +71,7 @@ Public Class frmUsuarios
                     usu2.Contraseña = arraydatos2(1)
                 End If
             End If
-            If usu2.Usuario = txtUsuario.text AndAlso usu2.Contraseña = txtContraseña.text Then
+            If usu2.Usuario = txtUsuario.Text AndAlso usu2.Contraseña = txtContraseña.Text AndAlso Not String.IsNullOrWhiteSpace(txtUsuario.Text) Then
                 lblError.Visible = True
                 lblError.Text = "Bienvenido " & usu2.Usuario
                 My.Computer.Audio.Play(My.Resources.acierto, AudioPlayMode.Background)
@@ -87,14 +88,19 @@ Public Class frmUsuarios
             End If
         Loop Until sline = "" OrElse IsNothing(sline)
 
-        If boolError = False Then
+        If boolError = False OrElse String.IsNullOrWhiteSpace(txtUsuario.Text) Then
             lblError.Visible = True
             lblError.Text = "Error, el usuario es incorrecto."
             My.Computer.Audio.Play(My.Resources._error, AudioPlayMode.Background)
         End If
-        If boolError2 = True Then
+        If boolError2 = True OrElse String.IsNullOrWhiteSpace(txtContraseña.Text) Then
             lblError.Visible = True
             lblError.Text = "Error, la contraseña no es correcta."
+            My.Computer.Audio.Play(My.Resources._error, AudioPlayMode.Background)
+        End If
+
+        If (boolError = False AndAlso boolError = False) OrElse (String.IsNullOrWhiteSpace(txtUsuario.Text) AndAlso String.IsNullOrWhiteSpace(txtContraseña.Text)) Then
+            lblError.Text = "Error, usuario y contraseña INCORRECTOS."
             My.Computer.Audio.Play(My.Resources._error, AudioPlayMode.Background)
         End If
         objReader2.Close()

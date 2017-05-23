@@ -218,6 +218,7 @@
     <Content Include="Ficheros\Usuarios.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\correcto.wav" />
     <None Include="Resources\pedidoCompletado.wav" />
     <None Include="Resources\error.wav" />
     <None Include="Resources\acierto.wav" />
