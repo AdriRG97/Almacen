@@ -13,7 +13,7 @@ Public Class frmAlmacen
 
 
     Private Sub frmAlmacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        My.Computer.Audio.Play(My.Resources.pedidoCompletado, AudioPlayMode.BackgroundLoop)
 
 
         Dim classResize As New clsResizeForm
