@@ -1,6 +1,6 @@
 ﻿Imports CapaDatos
 Public Class frmCantidadPedida
-    Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
+    Private Sub btnAceptar_Click(sender As Object, e As EventArgs) 
         Dim almacen = frmAlmacen
 
         almacen.lblBolisQ.Text = "Quedan " & nuestroAlmacen(0).Stock & " bolis."
