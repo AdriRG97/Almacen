@@ -1,6 +1,7 @@
 ﻿Imports CapaDatos
 Module Module1
     Public nuestroAlmacen As New List(Of Producto)
+
 End Module
 Public Class frmAlmacen
 
@@ -11,15 +12,9 @@ Public Class frmAlmacen
     Dim nombresProductos As String() = {"Cuadernos", "Subrayadores", "Bolis", "Lapices", "Perforadora", "Grapadoras", "Carpetas", "Calculadoras", "Telefono"}
 
 
-
-
-    '  Sub PlayBackgroundSoundFile()
-    '      My.Computer.Audio.Play("./song.mp3",
-    '      AudioPlayMode.BackgroundLoop)
-    '  End Sub
-
-
     Private Sub frmAlmacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
 
 
         Dim classResize As New clsResizeForm
@@ -49,10 +44,6 @@ Public Class frmAlmacen
         localizacionIni.Add(pbCarpetas.Location)
         localizacionIni.Add(pbCalculadoras.Location)
         localizacionIni.Add(pbTelefono.Location)
-
-
-
-        'My.Computer.Audio.Play(My.Resources.ResourceManager.)
 
 
 
@@ -145,8 +136,8 @@ Public Class frmAlmacen
         Dim cantidad As Integer = 0
         Do
         Loop Until Integer.TryParse(InputBox("¿Cuantos quieres?"), cantidad)
-        If nuestroAlmacen.Contains(Producto) Then
-            If cantidad < nuestroAlmacen.Item(nuestroAlmacen.IndexOf(Producto)).Stock Then
+        If nuestroAlmacen.Contains(producto) Then
+            If cantidad < nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock Then
                 nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock -= cantidad
                 actualizarEtiquetas()
             Else
@@ -213,4 +204,8 @@ Public Class frmAlmacen
 
     End Sub
 
+    Private Sub btnVerPedido_Click(sender As Object, e As EventArgs) Handles btnVerPedido.Click
+        Dim pedido As New frmCantidadPedida
+        pedido.ShowDialog()
+    End Sub
 End Class
