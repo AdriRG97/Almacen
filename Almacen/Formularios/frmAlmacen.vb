@@ -10,11 +10,10 @@ Public Class frmAlmacen
     Private frmacantidad As New frmCantidadPedida
 
     Dim nombresProductos As String() = {"Cuadernos", "Subrayadores", "Bolis", "Lapices", "Perforadora", "Grapadoras", "Carpetas", "Calculadoras", "Telefono"}
+    Dim paquetesProductos As Integer() = {}
 
 
     Private Sub frmAlmacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
 
 
         Dim classResize As New clsResizeForm
@@ -123,6 +122,7 @@ Public Class frmAlmacen
 
             If sender.Equals(pbTelefono) Then
                 pbTelefono.Location = localizacionIni(8)
+
                 pedirCantidad("Telefono")
             End If
 
@@ -135,9 +135,9 @@ Public Class frmAlmacen
         Dim producto As New Producto(nombreProducto)
         Dim cantidad As Integer = 0
         Do
-        Loop Until Integer.TryParse(InputBox("¿Cuantos quieres?"), cantidad)
+        Loop Until Integer.TryParse(InputBox("¿Cuantos paquetes quieres?"), cantidad)
         If nuestroAlmacen.Contains(producto) Then
-            If cantidad < nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock Then
+            If cantidad < nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock Then '/nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).tag Then
                 nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock -= cantidad
                 actualizarEtiquetas()
             Else
