@@ -131,6 +131,12 @@
     <Compile Include="frmCantidadPedida.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Instrucciones.Designer.vb">
+      <DependentUpon>Instrucciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Instrucciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCantidadPedida.resx">
       <DependentUpon>frmCantidadPedida.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instrucciones.resx">
+      <DependentUpon>Instrucciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
