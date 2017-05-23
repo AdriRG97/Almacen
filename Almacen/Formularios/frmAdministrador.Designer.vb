@@ -32,6 +32,7 @@ Partial Class frmAdministrador
         Me.lblProductos = New MetroFramework.Controls.MetroLabel()
         Me.lblUsuarios = New MetroFramework.Controls.MetroLabel()
         Me.ptbAñadir = New System.Windows.Forms.PictureBox()
+        Me.btnAnadirEnunciado = New MetroFramework.Controls.MetroButton()
         CType(Me.ptbAñadir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -134,11 +135,21 @@ Partial Class frmAdministrador
         Me.ptbAñadir.TabIndex = 9
         Me.ptbAñadir.TabStop = False
         '
+        'btnAnadirEnunciado
+        '
+        Me.btnAnadirEnunciado.Location = New System.Drawing.Point(239, 12)
+        Me.btnAnadirEnunciado.Name = "btnAnadirEnunciado"
+        Me.btnAnadirEnunciado.Size = New System.Drawing.Size(113, 39)
+        Me.btnAnadirEnunciado.TabIndex = 15
+        Me.btnAnadirEnunciado.Text = "Añadir Enunciado"
+        Me.btnAnadirEnunciado.UseSelectable = True
+        '
         'frmAdministrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(931, 461)
+        Me.Controls.Add(Me.btnAnadirEnunciado)
         Me.Controls.Add(Me.lblUsuarios)
         Me.Controls.Add(Me.lblProductos)
         Me.Controls.Add(Me.lblPedido)
@@ -164,4 +175,5 @@ Partial Class frmAdministrador
     Friend WithEvents lblPedido As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblProductos As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblUsuarios As MetroFramework.Controls.MetroLabel
+    Friend WithEvents btnAnadirEnunciado As MetroFramework.Controls.MetroButton
 End Class

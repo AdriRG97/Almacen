@@ -6,7 +6,10 @@ End Module
 Public Class frmAlmacen
 
     Private localizacionIni As New List(Of Point)
-    Private errores As Integer = 0
+    Private erroresPorExistencia As Integer = 0
+    Private erroresPorEnunciado As Integer = 0
+    Private erroresPorFinalizar As Integer = 0
+    Private enunciadoCumplido As Boolean = False
     Private frmacantidad As New frmCantidadPedida
 
     Dim nombresProductos As String() = {"Cuadernos", "Subrayadores", "Bolis", "Lapices", "Perforadora", "Grapadoras", "Carpetas", "Calculadoras", "Telefono"}
@@ -14,7 +17,6 @@ Public Class frmAlmacen
 
 
     Private Sub frmAlmacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
 
 
         Dim classResize As New clsResizeForm
@@ -124,13 +126,14 @@ Public Class frmAlmacen
                 pbTelefono.Location = localizacionIni(8)
                 pedirCantidad("Telefono")
             End If
+            enunciadoCumplido = True
         End If
     End Sub
     Private Function pedirCantidad(ByVal nombreProducto As String) As String
         Dim producto As New Producto(nombreProducto)
         Dim cantidad As Integer = 0
         Do
-        Loop Until Integer.TryParse(InputBox("¿Cuantos paquetes quieres?"), cantidad) AndAlso cantidad > 0
+        Loop Until Integer.TryParse(InputBox("¿Cuántos paquetes quieres?"), cantidad) AndAlso cantidad > 0
         If nuestroAlmacen.Contains(producto) Then
             If cantidad <= nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock / paquetesProductos(nuestroAlmacen.IndexOf(producto)) Then
                 nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock -= cantidad * paquetesProductos(nuestroAlmacen.IndexOf(producto))
@@ -138,8 +141,8 @@ Public Class frmAlmacen
                 My.Computer.Audio.Play(My.Resources.correcto, AudioPlayMode.Background)
             Else
                 My.Computer.Audio.Play(My.Resources._error, AudioPlayMode.Background)
-                errores += 1
-                Return MsgBox("No hay suficiente stock")
+                erroresPorExistencia += 1
+                Return MsgBox("No hay suficiente stock.")
             End If
         End If
         Return "Pedido correctamente"
@@ -148,7 +151,7 @@ Public Class frmAlmacen
         lblCuadernosQ.Text = "Quedan " & nuestroAlmacen(0).Stock & " cuadernos."
         lblSubrayadoresQ.Text = "Quedan " & nuestroAlmacen(1).Stock & " subrayadores."
         lblBolisQ.Text = "Quedan " & nuestroAlmacen(2).Stock & " bolis."
-        lblLapicesQ.Text = "Quedan " & nuestroAlmacen(3).Stock & " lapices."
+        lblLapicesQ.Text = "Quedan " & nuestroAlmacen(3).Stock & " lápices."
         lblPerforadoraQ.Text = "Quedan " & nuestroAlmacen(4).Stock & " perforadoras."
         lblGrapadorasQ.Text = "Quedan " & nuestroAlmacen(5).Stock & " grapadoras."
         lblCarpetasQ.Text = "Quedan " & nuestroAlmacen(6).Stock & " carpetas."
@@ -210,5 +213,21 @@ Public Class frmAlmacen
     Private Sub btnTutorial_Click(sender As Object, e As EventArgs) Handles btnTutorial.Click
         Dim tuto As New Instrucciones
         tuto.ShowDialog()
+    End Sub
+
+    Private Sub btnFinalizar_Click(sender As Object, e As EventArgs) Handles btnFinalizar.Click
+        If enunciadoCumplido = True Then
+
+            Dim erroresTotales As Integer = erroresPorEnunciado + erroresPorExistencia + erroresPorFinalizar
+
+
+            MsgBox("Has terminado tu pedido." & vbCrLf & vbCrLf & "○ Errores por sobrepasar las existencias: " & erroresPorExistencia & vbCrLf & "○ Errores por sobrepasar lo que manda el enunciado: " & erroresPorEnunciado & vbCrLf & "○ Errores por finalizar sin haber terminado el pedido: " & erroresPorFinalizar & vbCrLf & "____________________________" & vbCrLf & vbCrLf & "○ Errores totales: " & erroresTotales, Buttons:=MsgBoxStyle.Information, Title:="Fin del juego")
+            Me.Close()
+
+        Else
+            erroresPorFinalizar += 1
+            MsgBox("Error, todavía no has completado tu pedido, ¡Ánimo!", MsgBoxStyle.Critical)
+
+        End If
     End Sub
 End Class
