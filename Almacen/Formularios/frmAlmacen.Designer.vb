@@ -28,7 +28,6 @@ Partial Class frmAlmacen
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.pbCarpetas = New System.Windows.Forms.PictureBox()
         Me.pbGrapadoras = New System.Windows.Forms.PictureBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblCuadernosT = New System.Windows.Forms.Label()
         Me.lblSubrayadoresT = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -67,12 +66,13 @@ Partial Class frmAlmacen
         Me.copiaTelefono = New System.Windows.Forms.PictureBox()
         Me.copiaPerforadora = New System.Windows.Forms.PictureBox()
         Me.btnVerPedido = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.pbCuadernos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbSubrayadores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbCarpetas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbGrapadoras, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         CType(Me.pbBolis, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbCalculadoras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbLapices, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -114,7 +114,7 @@ Partial Class frmAlmacen
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(30, 30)
+        Me.PictureBox2.Location = New System.Drawing.Point(1531, 282)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(333, 368)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -142,14 +142,6 @@ Partial Class frmAlmacen
         Me.pbGrapadoras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbGrapadoras.TabIndex = 4
         Me.pbGrapadoras.TabStop = False
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.PictureBox2)
-        Me.Panel1.Location = New System.Drawing.Point(1461, 303)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(394, 419)
-        Me.Panel1.TabIndex = 6
         '
         'lblCuadernosT
         '
@@ -497,7 +489,7 @@ Partial Class frmAlmacen
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(1390, 698)
+        Me.Label1.Location = New System.Drawing.Point(1632, 704)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(39, 13)
         Me.Label1.TabIndex = 50
@@ -532,12 +524,31 @@ Partial Class frmAlmacen
         Me.btnVerPedido.Text = "VER CÓMO VA NUESTRO PEDIDO"
         Me.btnVerPedido.UseVisualStyleBackColor = True
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(464, 129)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(39, 13)
+        Me.Label5.TabIndex = 54
+        Me.Label5.Text = "Label5"
+        '
+        'Panel1
+        '
+        Me.Panel1.Location = New System.Drawing.Point(1214, 668)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(200, 100)
+        Me.Panel1.TabIndex = 55
+        '
         'frmAlmacen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(1932, 1092)
+        Me.ClientSize = New System.Drawing.Size(1927, 1092)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btnVerPedido)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblPerforadoraQ)
@@ -569,7 +580,6 @@ Partial Class frmAlmacen
         Me.Controls.Add(Me.pbGrapadoras)
         Me.Controls.Add(Me.pbCarpetas)
         Me.Controls.Add(Me.pbCuadernos)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.copiaCuaderno)
         Me.Controls.Add(Me.pbSubrayadores)
         Me.Controls.Add(Me.copiaSubrayadores)
@@ -591,7 +601,6 @@ Partial Class frmAlmacen
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbCarpetas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbGrapadoras, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
         CType(Me.pbBolis, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbCalculadoras, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbLapices, System.ComponentModel.ISupportInitialize).EndInit()
@@ -615,7 +624,6 @@ Partial Class frmAlmacen
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents pbCarpetas As PictureBox
     Friend WithEvents pbGrapadoras As PictureBox
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents lblCuadernosT As Label
     Friend WithEvents lblSubrayadoresT As Label
     Friend WithEvents Label3 As Label
@@ -654,4 +662,6 @@ Partial Class frmAlmacen
     Friend WithEvents copiaTelefono As PictureBox
     Friend WithEvents copiaPerforadora As PictureBox
     Friend WithEvents btnVerPedido As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Panel1 As Panel
 End Class

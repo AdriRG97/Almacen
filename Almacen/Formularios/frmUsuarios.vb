@@ -2,6 +2,7 @@
 Imports CapaDatos
 
 Public Class frmUsuarios
+    ' TODO Al finalizar poner este como  Primero
     Public Property Usuarios As New List(Of Usuario)
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
         lblErrorAdmin.Text = ""
