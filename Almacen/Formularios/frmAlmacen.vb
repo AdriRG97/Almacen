@@ -80,8 +80,6 @@ Public Class frmAlmacen
 
 
         If pictureEnMovimiento.Location.X >= PictureBox2.Location.X AndAlso pictureEnMovimiento.Location.X <= PictureBox2.Location.X + PictureBox2.Width - pictureEnMovimiento.Width AndAlso pictureEnMovimiento.Location.Y >= PictureBox2.Location.Y AndAlso pictureEnMovimiento.Location.Y <= PictureBox2.Location.Y + PictureBox2.Height - pictureEnMovimiento.Width Then
-
-
             If sender.Equals(pbCuadernos) Then
                 pbCuadernos.Location = localizacionIni(0)
                 pedirCantidad("Cuadernos")
@@ -124,14 +122,9 @@ Public Class frmAlmacen
 
             If sender.Equals(pbTelefono) Then
                 pbTelefono.Location = localizacionIni(8)
-
                 pedirCantidad("Telefono")
             End If
-
-
-
         End If
-
     End Sub
     Private Function pedirCantidad(ByVal nombreProducto As String) As String
         Dim producto As New Producto(nombreProducto)
@@ -210,4 +203,5 @@ Public Class frmAlmacen
         Dim pedido As New frmCantidadPedida
         pedido.ShowDialog()
     End Sub
+
 End Class
