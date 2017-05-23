@@ -73,6 +73,7 @@ Public Class frmUsuarios
             If usu2.Usuario = txtUsuario.text AndAlso usu2.Contraseña = txtContraseña.text Then
                 lblError.Visible = True
                 lblError.Text = "Bienvenido " & usu2.Usuario
+                My.Computer.Audio.Play(My.Resources.acierto, AudioPlayMode.Background)
                 Dim frmAlmacen As New frmAlmacen
                 frmAlmacen.Show()
                 Hide()
@@ -89,10 +90,12 @@ Public Class frmUsuarios
         If boolError = False Then
             lblError.Visible = True
             lblError.Text = "Error, el usuario es incorrecto."
+            My.Computer.Audio.Play(My.Resources._error, AudioPlayMode.Background)
         End If
         If boolError2 = True Then
             lblError.Visible = True
             lblError.Text = "Error, la contraseña no es correcta."
+            My.Computer.Audio.Play(My.Resources._error, AudioPlayMode.Background)
         End If
         objReader2.Close()
     End Sub

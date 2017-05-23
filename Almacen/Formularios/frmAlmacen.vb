@@ -14,7 +14,7 @@ Public Class frmAlmacen
 
 
     Private Sub frmAlmacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        My.Computer.Audio.Play(My.Resources.pedidoCompletado, AudioPlayMode.BackgroundLoop)
+
 
 
         Dim classResize As New clsResizeForm
@@ -136,8 +136,11 @@ Public Class frmAlmacen
                 nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock -= cantidad * paquetesProductos(nuestroAlmacen.IndexOf(producto))
                 actualizarEtiquetas()
             Else
-                Return MsgBox("No hay suficiente stock")
+                My.Computer.Audio.Play(My.Resources._error, AudioPlayMode.Background)
                 errores += 1
+                Return MsgBox("No hay suficiente stock")
+
+
             End If
         End If
         Return "Pedido correctamente"
