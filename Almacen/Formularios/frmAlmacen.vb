@@ -55,7 +55,7 @@ Public Class frmAlmacen
 
 
 
-        '    My.Computer.Audio.Play(My.Resources.ResourceManager.)
+        'My.Computer.Audio.Play(My.Resources.ResourceManager.)
 
 
 
