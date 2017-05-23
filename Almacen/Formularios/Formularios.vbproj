@@ -221,8 +221,6 @@
     <None Include="Resources\pedidoCompletado.wav" />
     <None Include="Resources\error.wav" />
     <None Include="Resources\acierto.wav" />
-    <None Include="Resources\pedidoCompletado.mp3" />
-    <None Include="Resources\error.mp3" />
     <None Include="Resources\tlf.jpg" />
     <None Include="Resources\perforadora.jpg" />
     <None Include="Resources\pack-10-boligrafos-paper-mate-s0957191.jpg" />
