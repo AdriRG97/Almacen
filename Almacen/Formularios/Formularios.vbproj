@@ -119,6 +119,12 @@
       <DependentUpon>frmAlmacen.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmAñadirPedido.Designer.vb">
+      <DependentUpon>frmAñadirPedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAñadirPedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmAñadirUsuario.Designer.vb">
       <DependentUpon>frmAñadirUsuario.vb</DependentUpon>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAlmacen.resx">
       <DependentUpon>frmAlmacen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAñadirPedido.resx">
+      <DependentUpon>frmAñadirPedido.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAñadirUsuario.resx">
       <DependentUpon>frmAñadirUsuario.vb</DependentUpon>
@@ -227,6 +236,7 @@
     <Content Include="Ficheros\Usuarios.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\pencil.png" />
     <None Include="Resources\correcto.wav" />
     <None Include="Resources\pedidoCompletado.wav" />
     <None Include="Resources\error.wav" />

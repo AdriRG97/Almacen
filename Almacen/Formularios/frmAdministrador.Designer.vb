@@ -31,6 +31,7 @@ Partial Class frmAdministrador
         Me.lblPedido = New MetroFramework.Controls.MetroLabel()
         Me.lblProductos = New MetroFramework.Controls.MetroLabel()
         Me.lblUsuarios = New MetroFramework.Controls.MetroLabel()
+        Me.btnAñadirPedido = New System.Windows.Forms.Button()
         Me.ptbAñadir = New System.Windows.Forms.PictureBox()
         CType(Me.ptbAñadir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -124,6 +125,16 @@ Partial Class frmAdministrador
         Me.lblUsuarios.TabIndex = 14
         Me.lblUsuarios.Text = "Usuarios"
         '
+        'btnAñadirPedido
+        '
+        Me.btnAñadirPedido.BackgroundImage = Global.Formularios.My.Resources.Resources.pencil
+        Me.btnAñadirPedido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnAñadirPedido.Location = New System.Drawing.Point(254, 355)
+        Me.btnAñadirPedido.Name = "btnAñadirPedido"
+        Me.btnAñadirPedido.Size = New System.Drawing.Size(40, 40)
+        Me.btnAñadirPedido.TabIndex = 15
+        Me.btnAñadirPedido.UseVisualStyleBackColor = True
+        '
         'ptbAñadir
         '
         Me.ptbAñadir.Image = CType(resources.GetObject("ptbAñadir.Image"), System.Drawing.Image)
@@ -138,7 +149,8 @@ Partial Class frmAdministrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(931, 461)
+        Me.ClientSize = New System.Drawing.Size(957, 461)
+        Me.Controls.Add(Me.btnAñadirPedido)
         Me.Controls.Add(Me.lblUsuarios)
         Me.Controls.Add(Me.lblProductos)
         Me.Controls.Add(Me.lblPedido)
@@ -164,4 +176,5 @@ Partial Class frmAdministrador
     Friend WithEvents lblPedido As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblProductos As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblUsuarios As MetroFramework.Controls.MetroLabel
+    Friend WithEvents btnAñadirPedido As Button
 End Class
