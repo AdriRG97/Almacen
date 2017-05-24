@@ -159,9 +159,8 @@ Partial Class frmAdministrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(931, 461)
-        Me.Controls.Add(Me.btnAnadirEnunciado)
         Me.ClientSize = New System.Drawing.Size(957, 461)
+        Me.Controls.Add(Me.btnAnadirEnunciado)
         Me.Controls.Add(Me.btnAñadirPedido)
         Me.Controls.Add(Me.lblUsuarios)
         Me.Controls.Add(Me.lblProductos)
