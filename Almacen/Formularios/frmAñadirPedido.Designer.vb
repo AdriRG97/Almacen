@@ -39,6 +39,7 @@ Partial Class frmAñadirPedido
         Me.btnGuardar = New MetroFramework.Controls.MetroTile()
         Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
         Me.lblProductoSeleccionado = New MetroFramework.Controls.MetroLabel()
+        Me.btnFinalizar = New MetroFramework.Controls.MetroTile()
         Me.grbProductos.SuspendLayout()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,6 +74,8 @@ Partial Class frmAñadirPedido
         '
         'PictureBox9
         '
+        Me.PictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox9.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox9.Image = Global.Formularios.My.Resources.Resources.tlf
         Me.PictureBox9.Location = New System.Drawing.Point(6, 250)
         Me.PictureBox9.Name = "PictureBox9"
@@ -80,10 +83,12 @@ Partial Class frmAñadirPedido
         Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox9.TabIndex = 1
         Me.PictureBox9.TabStop = False
-        Me.PictureBox9.Tag = "Telefono"
+        Me.PictureBox9.Tag = "TELÉFONOS"
         '
         'PictureBox8
         '
+        Me.PictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox8.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox8.Image = Global.Formularios.My.Resources.Resources.calculadoras
         Me.PictureBox8.Location = New System.Drawing.Point(92, 173)
         Me.PictureBox8.Name = "PictureBox8"
@@ -91,10 +96,12 @@ Partial Class frmAñadirPedido
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox8.TabIndex = 2
         Me.PictureBox8.TabStop = False
-        Me.PictureBox8.Tag = "Calculadoras"
+        Me.PictureBox8.Tag = "CALCULADORAS"
         '
         'PictureBox7
         '
+        Me.PictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox7.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox7.Image = Global.Formularios.My.Resources.Resources.carpetas
         Me.PictureBox7.Location = New System.Drawing.Point(6, 173)
         Me.PictureBox7.Name = "PictureBox7"
@@ -102,10 +109,12 @@ Partial Class frmAñadirPedido
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox7.TabIndex = 3
         Me.PictureBox7.TabStop = False
-        Me.PictureBox7.Tag = "Carpetas"
+        Me.PictureBox7.Tag = "CARPETAS"
         '
         'PictureBox6
         '
+        Me.PictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox6.Image = Global.Formularios.My.Resources.Resources.grapadoras
         Me.PictureBox6.Location = New System.Drawing.Point(92, 250)
         Me.PictureBox6.Name = "PictureBox6"
@@ -113,10 +122,12 @@ Partial Class frmAñadirPedido
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox6.TabIndex = 4
         Me.PictureBox6.TabStop = False
-        Me.PictureBox6.Tag = "Grapadoras"
+        Me.PictureBox6.Tag = "GRAPADORAS"
         '
         'PictureBox5
         '
+        Me.PictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox5.Image = Global.Formularios.My.Resources.Resources.perforadora
         Me.PictureBox5.Location = New System.Drawing.Point(92, 96)
         Me.PictureBox5.Name = "PictureBox5"
@@ -124,10 +135,12 @@ Partial Class frmAñadirPedido
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox5.TabIndex = 5
         Me.PictureBox5.TabStop = False
-        Me.PictureBox5.Tag = "Perforadora"
+        Me.PictureBox5.Tag = "PERFORADORAS"
         '
         'PictureBox4
         '
+        Me.PictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox4.Image = Global.Formularios.My.Resources.Resources.lapices
         Me.PictureBox4.Location = New System.Drawing.Point(6, 96)
         Me.PictureBox4.Name = "PictureBox4"
@@ -135,10 +148,12 @@ Partial Class frmAñadirPedido
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox4.TabIndex = 6
         Me.PictureBox4.TabStop = False
-        Me.PictureBox4.Tag = "Lapices"
+        Me.PictureBox4.Tag = "LÁPICES"
         '
         'PictureBox3
         '
+        Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox3.Image = Global.Formularios.My.Resources.Resources.pack_10_boligrafos_paper_mate_s0957191
         Me.PictureBox3.Location = New System.Drawing.Point(50, 327)
         Me.PictureBox3.Name = "PictureBox3"
@@ -146,10 +161,12 @@ Partial Class frmAñadirPedido
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 7
         Me.PictureBox3.TabStop = False
-        Me.PictureBox3.Tag = "Bolis"
+        Me.PictureBox3.Tag = "BOLIS"
         '
         'PictureBox2
         '
+        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox2.Image = Global.Formularios.My.Resources.Resources.marcadores_fluorescentes_stabilo_boss_original_70_500x500
         Me.PictureBox2.Location = New System.Drawing.Point(92, 19)
         Me.PictureBox2.Name = "PictureBox2"
@@ -157,10 +174,12 @@ Partial Class frmAñadirPedido
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 8
         Me.PictureBox2.TabStop = False
-        Me.PictureBox2.Tag = "Subrayadores"
+        Me.PictureBox2.Tag = "SUBRAYADORES"
         '
         'PictureBox1
         '
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox1.Image = Global.Formularios.My.Resources.Resources.Libretas_Duquesa_en_varios_colores_para_regalos_de_empresa_o_merchandising
         Me.PictureBox1.Location = New System.Drawing.Point(6, 19)
         Me.PictureBox1.Name = "PictureBox1"
@@ -168,7 +187,7 @@ Partial Class frmAñadirPedido
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
-        Me.PictureBox1.Tag = "Cuadernos"
+        Me.PictureBox1.Tag = "CUADERNOS"
         '
         'lstPedidos
         '
@@ -177,7 +196,7 @@ Partial Class frmAñadirPedido
         Me.lstPedidos.Location = New System.Drawing.Point(200, 19)
         Me.lstPedidos.Name = "lstPedidos"
         Me.lstPedidos.OwnerDraw = True
-        Me.lstPedidos.Size = New System.Drawing.Size(272, 283)
+        Me.lstPedidos.Size = New System.Drawing.Size(279, 283)
         Me.lstPedidos.Style = MetroFramework.MetroColorStyle.Orange
         Me.lstPedidos.TabIndex = 2
         Me.lstPedidos.Theme = MetroFramework.MetroThemeStyle.Dark
@@ -211,7 +230,8 @@ Partial Class frmAñadirPedido
         'btnAñadir
         '
         Me.btnAñadir.ActiveControl = Nothing
-        Me.btnAñadir.Location = New System.Drawing.Point(233, 413)
+        Me.btnAñadir.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAñadir.Location = New System.Drawing.Point(231, 400)
         Me.btnAñadir.Name = "btnAñadir"
         Me.btnAñadir.Size = New System.Drawing.Size(90, 36)
         Me.btnAñadir.Style = MetroFramework.MetroColorStyle.Lime
@@ -224,7 +244,8 @@ Partial Class frmAñadirPedido
         'btnGuardar
         '
         Me.btnGuardar.ActiveControl = Nothing
-        Me.btnGuardar.Location = New System.Drawing.Point(352, 413)
+        Me.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnGuardar.Location = New System.Drawing.Point(373, 400)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(90, 36)
         Me.btnGuardar.Style = MetroFramework.MetroColorStyle.Green
@@ -236,28 +257,47 @@ Partial Class frmAñadirPedido
         'MetroLabel2
         '
         Me.MetroLabel2.AutoSize = True
-        Me.MetroLabel2.Location = New System.Drawing.Point(200, 355)
+        Me.MetroLabel2.Location = New System.Drawing.Point(198, 356)
         Me.MetroLabel2.Name = "MetroLabel2"
-        Me.MetroLabel2.Size = New System.Drawing.Size(142, 19)
+        Me.MetroLabel2.Size = New System.Drawing.Size(145, 19)
         Me.MetroLabel2.Style = MetroFramework.MetroColorStyle.Orange
         Me.MetroLabel2.TabIndex = 7
-        Me.MetroLabel2.Text = "Producto seleccionado"
+        Me.MetroLabel2.Text = "Producto seleccionado:"
         Me.MetroLabel2.UseStyleColors = True
         '
         'lblProductoSeleccionado
         '
-        Me.lblProductoSeleccionado.Location = New System.Drawing.Point(352, 355)
+        Me.lblProductoSeleccionado.BackColor = System.Drawing.SystemColors.Info
+        Me.lblProductoSeleccionado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblProductoSeleccionado.FontWeight = MetroFramework.MetroLabelWeight.Bold
+        Me.lblProductoSeleccionado.Location = New System.Drawing.Point(346, 355)
         Me.lblProductoSeleccionado.Name = "lblProductoSeleccionado"
-        Me.lblProductoSeleccionado.Size = New System.Drawing.Size(120, 23)
+        Me.lblProductoSeleccionado.Size = New System.Drawing.Size(133, 23)
         Me.lblProductoSeleccionado.TabIndex = 8
         Me.lblProductoSeleccionado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblProductoSeleccionado.UseCustomBackColor = True
+        '
+        'btnFinalizar
+        '
+        Me.btnFinalizar.ActiveControl = Nothing
+        Me.btnFinalizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnFinalizar.Location = New System.Drawing.Point(307, 465)
+        Me.btnFinalizar.Name = "btnFinalizar"
+        Me.btnFinalizar.Size = New System.Drawing.Size(90, 36)
+        Me.btnFinalizar.Style = MetroFramework.MetroColorStyle.Red
+        Me.btnFinalizar.TabIndex = 9
+        Me.btnFinalizar.Text = "Salir"
+        Me.btnFinalizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnFinalizar.UseSelectable = True
+        Me.btnFinalizar.UseStyleColors = True
         '
         'frmAñadirPedido
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(484, 461)
+        Me.ClientSize = New System.Drawing.Size(491, 520)
+        Me.Controls.Add(Me.btnFinalizar)
         Me.Controls.Add(Me.lblProductoSeleccionado)
         Me.Controls.Add(Me.MetroLabel2)
         Me.Controls.Add(Me.btnGuardar)
@@ -303,4 +343,5 @@ Partial Class frmAñadirPedido
     Friend WithEvents btnGuardar As MetroFramework.Controls.MetroTile
     Friend WithEvents MetroLabel2 As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblProductoSeleccionado As MetroFramework.Controls.MetroLabel
+    Friend WithEvents btnFinalizar As MetroFramework.Controls.MetroTile
 End Class

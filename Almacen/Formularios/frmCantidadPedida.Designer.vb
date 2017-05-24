@@ -25,11 +25,11 @@ Partial Class frmCantidadPedida
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCantidadPedida))
         Me.grbPedidos = New System.Windows.Forms.GroupBox()
+        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
         Me.btnAceptar = New MetroFramework.Controls.MetroButton()
         Me.lblNuestroPedido = New MetroFramework.Controls.MetroLabel()
         Me.FrmAlmacenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.FrmAlmacenBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
         Me.grbPedidos.SuspendLayout()
         CType(Me.FrmAlmacenBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FrmAlmacenBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,6 +44,14 @@ Partial Class frmCantidadPedida
         Me.grbPedidos.TabIndex = 0
         Me.grbPedidos.TabStop = False
         Me.grbPedidos.Text = "Pedido:"
+        '
+        'MetroLabel1
+        '
+        Me.MetroLabel1.Location = New System.Drawing.Point(28, 20)
+        Me.MetroLabel1.Name = "MetroLabel1"
+        Me.MetroLabel1.Size = New System.Drawing.Size(393, 335)
+        Me.MetroLabel1.TabIndex = 0
+        Me.MetroLabel1.Text = "lblNuestroPedido"
         '
         'btnAceptar
         '
@@ -79,14 +87,6 @@ Partial Class frmCantidadPedida
         'FrmAlmacenBindingSource1
         '
         Me.FrmAlmacenBindingSource1.DataSource = GetType(Formularios.frmAlmacen)
-        '
-        'MetroLabel1
-        '
-        Me.MetroLabel1.Location = New System.Drawing.Point(28, 20)
-        Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(393, 335)
-        Me.MetroLabel1.TabIndex = 0
-        Me.MetroLabel1.Text = "lblNuestroPedido"
         '
         'frmCantidadPedida
         '

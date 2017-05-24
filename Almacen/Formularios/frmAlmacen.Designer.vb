@@ -67,6 +67,8 @@ Partial Class frmAlmacen
         Me.btnVerPedido = New MetroFramework.Controls.MetroButton()
         Me.btnStock = New MetroFramework.Controls.MetroButton()
         Me.btnTutorial = New MetroFramework.Controls.MetroButton()
+        Me.lblEnunciado = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
         CType(Me.pbCuadernos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbSubrayadores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -560,12 +562,36 @@ Partial Class frmAlmacen
         Me.btnTutorial.UseCustomForeColor = True
         Me.btnTutorial.UseSelectable = True
         '
+        'lblEnunciado
+        '
+        Me.lblEnunciado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblEnunciado.Enabled = False
+        Me.lblEnunciado.FontWeight = MetroFramework.MetroLabelWeight.Bold
+        Me.lblEnunciado.Location = New System.Drawing.Point(37, 163)
+        Me.lblEnunciado.Name = "lblEnunciado"
+        Me.lblEnunciado.Size = New System.Drawing.Size(833, 153)
+        Me.lblEnunciado.TabIndex = 58
+        '
+        'MetroLabel1
+        '
+        Me.MetroLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.MetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold
+        Me.MetroLabel1.Location = New System.Drawing.Point(138, 64)
+        Me.MetroLabel1.Name = "MetroLabel1"
+        Me.MetroLabel1.Size = New System.Drawing.Size(152, 57)
+        Me.MetroLabel1.TabIndex = 59
+        Me.MetroLabel1.Text = "Enunciado"
+        Me.MetroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'frmAlmacen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(1378, 780)
+        Me.ClientSize = New System.Drawing.Size(1927, 1092)
+        Me.Controls.Add(Me.MetroLabel1)
+        Me.Controls.Add(Me.lblEnunciado)
         Me.Controls.Add(Me.btnTutorial)
         Me.Controls.Add(Me.btnStock)
         Me.Controls.Add(Me.btnVerPedido)
@@ -682,4 +708,6 @@ Partial Class frmAlmacen
     Friend WithEvents btnVerPedido As MetroFramework.Controls.MetroButton
     Friend WithEvents btnStock As MetroFramework.Controls.MetroButton
     Friend WithEvents btnTutorial As MetroFramework.Controls.MetroButton
+    Friend WithEvents lblEnunciado As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
 End Class
