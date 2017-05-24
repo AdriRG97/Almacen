@@ -4,6 +4,7 @@ Imports CapaDatos
 Public Class frmAñadirPedido
 
     Private pedido As String = ""
+    Private ultLinea As String
 
     Private Sub frmAñadirPedido_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ActualizarPedidos()
@@ -18,6 +19,10 @@ Public Class frmAñadirPedido
         Dim lectorStr As String
         Dim pedidos() As String = {}
         Dim pedido As String = ""
+        Dim pedidoValido As String
+        Dim cantidad As Integer
+
+
 
         Do
             lectorStr = lector.ReadLine
@@ -25,22 +30,33 @@ Public Class frmAñadirPedido
             If IsNothing(lectorStr) Then
                 Exit Do
             End If
+
+
             pedidos = lectorStr.Split(";")
             For i = 0 To pedidos.Length - 1
-                pedido += pedidos(i) & "  "
+                pedido += pedidos(i)
             Next
-            lstPedidos.Items.Add(pedido)
+
+
+
+            ultLinea = UltimaLineas()
+                lstPedidos.Items.Add(ultLinea)
+                Exit Do
+
+
+
+
 
         Loop Until lector.EndOfStream
         lector.Close()
+        
     End Sub
 
     Private Sub btnAñadir_Click(sender As Object, e As EventArgs) Handles btnAñadir.Click
 
         If String.IsNullOrWhiteSpace(lblProductoSeleccionado.Text) Then
             MsgBox("Selecciona un producto primero", MsgBoxStyle.Exclamation, Title:="Atención")
-        Else
-            pedido += lblProductoSeleccionado.Text & ":" & NumericUpDown1.Value & ";"
+
         End If
 
         If cesta.Contains(lblProductoSeleccionado.Text) Then
@@ -48,6 +64,7 @@ Public Class frmAñadirPedido
 
         Else
             cesta.Add(lblProductoSeleccionado.Text)
+            pedido += lblProductoSeleccionado.Text & ":" & NumericUpDown1.Value & ";"
         End If
 
     End Sub
@@ -68,15 +85,31 @@ Public Class frmAñadirPedido
             lstPedidos.Items.Clear()
             ActualizarPedidos()
             pedido = ""
+            For i = 0 To cesta.Count - 1
+                cesta(i) = ""
+            Next
 
         Else
 
             MsgBox("Añade un producto antes de guardar el pedido.", MsgBoxStyle.Exclamation, Title:="Atención")
 
         End If
+
+
+
     End Sub
 
     Private Sub btnFinalizar_Click(sender As Object, e As EventArgs) Handles btnFinalizar.Click
         Me.Close()
     End Sub
+
+
+    Private Function UltimaLineas() As String
+        Dim fulltext As String = File.ReadAllText(".\Ficheros\Pedidos.txt")
+
+        Dim partes() As String = fulltext.Split(Environment.NewLine)
+
+        Dim ultimalinea As String = partes(partes.Length - 2)
+        Return ultimalinea
+    End Function
 End Class
