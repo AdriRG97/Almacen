@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Instrucciones
+Partial Class frmInstrucciones
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -30,7 +30,7 @@ Partial Class Instrucciones
         'TxtBox_instrucciones
         '
         Me.TxtBox_instrucciones.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.TxtBox_instrucciones.Font = New System.Drawing.Font("Nunito", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtBox_instrucciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtBox_instrucciones.Location = New System.Drawing.Point(143, 104)
         Me.TxtBox_instrucciones.Multiline = True
         Me.TxtBox_instrucciones.Name = "TxtBox_instrucciones"
@@ -62,7 +62,7 @@ Partial Class Instrucciones
         Me.Btn_Entendido.Text = "Entendido"
         Me.Btn_Entendido.UseVisualStyleBackColor = False
         '
-        'Instrucciones
+        'frmInstrucciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -72,7 +72,7 @@ Partial Class Instrucciones
         Me.Controls.Add(Me.Label_instrucciones)
         Me.Controls.Add(Me.TxtBox_instrucciones)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Instrucciones"
+        Me.Name = "frmInstrucciones"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Instrucciones"
         Me.ResumeLayout(False)

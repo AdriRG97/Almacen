@@ -217,7 +217,7 @@ Public Class frmAlmacen
     End Sub
 
     Private Sub btnTutorial_Click(sender As Object, e As EventArgs) Handles btnTutorial.Click
-        Dim tuto As New Instrucciones
+        Dim tuto As New frmInstrucciones
         tuto.ShowDialog()
     End Sub
 
