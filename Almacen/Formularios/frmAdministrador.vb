@@ -88,12 +88,12 @@ Public Class frmAdministrador
     Dim cantPed As Integer
     Dim ped As New Pedido
 
-    Private Sub btnAnadirEnunciado_Click(sender As Object, e As EventArgs) Handles btnAnadirEnunciado.Click
-        ' Dim almacen As New List(Of Producto)
-        '  almacen(0)
-        ' IMPORTANTE: Obligar que todos los productos de los enunciados sean múltiplos de 2, 3 o 5 para que puedan completar el Enunciado (Por los paquetes y así)
+    'Private Sub btnAnadirEnunciado_Click(sender As Object, e As EventArgs) Handles btnAnadirEnunciado.Click
+    '    ' Dim almacen As New List(Of Producto)
+    '    '  almacen(0)
+    '    ' IMPORTANTE: Obligar que todos los productos de los enunciados sean múltiplos de 2, 3 o 5 para que puedan completar el Enunciado (Por los paquetes y así)
 
-    End Sub
+    'End Sub
 
 
     'Public Function NuevoPedido() As String

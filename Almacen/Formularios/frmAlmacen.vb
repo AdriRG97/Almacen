@@ -18,6 +18,7 @@ Public Class frmAlmacen
 
 
     Private Sub frmAlmacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblEnunciado.Text = "Consigue que tu pedido contenga: " & vbCrLf & "•                     " & "• " & vbCrLf & "• " & "                    • " & vbCrLf & "• " & vbCrLf & "• " & vbCrLf & "• " ' TO-DO
 
 
         Dim classResize As New clsResizeForm
@@ -143,7 +144,7 @@ Public Class frmAlmacen
             Else
                 My.Computer.Audio.Play(My.Resources._error, AudioPlayMode.Background)
                 erroresPorExistencia += 1
-                Return MsgBox("No hay suficiente stock.")
+                Return MsgBox("No hay suficiente stock.", MsgBoxStyle.Critical, Title:="FALLO")
             End If
         End If
         Return "Pedido correctamente"
@@ -227,6 +228,8 @@ Public Class frmAlmacen
             Dim erroresTotales As Integer = erroresPorEnunciado + erroresPorExistencia + erroresPorFinalizar
 
 
+            My.Computer.Audio.Play(My.Resources.pedidoCompletado, AudioPlayMode.Background)
+
             MsgBox("Has terminado tu pedido." & vbCrLf & vbCrLf & "○ Errores por sobrepasar las existencias: " & erroresPorExistencia & vbCrLf & "○ Errores por sobrepasar lo que manda el enunciado: " & erroresPorEnunciado & vbCrLf & "○ Errores por finalizar sin haber terminado el pedido: " & erroresPorFinalizar & vbCrLf & "____________________________" & vbCrLf & vbCrLf & "○ Errores totales: " & erroresTotales, Buttons:=MsgBoxStyle.Information, Title:="Fin del juego")
             Me.Close()
 
@@ -236,4 +239,5 @@ Public Class frmAlmacen
 
         End If
     End Sub
+
 End Class
