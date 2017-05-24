@@ -17,13 +17,10 @@ Public Class frmAdministrador
         Dim arrayDatos() As String
         sline = objReader.ReadLine
         objReader.Close()
-
         If String.IsNullOrWhiteSpace(sline) Then
-            'Añadir los que faltan
-            My.Computer.FileSystem.WriteAllText(ruta, "Lapices;", True)
-            My.Computer.FileSystem.WriteAllText(ruta, "bolis;", True)
-            My.Computer.FileSystem.WriteAllText(ruta, "cuadernos;", True)
-            My.Computer.FileSystem.WriteAllText(ruta, "hojas;", True)
+            For i = 0 To nombresProductos.Count - 1
+                My.Computer.FileSystem.WriteAllText(ruta, nombresProductos(i) & ";", True)
+            Next
             objReader = New StreamReader(ruta)
             sline = objReader.ReadLine
             objReader.Close()
@@ -43,10 +40,7 @@ Public Class frmAdministrador
         Dim objeto As String
         objeto = InputBox("Introduce objeto")
         My.Computer.FileSystem.WriteAllText(ruta, vbCrLf & objeto & ";", True)
-
-
         lstProductos.Items.Add(objeto)
-
     End Sub
 
     Private Sub btnMostrarUsuarios_Click(sender As Object, e As EventArgs) Handles btnMostrarUsuarios.Click

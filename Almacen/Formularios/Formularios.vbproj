@@ -143,10 +143,10 @@
     <Compile Include="frmStock.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Instrucciones.Designer.vb">
-      <DependentUpon>Instrucciones.vb</DependentUpon>
+    <Compile Include="frmInstrucciones.Designer.vb">
+      <DependentUpon>frmInstrucciones.vb</DependentUpon>
     </Compile>
-    <Compile Include="Instrucciones.vb">
+    <Compile Include="frmInstrucciones.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -190,8 +190,8 @@
     <EmbeddedResource Include="frmStock.resx">
       <DependentUpon>frmStock.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Instrucciones.resx">
-      <DependentUpon>Instrucciones.vb</DependentUpon>
+    <EmbeddedResource Include="frmInstrucciones.resx">
+      <DependentUpon>frmInstrucciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
