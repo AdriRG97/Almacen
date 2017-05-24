@@ -32,7 +32,6 @@ Partial Class frmAñadirPedido
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.lstPedidos = New MetroFramework.Controls.MetroListView()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
         Me.btnAñadir = New MetroFramework.Controls.MetroTile()
@@ -40,6 +39,7 @@ Partial Class frmAñadirPedido
         Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
         Me.lblProductoSeleccionado = New MetroFramework.Controls.MetroLabel()
         Me.btnFinalizar = New MetroFramework.Controls.MetroTile()
+        Me.lstPedidos = New System.Windows.Forms.ListBox()
         Me.grbProductos.SuspendLayout()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -189,22 +189,6 @@ Partial Class frmAñadirPedido
         Me.PictureBox1.TabStop = False
         Me.PictureBox1.Tag = "CUADERNOS"
         '
-        'lstPedidos
-        '
-        Me.lstPedidos.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.lstPedidos.FullRowSelect = True
-        Me.lstPedidos.Location = New System.Drawing.Point(200, 19)
-        Me.lstPedidos.Name = "lstPedidos"
-        Me.lstPedidos.OwnerDraw = True
-        Me.lstPedidos.Size = New System.Drawing.Size(279, 283)
-        Me.lstPedidos.Style = MetroFramework.MetroColorStyle.Orange
-        Me.lstPedidos.TabIndex = 2
-        Me.lstPedidos.Theme = MetroFramework.MetroThemeStyle.Dark
-        Me.lstPedidos.UseCompatibleStateImageBehavior = False
-        Me.lstPedidos.UseSelectable = True
-        Me.lstPedidos.UseStyleColors = True
-        Me.lstPedidos.View = System.Windows.Forms.View.List
-        '
         'NumericUpDown1
         '
         Me.NumericUpDown1.Location = New System.Drawing.Point(391, 313)
@@ -291,12 +275,25 @@ Partial Class frmAñadirPedido
         Me.btnFinalizar.UseSelectable = True
         Me.btnFinalizar.UseStyleColors = True
         '
+        'lstPedidos
+        '
+        Me.lstPedidos.BackColor = System.Drawing.SystemColors.InactiveBorder
+        Me.lstPedidos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lstPedidos.FormattingEnabled = True
+        Me.lstPedidos.HorizontalScrollbar = True
+        Me.lstPedidos.ItemHeight = 16
+        Me.lstPedidos.Location = New System.Drawing.Point(201, 19)
+        Me.lstPedidos.Name = "lstPedidos"
+        Me.lstPedidos.Size = New System.Drawing.Size(262, 276)
+        Me.lstPedidos.TabIndex = 11
+        '
         'frmAñadirPedido
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(491, 520)
+        Me.Controls.Add(Me.lstPedidos)
         Me.Controls.Add(Me.btnFinalizar)
         Me.Controls.Add(Me.lblProductoSeleccionado)
         Me.Controls.Add(Me.MetroLabel2)
@@ -304,7 +301,6 @@ Partial Class frmAñadirPedido
         Me.Controls.Add(Me.btnAñadir)
         Me.Controls.Add(Me.MetroLabel1)
         Me.Controls.Add(Me.NumericUpDown1)
-        Me.Controls.Add(Me.lstPedidos)
         Me.Controls.Add(Me.grbProductos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmAñadirPedido"
@@ -336,7 +332,6 @@ Partial Class frmAñadirPedido
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents lstPedidos As MetroFramework.Controls.MetroListView
     Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
     Friend WithEvents btnAñadir As MetroFramework.Controls.MetroTile
@@ -344,4 +339,5 @@ Partial Class frmAñadirPedido
     Friend WithEvents MetroLabel2 As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblProductoSeleccionado As MetroFramework.Controls.MetroLabel
     Friend WithEvents btnFinalizar As MetroFramework.Controls.MetroTile
+    Friend WithEvents lstPedidos As ListBox
 End Class

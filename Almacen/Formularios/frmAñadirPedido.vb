@@ -29,7 +29,10 @@ Public Class frmAñadirPedido
             For i = 0 To pedidos.Length - 1
                 pedido += pedidos(i) & "  "
             Next
-            lstPedidos.Items.Add(pedido)
+            If Not lstPedidos.Items.Contains(pedido) Then
+                lstPedidos.Items.Add(pedido)
+            End If
+
 
         Loop Until lector.EndOfStream
         lector.Close()
@@ -79,4 +82,5 @@ Public Class frmAñadirPedido
     Private Sub btnFinalizar_Click(sender As Object, e As EventArgs) Handles btnFinalizar.Click
         Me.Close()
     End Sub
+
 End Class

@@ -88,6 +88,12 @@ Public Class frmAdministrador
     Dim cantPed As Integer
     Dim ped As New Pedido
 
+    Private Sub btnAnadirEnunciado_Click(sender As Object, e As EventArgs) Handles btnAnadirEnunciado.Click
+        Dim anadir As New frmAñadirPedido
+        anadir.ShowDialog()
+    End Sub
+
+
     'Private Sub btnAnadirEnunciado_Click(sender As Object, e As EventArgs) Handles btnAnadirEnunciado.Click
     '    ' Dim almacen As New List(Of Producto)
     '    '  almacen(0)

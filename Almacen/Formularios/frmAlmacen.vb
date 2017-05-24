@@ -235,9 +235,9 @@ Public Class frmAlmacen
 
         Else
             erroresPorFinalizar += 1
-            MsgBox("Error, todavía no has completado tu pedido, ¡Ánimo!", MsgBoxStyle.Critical)
-
+            MsgBox("Error, todavía no has completado tu pedido, ¡Revísalo y ánimo!", MsgBoxStyle.Critical)
         End If
     End Sub
+
 
 End Class
