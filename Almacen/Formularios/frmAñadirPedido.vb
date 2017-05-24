@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports CapaDatos
 
 Public Class frmAñadirPedido
 
@@ -7,6 +8,8 @@ Public Class frmAñadirPedido
     Private Sub frmAñadirPedido_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ActualizarPedidos()
     End Sub
+
+    Dim cesta As New List(Of String)
 
 
 
@@ -35,9 +38,16 @@ Public Class frmAñadirPedido
     Private Sub btnAñadir_Click(sender As Object, e As EventArgs) Handles btnAñadir.Click
 
         If String.IsNullOrWhiteSpace(lblProductoSeleccionado.Text) Then
-            MsgBox("Selecciona un producto primero")
+            MsgBox("Selecciona un producto primero", MsgBoxStyle.Exclamation, Title:="Atención")
         Else
             pedido += lblProductoSeleccionado.Text & ":" & NumericUpDown1.Value & ";"
+        End If
+
+        If cesta.Contains(lblProductoSeleccionado.Text) Then
+            MsgBox("Error, el producto ya ha sido almacenado.", MsgBoxStyle.Critical, Title:="ERROR")
+
+        Else
+            cesta.Add(lblProductoSeleccionado.Text)
         End If
 
     End Sub
@@ -48,13 +58,25 @@ Public Class frmAñadirPedido
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        Dim grabador As New StreamWriter(".\Ficheros\Pedidos.txt", True)
-        Dim pedidoBueno As String
-        pedidoBueno = pedido.Substring(0, pedido.Length - 1)
-        grabador.WriteLine(pedidoBueno)
-        grabador.Close()
-        lstPedidos.Items.Clear()
-        ActualizarPedidos()
-        pedido = ""
+
+        If cesta.Count <> 0 Then
+            Dim grabador As New StreamWriter(".\Ficheros\Pedidos.txt", True)
+            Dim pedidoBueno As String
+            pedidoBueno = pedido.Substring(0, pedido.Length - 1)
+            grabador.WriteLine(pedidoBueno)
+            grabador.Close()
+            lstPedidos.Items.Clear()
+            ActualizarPedidos()
+            pedido = ""
+
+        Else
+
+            MsgBox("Añade un producto antes de guardar el pedido.", MsgBoxStyle.Exclamation, Title:="Atención")
+
+        End If
+    End Sub
+
+    Private Sub btnFinalizar_Click(sender As Object, e As EventArgs) Handles btnFinalizar.Click
+        Me.Close()
     End Sub
 End Class
