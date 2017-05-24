@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmAdministrador
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmAdministrador
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAdministrador))
         Me.lstProductos = New MetroFramework.Controls.MetroListView()
@@ -33,6 +33,7 @@ Partial Class frmAdministrador
         Me.lblUsuarios = New MetroFramework.Controls.MetroLabel()
         Me.btnAñadirPedido = New System.Windows.Forms.Button()
         Me.ptbAñadir = New System.Windows.Forms.PictureBox()
+        Me.btnAnadirEnunciado = New MetroFramework.Controls.MetroButton()
         CType(Me.ptbAñadir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -145,10 +146,21 @@ Partial Class frmAdministrador
         Me.ptbAñadir.TabIndex = 9
         Me.ptbAñadir.TabStop = False
         '
+        'btnAnadirEnunciado
+        '
+        Me.btnAnadirEnunciado.Location = New System.Drawing.Point(239, 12)
+        Me.btnAnadirEnunciado.Name = "btnAnadirEnunciado"
+        Me.btnAnadirEnunciado.Size = New System.Drawing.Size(113, 39)
+        Me.btnAnadirEnunciado.TabIndex = 15
+        Me.btnAnadirEnunciado.Text = "Añadir Enunciado"
+        Me.btnAnadirEnunciado.UseSelectable = True
+        '
         'frmAdministrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(931, 461)
+        Me.Controls.Add(Me.btnAnadirEnunciado)
         Me.ClientSize = New System.Drawing.Size(957, 461)
         Me.Controls.Add(Me.btnAñadirPedido)
         Me.Controls.Add(Me.lblUsuarios)
@@ -177,4 +189,5 @@ Partial Class frmAdministrador
     Friend WithEvents lblProductos As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblUsuarios As MetroFramework.Controls.MetroLabel
     Friend WithEvents btnAñadirPedido As Button
+    Friend WithEvents btnAnadirEnunciado As MetroFramework.Controls.MetroButton
 End Class

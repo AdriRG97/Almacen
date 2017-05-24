@@ -1,19 +1,12 @@
 ﻿Imports CapaDatos
 Public Class frmCantidadPedida
-    Private Sub btnAceptar_Click(sender As Object, e As EventArgs)
-        Dim almacen = frmAlmacen
 
-        'almacen.lblBolisQ.Text = "Quedan " & nuestroAlmacen(0).Stock & " bolis."
-        'almacen.lblCalculadorasQ.Text = "Quedan " & nuestroAlmacen(0).Stock & " calculadoras."
-        'almacen.lblSubrayadoresQ.Text = "Quedan " & nuestroAlmacen(0).Stock & " subrayadores."
-        'almacen.lblCarpetasQ.Text = "Quedan " & nuestroAlmacen(0).Stock & " carpetas."
-        'almacen.lblCuadernosQ.Text = "Quedan " & nuestroAlmacen(0).Stock & " cuadernos."
-        'almacen.lblGrapadorasQ.Text = "Quedan " & nuestroAlmacen(0).Stock & " grapadoras."
-        'almacen.lblLapicesQ.Text = "Quedan " & nuestroAlmacen(0).Stock & " lapices."
-        'almacen.lblPerforadoraQ.Text = "Quedan " & nuestroAlmacen(0).Stock & " perforadoras."
-        'almacen.lblTelefonoQ.Text = "Quedan " & nuestroAlmacen(0).Stock & " teléfonos."
-
+    Private Sub btnAceptar_Click_1(sender As Object, e As EventArgs) Handles btnAceptar.Click
         Me.Close()
     End Sub
 
+    Private Sub frmCantidadPedida_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Dim almacen As New frmAlmacen
+        lblNuestroPedido.Text = nuestroAlmacen(0).Nombre
+    End Sub
 End Class

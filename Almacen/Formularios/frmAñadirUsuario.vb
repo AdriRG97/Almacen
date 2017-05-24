@@ -51,8 +51,6 @@ Public Class frmAñadirUsuario
         End If
 
 
-
-
         If compro = True Then
             MsgBox("Error, el usuario introducido ya existe.")
             Exit Sub

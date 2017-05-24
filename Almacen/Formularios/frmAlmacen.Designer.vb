@@ -243,6 +243,7 @@ Partial Class frmAlmacen
         '
         'btnFinalizar
         '
+        Me.btnFinalizar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnFinalizar.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.btnFinalizar.Highlight = True
         Me.btnFinalizar.Location = New System.Drawing.Point(545, 961)
@@ -509,6 +510,7 @@ Partial Class frmAlmacen
         '
         'btnSalir
         '
+        Me.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSalir.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.btnSalir.Highlight = True
         Me.btnSalir.Location = New System.Drawing.Point(859, 961)
@@ -520,6 +522,7 @@ Partial Class frmAlmacen
         '
         'btnVerPedido
         '
+        Me.btnVerPedido.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnVerPedido.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.btnVerPedido.Highlight = True
         Me.btnVerPedido.Location = New System.Drawing.Point(1282, 798)
@@ -531,6 +534,7 @@ Partial Class frmAlmacen
         '
         'btnStock
         '
+        Me.btnStock.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnStock.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.btnStock.Highlight = True
         Me.btnStock.Location = New System.Drawing.Point(1591, 798)
@@ -543,7 +547,9 @@ Partial Class frmAlmacen
         'btnTutorial
         '
         Me.btnTutorial.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnTutorial.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnTutorial.FontSize = MetroFramework.MetroButtonSize.Tall
+        Me.btnTutorial.Highlight = True
         Me.btnTutorial.Location = New System.Drawing.Point(1266, 94)
         Me.btnTutorial.Name = "btnTutorial"
         Me.btnTutorial.Size = New System.Drawing.Size(154, 88)
