@@ -3,6 +3,7 @@ Imports CapaDatos
 
 Public Class frmAdministrador
 
+
     Private Sub frmAdministrador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Dim ruta = "Ficheros/Productos.txt"
@@ -91,6 +92,46 @@ Public Class frmAdministrador
     Private Sub btnAnadirEnunciado_Click(sender As Object, e As EventArgs) Handles btnAnadirEnunciado.Click
         Dim anadir As New frmAñadirPedido
         anadir.ShowDialog()
+    End Sub
+
+
+
+
+
+    Private Sub btnMostrarPedido_Click(sender As Object, e As EventArgs) Handles btnMostrarPedido.Click
+        Dim lector As New StreamReader(".\Ficheros\Pedidos.txt", True)
+        Dim lectorStr As String
+        Dim pedidos() As String = {}
+        Dim pedido As String = ""
+
+
+        Do
+            lectorStr = lector.ReadLine
+
+            If IsNothing(lectorStr) Then
+                Exit Do
+            End If
+
+
+            pedidos = lectorStr.Split(";")
+            For i = 0 To pedidos.Length - 1
+                pedido += pedidos(i) & " "
+            Next
+            lstPedidos.Items.Add(pedido)
+            pedido = ""
+        Loop Until lector.EndOfStream
+
+
+
+    End Sub
+
+    Private Sub btnAnadirEnunciado_Click(sender As Object, e As EventArgs) Handles btnAnadirEnunciado.Click
+        Dim añadir As New frmAñadirPedido
+        añadir.ShowDialog()
+    End Sub
+
+    Private Sub lstPedidos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstPedidos.SelectedIndexChanged
+
     End Sub
 
 
