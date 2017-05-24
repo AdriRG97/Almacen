@@ -565,7 +565,7 @@ Partial Class frmAlmacen
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(1927, 1092)
+        Me.ClientSize = New System.Drawing.Size(1378, 780)
         Me.Controls.Add(Me.btnTutorial)
         Me.Controls.Add(Me.btnStock)
         Me.Controls.Add(Me.btnVerPedido)
