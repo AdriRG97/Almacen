@@ -9,6 +9,10 @@
                 Integer.TryParse(cantidades(i), num)
                 If (nuestroAlmacen.Item(i).Stock + num * paquetesProductos(i)) <= 50 Then
                     nuestroAlmacen.Item(i).Stock += num * paquetesProductos(i)
+                Else
+                    MsgBox("Error, el número total de existencias jamás puede superar las 50 unidades", MsgBoxStyle.Critical)
+                    erroresPorStock += 1
+                    My.Computer.Audio.Play(My.Resources._error, AudioPlayMode.Background)
                 End If
             End If
         Next

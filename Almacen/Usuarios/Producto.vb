@@ -24,5 +24,6 @@ Public Class Producto : Implements IEquatable(Of Producto)
         Stock = 50
     End Sub
 
-
+    Public Sub New()
+    End Sub
 End Class

@@ -10,9 +10,9 @@ Public Class frmCantidadPedida
         Dim scr = Screen.FromPoint(Me.Location)
         Me.Location = New Point(scr.WorkingArea.Right - Me.Width, scr.WorkingArea.Top)
 
+        For Each prod As Producto In nuestroAlmacen
+            lblPedido.Text = lblPedido.Text & "| " & prod.Nombre & ": " & prod.CantPedida & "| " & vbCrLf
+        Next
 
-
-        Dim almacen As New frmAlmacen
-        lblNuestroPedido.Text = nuestroAlmacen(0).Nombre
     End Sub
 End Class

@@ -192,7 +192,7 @@ Partial Class frmAñadirPedido
         'NumericUpDown1
         '
         Me.NumericUpDown1.Location = New System.Drawing.Point(391, 313)
-        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {50, 0, 0, 0})
+        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.NumericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(53, 20)
@@ -284,7 +284,7 @@ Partial Class frmAñadirPedido
         Me.lstPedidos.ItemHeight = 16
         Me.lstPedidos.Location = New System.Drawing.Point(201, 19)
         Me.lstPedidos.Name = "lstPedidos"
-        Me.lstPedidos.Size = New System.Drawing.Size(262, 276)
+        Me.lstPedidos.Size = New System.Drawing.Size(215, 276)
         Me.lstPedidos.TabIndex = 11
         '
         'frmAñadirPedido
@@ -292,7 +292,7 @@ Partial Class frmAñadirPedido
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(491, 520)
+        Me.ClientSize = New System.Drawing.Size(503, 520)
         Me.Controls.Add(Me.lstPedidos)
         Me.Controls.Add(Me.btnFinalizar)
         Me.Controls.Add(Me.lblProductoSeleccionado)

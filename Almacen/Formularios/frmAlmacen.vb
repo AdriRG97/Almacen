@@ -1,8 +1,12 @@
 ﻿Imports CapaDatos
 Module Module1
-    Public nuestroAlmacen As New List(Of Producto)
+    Public nuestroAlmacen As New List(Of Producto) 'Existencias
     Public paquetesProductos As Integer() = {5, 3, 10, 5, 1, 2, 10, 3, 1}
-    Public nombresProductos As String() = {"Cuadernos", "Subrayadores", "Bolis", "Lapices", "Perforadora", "Grapadoras", "Carpetas", "Calculadoras", "Telefono"}
+    Public nombresProductos As String() = {"Cuadernos", "Subrayadores", "Bolis", "Lápices", "Perforadoras", "Grapadoras", "Carpetas", "Calculadoras", "Teléfonos"}
+    Public enunciado As String
+
+    Public erroresPorStock As Integer = 0 'Sobrepasar al recargar el stock
+    Public enunciadoProductosRes As New List(Of Producto) 'Lo que falta para completar el enunciado
 End Module
 Public Class frmAlmacen
 
@@ -12,15 +16,109 @@ Public Class frmAlmacen
     Private erroresPorFinalizar As Integer = 0
     Private enunciadoCumplido As Boolean = False
     Private frmacantidad As New frmCantidadPedida
-
-
+    Private arrEnunciado1() As String = {}
+    Private arrEnunciadoCantidad() As String = {}
+    Private aux As String
+    Private productosRestEn() As Integer = {} ' Productos que quedan para completar el enunciado. {"Cuadernos", "Subrayadores", "Bolis", "Lapices", "Perforadora", "Grapadoras", "Carpetas", "Calculadoras", "Telefono"} (Posiciones iguales que en nuestroAlmacén, aunque no haya en el enunciado tal producto.)  
 
 
 
     Private Sub frmAlmacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblEnunciado.Text = "Consigue que tu pedido contenga: " & vbCrLf & "•                     " & "• " & vbCrLf & "• " & "                    • " & vbCrLf & "• " & vbCrLf & "• " & vbCrLf & "• " ' TO-DO
+        Dim contador As Integer = 0
+
+        lblEnunciado.Text = "Consigue que tu pedido contenga: " & enunciado
+        arrEnunciado1 = enunciado.Split(";") ' Añade a 'arrEnunciado1' los diferentes productos del enunciado y sus cantidades separados por ':'. EJEMPLO: CUADERNOS:2 
 
 
+        For i As Integer = 0 To arrEnunciado1.Length - 1
+
+            aux = arrEnunciado1(i) ' Para poder hacer .Contains, ya que no se puede Array(x).Contains
+            Dim product As New Producto
+
+            If aux.Contains("CUADERNOS") Then
+                arrEnunciadoCantidad = arrEnunciado1(i).Split(":") ' Guarda en arrEnunciadosCantidad: (0)-> Nombre del producto. (1) -> Cantidad que te pide el enunciado.
+                '  contador = contador + 1 ' INNECESARIO Para que, en caso de no incluir cuadernos en el enunciado, la posición (0) de 'productosRestEn' corresponda al 1er producto que sí esté.
+                '  productosRestEn(0)
+
+                product.Nombre = "Cuadernos"
+
+
+                product.Stock = CType(arrEnunciadoCantidad(1), Integer) 'Añadimos al array la cantidad de producto del Enunciado y lo convertimos a integer para poder operarlo a posteriori
+
+                enunciadoProductosRes.Add(product)
+
+            ElseIf aux.Contains("SUBRAYADORES") Then
+                arrEnunciadoCantidad = arrEnunciado1(i).Split(":")
+                product.Nombre = "Subrayadores"
+
+
+                product.Stock = CType(arrEnunciadoCantidad(1), Integer)
+
+                enunciadoProductosRes.Add(product)
+
+
+            ElseIf aux.Contains("BOLIS") Then
+                arrEnunciadoCantidad = arrEnunciado1(i).Split(":")
+                product.Nombre = "Bolígrafos"
+
+
+                product.Stock = CType(arrEnunciadoCantidad(1), Integer)
+
+                enunciadoProductosRes.Add(product)
+
+            ElseIf aux.Contains("LÁPICES") Then
+                product.Nombre = "Lápices"
+
+
+                product.Stock = CType(arrEnunciadoCantidad(1), Integer)
+
+                enunciadoProductosRes.Add(product)
+
+
+            ElseIf aux.Contains("PERFORADORAS") Then
+                product.Nombre = "Perforadoras"
+
+
+                product.Stock = CType(arrEnunciadoCantidad(1), Integer)
+
+                enunciadoProductosRes.Add(product)
+
+            ElseIf aux.Contains("GRAPADORAS") Then
+                product.Nombre = "Grapadoras"
+
+
+                product.Stock = CType(arrEnunciadoCantidad(1), Integer)
+
+                enunciadoProductosRes.Add(product)
+
+            ElseIf aux.Contains("CARPETAS") Then
+                product.Nombre = "Carpetas"
+
+
+                product.Stock = CType(arrEnunciadoCantidad(1), Integer)
+
+                enunciadoProductosRes.Add(product)
+
+            ElseIf aux.Contains("CALCULADORAS") Then
+                product.Nombre = "Calculadoras"
+
+
+                product.Stock = CType(arrEnunciadoCantidad(1), Integer)
+
+                enunciadoProductosRes.Add(product)
+
+            ElseIf aux.Contains("TELÉFONOS") Then
+                product.Nombre = "Teléfonos"
+
+
+                product.Stock = CType(arrEnunciadoCantidad(1), Integer)
+
+                enunciadoProductosRes.Add(product)
+            End If
+
+        Next
+
+        'Optimizando la resolución de pantalla para cualquier densidad de píxel por pulgada
         Dim classResize As New clsResizeForm
         classResize.ResizeForm(Me, 1920, 1080)
 
@@ -128,27 +226,39 @@ Public Class frmAlmacen
                 pbTelefono.Location = localizacionIni(8)
                 pedirCantidad("Telefono")
             End If
-            enunciadoCumplido = True
         End If
     End Sub
+    'Función que pide a los usuarios que introduzcan la cantidad de paquetes que desean
     Private Function pedirCantidad(ByVal nombreProducto As String) As String
         Dim producto As New Producto(nombreProducto)
         Dim cantidad As Integer = 0
         Do
         Loop Until Integer.TryParse(InputBox("¿Cuántos paquetes quieres?"), cantidad) AndAlso cantidad > 0
         If nuestroAlmacen.Contains(producto) Then
-            If cantidad <= nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock / paquetesProductos(nuestroAlmacen.IndexOf(producto)) Then
-                nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock -= cantidad * paquetesProductos(nuestroAlmacen.IndexOf(producto))
-                actualizarEtiquetas()
-                My.Computer.Audio.Play(My.Resources.correcto, AudioPlayMode.Background)
-            Else
-                My.Computer.Audio.Play(My.Resources._error, AudioPlayMode.Background)
-                erroresPorExistencia += 1
-                Return MsgBox("No hay suficiente stock.", MsgBoxStyle.Critical, Title:="FALLO")
-            End If
+            For j As Integer = 0 To enunciadoProductosRes.Count - 1
+                If cantidad <= nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock / paquetesProductos(nuestroAlmacen.IndexOf(producto)) Then
+
+                    nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).Stock -= cantidad * paquetesProductos(nuestroAlmacen.IndexOf(producto)) 'Resta los productos introducidos A LAS EXISTENCIAS
+                    enunciadoProductosRes.Item(enunciadoProductosRes.IndexOf(producto)).Stock -= cantidad * paquetesProductos(nuestroAlmacen.IndexOf(producto)) ' Resta los ''  ''         AL ENUNCIADO
+                    nuestroAlmacen.Item(nuestroAlmacen.IndexOf(producto)).CantPedida += cantidad * paquetesProductos(nuestroAlmacen.IndexOf(producto)) 'Suma los productos introducidos AL PEDIDO DEL USUARIO
+                    actualizarEtiquetas()
+                    My.Computer.Audio.Play(My.Resources.correcto, AudioPlayMode.Background)
+
+                ElseIf enunciadoProductosRes(j).Stock < cantidad * paquetesProductos(nuestroAlmacen.IndexOf(producto)) Then
+                    My.Computer.Audio.Play(My.Resources._error, AudioPlayMode.Background)
+                    erroresPorEnunciado += 1
+                    Return MsgBox("Error, has superado lo que pide el enunciado.", MsgBoxStyle.Critical, Title:="FALLO")
+                Else
+                    My.Computer.Audio.Play(My.Resources._error, AudioPlayMode.Background)
+                    erroresPorExistencia += 1
+                    Return MsgBox("No hay suficientes existencias.", MsgBoxStyle.Critical, Title:="FALLO")
+                End If
+
+            Next
         End If
         Return "Pedido correctamente"
     End Function
+    ' Procedimiento que actualiza el stock en tiempo real
     Private Sub actualizarEtiquetas()
         lblCuadernosQ.Text = "Quedan " & nuestroAlmacen(0).Stock & " cuadernos."
         lblSubrayadoresQ.Text = "Quedan " & nuestroAlmacen(1).Stock & " subrayadores."
@@ -223,14 +333,25 @@ Public Class frmAlmacen
     End Sub
 
     Private Sub btnFinalizar_Click(sender As Object, e As EventArgs) Handles btnFinalizar.Click
+        For i As Integer = 0 To enunciadoProductosRes.Count - 1
+            If enunciadoProductosRes(i).Stock = 0 Then
+                enunciadoCumplido = True
+            Else
+                enunciadoCumplido = False
+                Exit For
+            End If
+
+        Next
+
+
         If enunciadoCumplido = True Then
 
-            Dim erroresTotales As Integer = erroresPorEnunciado + erroresPorExistencia + erroresPorFinalizar
+            Dim erroresTotales As Integer = erroresPorEnunciado + erroresPorExistencia + erroresPorFinalizar + erroresPorStock
 
 
             My.Computer.Audio.Play(My.Resources.pedidoCompletado, AudioPlayMode.Background)
 
-            MsgBox("Has terminado tu pedido." & vbCrLf & vbCrLf & "○ Errores por sobrepasar las existencias: " & erroresPorExistencia & vbCrLf & "○ Errores por sobrepasar lo que manda el enunciado: " & erroresPorEnunciado & vbCrLf & "○ Errores por finalizar sin haber terminado el pedido: " & erroresPorFinalizar & vbCrLf & "____________________________" & vbCrLf & vbCrLf & "○ Errores totales: " & erroresTotales, Buttons:=MsgBoxStyle.Information, Title:="Fin del juego")
+            MsgBox("Has terminado tu pedido." & vbCrLf & vbCrLf & "○ Errores por sobrepasar las existencias: " & erroresPorExistencia & vbCrLf & "○ Errores por sobrepasar lo que manda el enunciado: " & erroresPorEnunciado & vbCrLf & "○ Errores por finalizar sin haber terminado el pedido: " & erroresPorFinalizar & vbCrLf & "○ Errores al recargar Stock: " & erroresPorStock & vbCrLf & "____________________________" & vbCrLf & vbCrLf & "○ Errores totales: " & erroresTotales, Buttons:=MsgBoxStyle.Information, Title:="Fin del juego")
             Me.Close()
 
         Else

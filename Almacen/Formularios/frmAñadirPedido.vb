@@ -36,14 +36,15 @@ Public Class frmAñadirPedido
             For i = 0 To pedidos.Length - 1
                 pedido += pedidos(i)
             Next
-            If Not lstPedidos.Items.Contains(pedido) Then
-                lstPedidos.Items.Add(pedido)
-            End If
-
-
 
             ultLinea = UltimaLineas()
-            lstPedidos.Items.Add(ultLinea)
+
+            enunciado = UltimaLineas()
+
+            If Not lstPedidos.Items.Contains(ultLinea) Then
+                lstPedidos.Items.Add(ultLinea)
+            End If
+
             Exit Do
 
 
@@ -55,12 +56,7 @@ Public Class frmAñadirPedido
 
     End Sub
 
-    Private Sub btnAñadir_Click(sender As Object, e As EventArgs) Handles btnAñadir.Click
-
-        If String.IsNullOrWhiteSpace(lblProductoSeleccionado.Text) Then
-            MsgBox("Selecciona un producto primero", MsgBoxStyle.Exclamation, Title:="Atención")
-
-        End If
+    Private Sub Anadir()
 
         If cesta.Contains(lblProductoSeleccionado.Text) Then
             MsgBox("Error, el producto ya ha sido almacenado.", MsgBoxStyle.Critical, Title:="ERROR")
@@ -69,6 +65,65 @@ Public Class frmAñadirPedido
             cesta.Add(lblProductoSeleccionado.Text)
             pedido += lblProductoSeleccionado.Text & ":" & NumericUpDown1.Value & ";"
         End If
+    End Sub
+    Private Sub btnAñadir_Click(sender As Object, e As EventArgs) Handles btnAñadir.Click
+
+
+        If String.IsNullOrWhiteSpace(lblProductoSeleccionado.Text) Then
+            MsgBox("Selecciona un producto primero", MsgBoxStyle.Exclamation, Title:="Atención")
+
+        End If
+
+
+
+        Select Case lblProductoSeleccionado.Text
+            Case "CUADERNOS", "LÁPICES"
+                If NumericUpDown1.Value Mod 5 = 0 Then
+                    Anadir()
+
+                Else
+                    MsgBox("Debes poner un número múltiplo de 5, ya que los " & lblProductoSeleccionado.Text.ToLower & " se comprarán en paquetes de 5.", MsgBoxStyle.Exclamation, Title:="Advertencia")
+
+
+                End If
+
+
+            Case "SUBRAYADORES", "CALCULADORAS"
+                If NumericUpDown1.Value Mod 3 = 0 Then
+                    Anadir()
+
+                Else
+                    MsgBox("Debes poner un número múltiplo de 3, ya que se comprarán " & lblProductoSeleccionado.Text.ToLower & " en paquetes de 3.", MsgBoxStyle.Exclamation, Title:="Advertencia")
+
+
+                End If
+
+
+            Case "BOLIS", "CARPETAS"
+                If NumericUpDown1.Value Mod 10 = 0 Then
+                    Anadir()
+
+                Else
+                    MsgBox("Debes poner un número múltiplo de 10, ya que se comprarán " & lblProductoSeleccionado.Text.ToLower & " en paquetes de 10.", MsgBoxStyle.Exclamation, Title:="Advertencia")
+
+
+                End If
+
+
+            Case "PERFORADORAS", "TELÉFONOS"
+                Anadir()
+
+
+            Case "GRAPADORAS"
+                If NumericUpDown1.Value Mod 2 = 0 Then
+                    Anadir()
+
+                Else
+                    MsgBox("Debes poner un número múltiplo de 2, ya que las " & lblProductoSeleccionado.Text.ToLower & " se comprarán en paquetes de 2.", MsgBoxStyle.Exclamation, Title:="Advertencia")
+
+                End If
+
+        End Select
 
     End Sub
 
@@ -115,4 +170,6 @@ Public Class frmAñadirPedido
         Dim ultimalinea As String = partes(partes.Length - 2)
         Return ultimalinea
     End Function
+
+
 End Class

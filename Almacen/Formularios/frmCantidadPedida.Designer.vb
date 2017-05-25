@@ -25,9 +25,9 @@ Partial Class frmCantidadPedida
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCantidadPedida))
         Me.grbPedidos = New System.Windows.Forms.GroupBox()
-        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
+        Me.lblPedido = New MetroFramework.Controls.MetroLabel()
         Me.btnAceptar = New MetroFramework.Controls.MetroButton()
-        Me.lblNuestroPedido = New MetroFramework.Controls.MetroLabel()
+        Me.lblTitulo = New MetroFramework.Controls.MetroLabel()
         Me.FrmAlmacenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.FrmAlmacenBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.grbPedidos.SuspendLayout()
@@ -37,7 +37,7 @@ Partial Class frmCantidadPedida
         '
         'grbPedidos
         '
-        Me.grbPedidos.Controls.Add(Me.MetroLabel1)
+        Me.grbPedidos.Controls.Add(Me.lblPedido)
         Me.grbPedidos.Location = New System.Drawing.Point(35, 107)
         Me.grbPedidos.Name = "grbPedidos"
         Me.grbPedidos.Size = New System.Drawing.Size(447, 370)
@@ -45,13 +45,13 @@ Partial Class frmCantidadPedida
         Me.grbPedidos.TabStop = False
         Me.grbPedidos.Text = "Pedido:"
         '
-        'MetroLabel1
+        'lblPedido
         '
-        Me.MetroLabel1.Location = New System.Drawing.Point(28, 20)
-        Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(393, 335)
-        Me.MetroLabel1.TabIndex = 0
-        Me.MetroLabel1.Text = "lblNuestroPedido"
+        Me.lblPedido.Location = New System.Drawing.Point(28, 20)
+        Me.lblPedido.Name = "lblPedido"
+        Me.lblPedido.Size = New System.Drawing.Size(393, 335)
+        Me.lblPedido.TabIndex = 0
+        Me.lblPedido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnAceptar
         '
@@ -67,18 +67,18 @@ Partial Class frmCantidadPedida
         Me.btnAceptar.UseCustomBackColor = True
         Me.btnAceptar.UseSelectable = True
         '
-        'lblNuestroPedido
+        'lblTitulo
         '
-        Me.lblNuestroPedido.BackColor = System.Drawing.SystemColors.Info
-        Me.lblNuestroPedido.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblNuestroPedido.FontWeight = MetroFramework.MetroLabelWeight.Bold
-        Me.lblNuestroPedido.Location = New System.Drawing.Point(148, 27)
-        Me.lblNuestroPedido.Name = "lblNuestroPedido"
-        Me.lblNuestroPedido.Size = New System.Drawing.Size(215, 57)
-        Me.lblNuestroPedido.TabIndex = 3
-        Me.lblNuestroPedido.Text = "Así va nuestro pedido"
-        Me.lblNuestroPedido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.lblNuestroPedido.UseCustomBackColor = True
+        Me.lblTitulo.BackColor = System.Drawing.SystemColors.Info
+        Me.lblTitulo.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblTitulo.FontWeight = MetroFramework.MetroLabelWeight.Bold
+        Me.lblTitulo.Location = New System.Drawing.Point(148, 27)
+        Me.lblTitulo.Name = "lblTitulo"
+        Me.lblTitulo.Size = New System.Drawing.Size(215, 57)
+        Me.lblTitulo.TabIndex = 3
+        Me.lblTitulo.Text = "Así va nuestro pedido"
+        Me.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblTitulo.UseCustomBackColor = True
         '
         'FrmAlmacenBindingSource
         '
@@ -96,7 +96,7 @@ Partial Class frmCantidadPedida
         Me.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.ClientSize = New System.Drawing.Size(528, 616)
         Me.ControlBox = False
-        Me.Controls.Add(Me.lblNuestroPedido)
+        Me.Controls.Add(Me.lblTitulo)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.grbPedidos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -113,8 +113,8 @@ Partial Class frmCantidadPedida
 
     Friend WithEvents grbPedidos As GroupBox
     Friend WithEvents btnAceptar As MetroFramework.Controls.MetroButton
-    Private WithEvents lblNuestroPedido As MetroFramework.Controls.MetroLabel
+    Private WithEvents lblTitulo As MetroFramework.Controls.MetroLabel
     Friend WithEvents FrmAlmacenBindingSource As BindingSource
     Friend WithEvents FrmAlmacenBindingSource1 As BindingSource
-    Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblPedido As MetroFramework.Controls.MetroLabel
 End Class

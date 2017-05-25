@@ -89,10 +89,7 @@ Public Class frmAdministrador
     Dim cantPed As Integer
     Dim ped As New Pedido
 
-    Private Sub btnAnadirEnunciado_Click(sender As Object, e As EventArgs) Handles btnAnadirEnunciado.Click
-        Dim anadir As New frmAñadirPedido
-        anadir.ShowDialog()
-    End Sub
+
 
 
 
@@ -124,10 +121,9 @@ Public Class frmAdministrador
 
 
     End Sub
-
     Private Sub btnAnadirEnunciado_Click(sender As Object, e As EventArgs) Handles btnAnadirEnunciado.Click
-        Dim añadir As New frmAñadirPedido
-        añadir.ShowDialog()
+        Dim anadir As New frmAñadirPedido
+        anadir.ShowDialog()
     End Sub
 
     Private Sub lstPedidos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstPedidos.SelectedIndexChanged
